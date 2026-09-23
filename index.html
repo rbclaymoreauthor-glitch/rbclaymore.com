@@ -1,37 +1,55 @@
 <!DOCTYPE html>
 
+
 <html lang="en">
+
 
 <head>
 
+
 <meta charset="UTF-8">
 
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 
 
 <title>R. B. Claymore | Psychological Thriller Author</title>
 
 
+
 <meta name="description" content="R. B. Claymore is an author of dark psychological and action thrillers about power, secrets, survival and uncomfortable truths. For readers of contemporary European thrillers.">
+
 
 <meta name="author" content="R. B. Claymore">
 
+
 <meta name="robots" content="index, follow">
+
 
 <link rel="canonical" href="https://www.rbclaymore.com/">
 
 
+
+<!-- AUTHOR SCHEMA -->
+
+
 <script type="application/ld+json">
+
 
 {
 
   "@context": "https://schema.org",
 
+
   "@type": "Person",
+
 
   "name": "R. B. Claymore",
 
+
   "url": "https://www.rbclaymore.com/",
+
 
   "sameAs": [
 
@@ -39,53 +57,171 @@
 
   ],
 
+
   "jobTitle": "Author"
 
 }
 
+
 </script>
+
+
+
+<!-- BOOK SCHEMA -->
+
+
+<script type="application/ld+json">
+
+
+{
+
+  "@context": "https://schema.org",
+
+
+  "@type": "Book",
+
+
+  "name": "No Vengáis",
+
+
+  "author": {
+
+    "@type": "Person",
+
+    "name": "R. B. Claymore",
+
+    "url": "https://www.rbclaymore.com/"
+
+  },
+
+
+  "genre": "Psychological Thriller",
+
+
+  "inLanguage": "es",
+
+
+  "workExample": [
+
+
+    {
+
+      "@type": "Book",
+
+
+      "name": "No Vengáis",
+
+
+      "author": {
+
+        "@type": "Person",
+
+        "name": "R. B. Claymore"
+
+      },
+
+
+      "inLanguage": "es",
+
+
+      "url": "https://www.amazon.es/No-Veng%C3%A1is-R-B-Claymore/dp/B0H5FFTNTJ"
+
+    },
+
+
+    {
+
+      "@type": "Book",
+
+
+      "name": "Do Not Come",
+
+
+      "author": {
+
+        "@type": "Person",
+
+        "name": "R. B. Claymore"
+
+      },
+
+
+      "inLanguage": "en",
+
+
+      "url": "https://www.amazon.es/Do-Not-Come-Psychological-Thriller-ebook/dp/B0GXGDCYWV"
+
+    }
+
+
+  ]
+
+}
+
+
+</script>
+
 
 
 <style>
 
+
 * {
+
 
     box-sizing: border-box;
 
+
     margin: 0;
+
 
     padding: 0;
 
+
 }
+
 
 
 html {
 
+
     scroll-behavior: smooth;
 
+
 }
+
 
 
 body {
 
+
     background: #080808;
+
 
     color: #f2f2f2;
 
+
     font-family: Arial, Helvetica, sans-serif;
+
 
     line-height: 1.6;
 
+
 }
+
 
 
 a {
 
+
     color: inherit;
+
 
     text-decoration: none;
 
+
 }
+
 
 
 /* =========================
@@ -97,886 +233,1925 @@ a {
 
 
 header {
+
+
     position: absolute;
+
+
     top: 0;
+
+
     left: 0;
+
+
     width: 100%;
+
+
     z-index: 10;
 
+
     display: flex;
+
+
     justify-content: space-between;
+
+
     align-items: center;
+
 
     padding: 28px 6%;
+
 }
+
+
 
 .logo {
+
+
     font-size: 18px;
+
+
     letter-spacing: 3px;
+
+
     font-weight: 600;
+
+
 }
+
+
 
 nav {
+
+
     display: flex;
+
+
     gap: 30px;
 
+
     font-size: 13px;
+
+
     letter-spacing: 1.5px;
+
+
     text-transform: uppercase;
+
+
 }
+
+
 
 nav a {
+
+
     opacity: 0.75;
+
+
     transition: opacity 0.3s ease;
+
+
 }
+
+
 
 nav a:hover {
+
+
     opacity: 1;
+
+
 }
 
+
+
 /* =========================
+
    HERO
+
 ========================= */
 
+
+
 .hero {
+
+
     min-height: 100vh;
 
+
     display: flex;
+
+
     align-items: center;
+
+
     justify-content: center;
 
+
     text-align: center;
+
 
     padding: 120px 20px;
 
+
     background:
+
+
         radial-gradient(
+
+
             circle at center,
+
+
             #202020 0%,
+
+
             #0d0d0d 45%,
+
+
             #050505 100%
+
+
         );
+
+
 }
+
+
 
 .hero-content {
+
+
     max-width: 900px;
+
+
 }
+
+
 
 .hero h1 {
+
+
     font-size: clamp(48px, 8vw, 96px);
+
+
     letter-spacing: 8px;
+
+
     font-weight: 500;
+
+
     margin-bottom: 25px;
+
+
 }
+
+
 
 .hero p {
+
+
     font-size: 15px;
+
+
     letter-spacing: 4px;
+
+
     text-transform: uppercase;
+
+
     color: #bdbdbd;
+
+
 }
+
+
 
 /* =========================
+
    GENERAL
+
 ========================= */
 
+
+
 .section-inner {
+
+
     max-width: 1150px;
+
+
     margin: 0 auto;
+
+
     padding: 120px 30px;
+
+
 }
 
+
+
 .section-label {
+
+
     text-align: center;
 
+
     font-size: 13px;
+
+
     letter-spacing: 5px;
+
+
     text-transform: uppercase;
+
 
     color: #777;
 
+
     margin-bottom: 22px;
+
+
 }
+
+
 
 /* =========================
+
    BOOKS
+
 ========================= */
 
+
+
 .books {
+
+
     background: #0a0a0a;
 
+
     border-top: 1px solid #1c1c1c;
+
+
     border-bottom: 1px solid #1c1c1c;
+
+
 }
+
+
 
 .books-heading {
+
+
     text-align: center;
+
+
     margin-bottom: 70px;
+
+
 }
+
+
 
 .books-heading h2 {
+
+
     font-size: clamp(28px, 5vw, 46px);
+
+
     font-weight: 400;
+
+
     letter-spacing: 3px;
+
+
     margin-bottom: 15px;
+
+
 }
 
+
+
 .books-heading p {
+
+
     color: #888;
+
+
     font-size: 14px;
+
+
     letter-spacing: 2px;
+
+
 }
+
+
 
 /* TWO EDITIONS */
 
+
+
 .editions {
+
+
     display: grid;
+
+
     grid-template-columns: 1fr 1fr;
+
+
     gap: 35px;
+
+
 }
+
+
 
 /* EDITION CARD */
 
+
+
 .edition-card {
+
+
     background: #101010;
+
 
     border: 1px solid #242424;
 
+
     padding: 42px 38px 45px;
+
 
     text-align: center;
 
+
     transition:
+
+
         transform 0.3s ease,
+
+
         border-color 0.3s ease;
+
+
 }
 
+
+
 .edition-card:hover {
+
+
     transform: translateY(-5px);
+
+
     border-color: #444;
+
+
 }
+
+
 
 /* LANGUAGE */
 
+
+
 .language {
+
+
     font-size: 13px;
+
+
     letter-spacing: 2px;
+
+
     text-transform: uppercase;
+
 
     color: #aaa;
 
+
     margin-bottom: 10px;
+
+
 }
 
+
+
 .flag {
+
+
     font-size: 25px;
+
+
     margin-right: 7px;
+
+
     vertical-align: -2px;
+
+
 }
+
+
 
 /* BOOK TITLE */
 
+
+
 .edition-card h3 {
+
+
     font-size: 29px;
+
+
     font-weight: 400;
+
+
     letter-spacing: 2px;
+
 
     margin-bottom: 5px;
+
+
 }
 
+
+
 .edition-name {
+
+
     font-size: 12px;
+
+
     letter-spacing: 2px;
+
+
     text-transform: uppercase;
+
 
     color: #777;
 
+
     margin-bottom: 32px;
+
+
 }
+
+
 
 /* COVER */
 
+
+
 .book-cover {
+
+
     width: 100%;
+
+
     max-width: 290px;
 
+
     display: block;
+
 
     margin: 0 auto 35px;
 
+
     box-shadow:
+
+
         0 25px 60px rgba(0,0,0,0.55);
+
+
 }
+
+
 
 /* DESCRIPTION */
 
+
+
 .genre {
+
+
     font-size: 12px;
+
+
     letter-spacing: 1.5px;
+
+
     text-transform: uppercase;
+
 
     color: #888;
 
+
     margin-bottom: 18px;
+
+
 }
 
+
+
 .synopsis {
+
+
     color: #bdbdbd;
 
+
     font-size: 15px;
+
+
     line-height: 1.8;
+
 
     max-width: 480px;
 
+
     margin: 0 auto 30px;
+
+
 }
+
+
 
 /* AMAZON */
 
+
+
 .amazon-button {
+
+
     display: inline-block;
+
 
     padding: 12px 28px;
 
+
     border: 1px solid #555;
 
+
     font-size: 11px;
+
+
     letter-spacing: 2px;
+
+
     text-transform: uppercase;
 
+
     transition:
+
+
         background 0.3s ease,
+
+
         color 0.3s ease;
+
+
 }
+
+
 
 .amazon-button:hover {
+
+
     background: #f2f2f2;
+
+
     color: #080808;
+
+
 }
+
+
 
 /* =========================
+
    ABOUT
+
 ========================= */
 
+
+
 .about {
+
+
     background:
+
+
         linear-gradient(
+
+
             to bottom,
+
+
             #080808 0%,
+
+
             #0d0d0d 50%,
+
+
             #080808 100%
+
+
         );
+
+
 }
 
+
+
 .about-content {
+
+
     display: grid;
+
 
     grid-template-columns: 280px 1fr;
 
+
     gap: 80px;
 
+
     align-items: center;
+
 
     max-width: 1000px;
 
+
     margin: 0 auto;
+
+
 }
 
+
+
 .author-photo {
+
+
     width: 190px;
+
+
     height: 190px;
+
 
     object-fit: cover;
 
+
     display: block;
 
+
     margin: 0 auto;
+
+
 }
 
+
+
 .about-text p {
+
+
     color: #bdbdbd;
+
 
     font-size: 17px;
 
+
     line-height: 1.9;
 
+
     margin-bottom: 25px;
+
+
 }
 
+
+
 .signature {
+
+
     margin-top: 35px;
+
 
     color: #f2f2f2 !important;
 
+
     font-size: 15px !important;
+
+
 }
+
+
 
 /* =========================
+
    CONTACT
+
 ========================= */
 
+
+
 .contact {
+
+
     background: #0a0a0a;
 
+
     border-top: 1px solid #1c1c1c;
+
+
 }
 
+
+
 .contact-content {
+
+
     text-align: center;
+
 
     max-width: 700px;
 
+
     margin: 0 auto;
+
+
 }
 
+
+
 .contact-content h2 {
+
+
     font-size: clamp(30px, 5vw, 48px);
+
 
     font-weight: 400;
 
+
     letter-spacing: 3px;
 
+
     margin-bottom: 18px;
+
+
 }
+
+
 
 .contact-content p {
+
+
     color: #888;
 
+
     margin-bottom: 25px;
+
+
 }
 
+
+
 .email {
+
+
     display: inline-block;
+
 
     font-size: 16px;
 
+
     letter-spacing: 1px;
 
+
     margin-bottom: 42px;
+
+
 }
+
+
 
 /* SOCIAL ICONS */
 
+
+
 .socials {
+
+
     display: flex;
 
+
     justify-content: center;
+
+
     align-items: center;
+
 
     gap: 27px;
+
+
 }
 
+
+
 .social-icon {
+
+
     width: 30px;
+
+
     height: 30px;
+
 
     display: flex;
 
+
     align-items: center;
+
+
     justify-content: center;
+
 
     color: #888;
 
+
     transition:
+
+
         color 0.3s ease,
+
+
         transform 0.3s ease;
+
+
 }
+
+
 
 .social-icon:hover {
+
+
     color: #fff;
 
+
     transform: translateY(-3px);
+
+
 }
+
+
 
 .social-icon svg {
+
+
     width: 23px;
+
+
     height: 23px;
 
+
     fill: currentColor;
+
+
 }
 
+
+
 /* =========================
+
    FOOTER
+
 ========================= */
 
+
+
 footer {
+
+
     border-top: 1px solid #1c1c1c;
+
 
     text-align: center;
 
+
     padding: 30px 20px;
+
 
     color: #666;
 
+
     font-size: 11px;
 
+
     letter-spacing: 1px;
+
+
 }
 
+
+
 /* =========================
+
    MOBILE
+
 ========================= */
+
+
 
 @media (max-width: 768px) {
 
+
     header {
+
+
         padding: 22px 20px;
+
+
     }
+
+
 
     nav {
+
+
         gap: 15px;
+
+
         font-size: 10px;
+
+
     }
+
+
 
     .hero {
+
+
         min-height: 90vh;
+
+
     }
+
+
 
     .hero h1 {
+
+
         letter-spacing: 5px;
+
+
     }
+
+
 
     .hero p {
+
+
         font-size: 11px;
+
+
         letter-spacing: 2.5px;
+
+
     }
+
+
 
     .section-inner {
+
+
         padding: 90px 20px;
+
+
     }
+
+
 
     .books-heading {
+
+
         margin-bottom: 50px;
+
+
     }
+
+
 
     .books-heading h2 {
+
+
         font-size: 27px;
+
+
         line-height: 1.4;
+
+
     }
+
+
 
     .editions {
+
+
         grid-template-columns: 1fr;
+
+
         gap: 25px;
+
+
     }
+
+
 
     .edition-card {
+
+
         padding: 35px 25px 40px;
+
+
     }
+
+
 
     .edition-card h3 {
+
+
         font-size: 26px;
+
+
     }
+
+
 
     .book-cover {
+
+
         max-width: 250px;
+
+
     }
 
+
+
     .about-content {
+
+
         grid-template-columns: 1fr;
+
 
         gap: 45px;
 
+
         text-align: center;
+
+
     }
+
+
 
     .author-photo {
+
+
         width: 155px;
+
+
         height: 155px;
+
+
     }
+
+
 
     .about-text {
+
+
         text-align: left;
+
+
     }
+
+
 
     .about-text p {
+
+
         font-size: 16px;
+
+
         line-height: 1.8;
+
+
     }
+
+
 
     .signature {
+
+
         text-align: center;
+
+
     }
 
+
+
     .socials {
+
+
         gap: 20px;
+
+
     }
+
+
 }
+
+
 </style>
+
+
 </head>
+
 
 
 <body>
 
+
+
 <!-- =========================
+
      HEADER
+
 ========================= -->
+
+
 
 <header>
 
+
     <div class="logo">
+
+
         R. B. CLAYMORE
+
+
     </div>
 
+
+
     <nav>
+
+
         <a href="#books">Books</a>
+
+
         <a href="#about">About</a>
+
+
         <a href="#contact">Contact</a>
+
+
     </nav>
+
 
 </header>
 
 
+
 <!-- =========================
+
      HERO
+
 ========================= -->
+
+
 
 <section class="hero">
 
+
     <div class="hero-content">
+
 
         <h1>R. B. CLAYMORE</h1>
 
+
         <p>
+
+
             Dark Psychological &amp; Action Thrillers
+
+
         </p>
 
+
     </div>
+
 
 </section>
 
 
+
 <!-- =========================
+
      BOOKS
+
 ========================= -->
+
+
 
 <section class="books" id="books">
 
+
     <div class="section-inner">
+
 
         <div class="books-heading">
 
+
             <div class="section-label">
+
+
                 Books
+
+
             </div>
 
+
+
             <h2>
+
+
                 NO VENGÁIS / DO NOT COME
+
+
             </h2>
 
+
+
             <p>
+
+
                 One story. Two languages.
+
+
             </p>
 
+
         </div>
+
 
 
         <div class="editions">
 
 
+
             <!-- =====================
+
                  SPANISH EDITION
+
             ====================== -->
+
+
 
             <div class="edition-card">
 
+
                 <div class="language">
+
+
                     <span class="flag">🇪🇸</span>
+
+
                     Spanish
+
+
                 </div>
+
+
 
                 <h3>
+
+
                     NO VENGÁIS
+
+
                 </h3>
 
+
+
                 <div class="edition-name">
+
+
                     Edición española
+
+
                 </div>
+
 
 
                 <img
+
+
                     src="images/no-vengais.jpg"
+
+
                     alt="No Vengáis"
+
+
                     class="book-cover"
+
+
                 >
+
 
 
                 <div class="genre">
+
+
                     Thriller psicológico y de acción
+
+
                 </div>
 
 
+
                 <p class="synopsis">
+
+
                     El tráfico ilegal de órganos mueve millones.
+
+
                     Las víctimas desaparecen sin dejar rastro.
+
+
                     Y quienes están detrás del negocio tienen demasiado poder para ser detenidos.
+
+
                 </p>
 
 
+
                 <a
+
+
                     href="https://amzn.eu/d/00tSXmSK"
+
+
                     target="_blank"
+
+
                     rel="noopener noreferrer"
+
+
                     class="amazon-button"
+
+
                 >
+
+
                     Buy on Amazon
+
+
                 </a>
 
+
             </div>
+
 
 
 
             <!-- =====================
+
                  ENGLISH EDITION
+
             ====================== -->
+
+
 
             <div class="edition-card">
 
+
                 <div class="language">
+
+
                     <span class="flag">🇺🇸</span>
+
+
                     English
+
+
                 </div>
+
+
 
                 <h3>
+
+
                     DO NOT COME
+
+
                 </h3>
 
+
+
                 <div class="edition-name">
+
+
                     English Edition
+
+
                 </div>
+
 
 
                 <img
+
+
                     src="images/do-not-come.jpg"
+
+
                     alt="Do Not Come"
+
+
                     class="book-cover"
+
+
                 >
+
 
 
                 <div class="genre">
+
+
                     Dark Psychological Thriller
+
+
                 </div>
 
 
+
                 <p class="synopsis">
+
+
                     The illegal organ trade is worth billions.
+
+
                     Victims disappear without a trace.
+
+
                     And the people behind the business have too much power to be stopped.
+
+
                 </p>
 
 
+
                 <a
+
+
                     href="https://amzn.eu/d/05VDHPws"
+
+
                     target="_blank"
+
+
                     rel="noopener noreferrer"
+
+
                     class="amazon-button"
+
+
                 >
+
+
                     Buy on Amazon
+
+
                 </a>
 
+
             </div>
+
 
         </div>
 
+
     </div>
+
 
 </section>
 
 
+
 <!-- =========================
+
      ABOUT
+
 ========================= -->
+
+
 
 <section class="about" id="about">
 
+
     <div class="section-inner">
 
+
         <div class="section-label">
+
+
             About
+
+
         </div>
+
 
 
         <div class="about-content">
 
 
+
             <div>
 
+
                 <img
+
+
                     src="images/autor.jpg"
+
+
                     alt="R. B. Claymore"
+
+
                     class="author-photo"
+
+
                 >
 
+
             </div>
+
 
 
             <div class="about-text">
 
-                <p>
-                    R. B. Claymore has lived and worked across the United States,
-                    Europe, and Asia. That international experience shapes his fiction,
-                    which explores intelligence services, power, and the hidden mechanisms
-                    that shape the modern world.
-                </p>
 
                 <p>
-                    His novels delve into ambition, secrecy, and the moral cost of knowing
-                    the truth, following characters caught between violence, loyalty,
-                    and survival in places where every decision leaves an irreversible mark.
+
+
+                    R. B. Claymore has lived and worked across the United States,
+
+
+                    Europe, and Asia. That international experience shapes his fiction,
+
+
+                    which explores intelligence services, power, and the hidden mechanisms
+
+
+                    that shape the modern world.
+
+
                 </p>
+
+
+
+                <p>
+
+
+                    His novels delve into ambition, secrecy, and the moral cost of knowing
+
+
+                    the truth, following characters caught between violence, loyalty,
+
+
+                    and survival in places where every decision leaves an irreversible mark.
+
+
+                </p>
+
+
 
                 <p class="signature">
+
+
                     Just a writer. Thrillers, intelligence, power, secrets and the dark side of truth.
+
+
                 </p>
+
 
             </div>
 
+
         </div>
 
+
     </div>
+
 
 </section>
 
 
+
 <!-- =========================
+
      CONTACT
+
 ========================= -->
+
+
 
 <section class="contact" id="contact">
 
+
     <div class="section-inner">
+
 
         <div class="contact-content">
 
+
             <div class="section-label">
+
+
                 Contact
+
+
             </div>
 
 
+
             <h2>
+
+
                 Get in touch
+
+
             </h2>
 
 
+
             <p>
+
+
                 For media, publishing and other enquiries.
+
+
             </p>
 
 
+
             <a
+
+
                 href="mailto:rbclaymoreauthor@gmail.com"
+
+
                 class="email"
+
+
             >
+
+
                 rbclaymoreauthor@gmail.com
+
+
             </a>
+
 
 
             <!-- SOCIAL NETWORKS -->
 
+
+
             <div class="socials">
+
 
 
                 <!-- INSTAGRAM -->
 
+
+
                 <a
+
+
                     href="https://www.instagram.com/r.b.claymore"
+
+
                     target="_blank"
+
+
                     rel="noopener noreferrer"
+
+
                     class="social-icon"
+
+
                     aria-label="Instagram"
+
+
                 >
 
+
                     <svg viewBox="0 0 24 24">
-                        <path d="M7.5 2h9A5.5 5.5 0 0 1 22 7.5v9a5.5 5.5 0 0 1-5.5 5.5h-9A5.5 5.5 0 0 1 2 16.5v-9A5.5 5.5 0 0 1 7.5 2zm0 2A3.5 3.5 0 0 0 4 7.5v9A3.5 3.5 0 0 0 7.5 20h9a3.5 3.5 0 0 0 3.5-3.5v-9A3.5 3.5 0 0 0 16.5 4h-9zM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6zm5.25-3.25a1.25 1.25 0 1 1 0 2.5 1.25 1.25 0 0 1 0-2.5z"/>
+
+
+                        <path d="M7.5 2h9A5.5 5.5 0 0 1 22 7.5v9a5.5 5.5 0 0 1-5.5 5.5h-9A5.5 5.5 0 0 1 2 16.5v-9A5.5 5.5 0 0 1 7.5 2zm0 2A3.5 3.5 0 0 0 4 7.5v9A3.5 3.5 0 0 0 7.5 20h9a3.5 3.5 0 0 0 3.5-3.5v-9A3.5 3.5 0 0 0 16.5 4h-9zM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm0 2a3 3 0 1 0 0 6 3 3 0 0 0-3-3zm5.25-3.25a1.25 1.25 0 1 1 0 2.5 1.25 1.25 0 0 1 0-2.5z"/>
+
+
                     </svg>
 
+
                 </a>
+
 
 
                 <!-- FACEBOOK -->
 
+
+
                 <a
+
+
                     href="https://www.facebook.com/share/1HBKdAvaFV/?mibextid=wwXIfr"
+
+
                     target="_blank"
+
+
                     rel="noopener noreferrer"
+
+
                     class="social-icon"
+
+
                     aria-label="Facebook"
+
+
                 >
 
+
                     <svg viewBox="0 0 24 24">
+
+
                         <path d="M13.5 21v-8h2.75l.4-3h-3.15V8.1c0-.87.24-1.6 1.6-1.6h1.65V3.82c-.72-.08-1.45-.12-2.18-.12-2.65 0-4.45 1.62-4.45 4.6V10H7.25v3h2.87v8h3.38z"/>
+
+
                     </svg>
 
+
                 </a>
+
 
 
                 <!-- X -->
 
+
+
                 <a
+
+
                     href="https://x.com/r_b_claymore"
+
+
                     target="_blank"
+
+
                     rel="noopener noreferrer"
+
+
                     class="social-icon"
+
+
                     aria-label="X"
+
+
                 >
 
+
                     <svg viewBox="0 0 24 24">
+
+
                         <path d="M18.9 2H22l-6.77 7.74L23.2 22h-6.24l-4.89-6.39L6.48 22H3.37l7.24-8.28L2.8 2h6.4l4.42 5.84L18.9 2zm-1.1 17.6h1.73L8.27 4.27H6.41L17.8 19.6z"/>
+
+
                     </svg>
 
+
                 </a>
+
 
 
                 <!-- TIKTOK -->
 
+
+
                 <a
+
+
                     href="https://www.tiktok.com/@rb_claymore"
+
+
                     target="_blank"
+
+
                     rel="noopener noreferrer"
+
+
                     class="social-icon"
+
+
                     aria-label="TikTok"
+
+
                 >
 
+
                     <svg viewBox="0 0 24 24">
+
+
                         <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.34V2h-3.45v13.67a2.89 2.89 0 1 1-2-2.75V9.4a6.34 6.34 0 1 0 5.45 6.27V8.26a8.27 8.27 0 0 0 4.83 1.55V6.69h-1.06z"/>
+
+
                     </svg>
 
+
                 </a>
+
 
 
                 <!-- THREADS -->
 
+
+
                 <a
+
+
                     href="https://www.threads.com/@r_b_claymore"
+
+
                     target="_blank"
+
+
                     rel="noopener noreferrer"
+
+
                     class="social-icon"
+
+
                     aria-label="Threads"
+
+
                 >
 
+
                     <svg viewBox="0 0 24 24">
+
+
                         <path d="M12.02 2C6.3 2 3 5.47 3 11.74c0 6.47 3.38 10.26 9.16 10.26 4.78 0 7.84-2.65 7.84-6.8 0-3.49-2.08-5.55-5.6-5.55-1.32 0-2.48.39-3.36 1.1-.2-1.47-1.05-2.25-2.47-2.25-1.3 0-2.25.69-2.25 1.66 0 .85.68 1.4 1.7 1.4 0.53 0 0.99-.13 1.38-.39.1.52.14 1.06.14 1.63v.15c-.51-.08-1.04-.12-1.59-.12-2.9 0-4.57 1.43-4.57 3.83 0 2.35 1.8 3.91 4.5 3.91 2.9 0 4.67-1.72 4.67-4.6 0-.45-.02-.87-.07-1.28 2.02.08 3.05 1.04 3.05 2.85 0 2.45-1.76 4.03-4.54 4.03-4.44 0-6.99-2.89-6.99-7.91 0-5.14 2.47-7.73 6.96-7.73 3.84 0 6.2 1.77 6.91 5.13h-2.18C17.18 4.47 15.23 2 12.02 2zm-1.73 13.1c.52 0 .99.04 1.4.12-.1 1.52-.88 2.29-2.31 2.29-1.1 0-1.75-.51-1.75-1.37 0-.72.63-1.04 2.66-1.04z"/>
+
+
                     </svg>
+
 
                 </a>
 
+
             </div>
+
 
         </div>
 
+
     </div>
+
 
 </section>
 
 
+
 <!-- =========================
+
      FOOTER
+
 ========================= -->
+
+
 
 <footer>
 
+
     © R. B. Claymore. All rights reserved.
+
 
 </footer>
 
+
+
 </body>
+
+
 </html>
