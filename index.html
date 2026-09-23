@@ -1,1 +1,414 @@
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>R. B. Claymore | Author</title>
+<meta name="description" content="Official website of R. B. Claymore, author of dark psychological and action thrillers.">
+<style>
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    background: #080808;
+    color: #eeeeea;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.7;
+}
+a {
+    color: inherit;
+    text-decoration: none;
+}
+/* HEADER */
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 28px 6%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10;
+}
+.logo {
+    font-size: 16px;
+    letter-spacing: 4px;
+    font-weight: 400;
+}
+nav {
+    display: flex;
+    gap: 28px;
+    font-size: 10px;
+    letter-spacing: 2px;
+}
+nav a {
+    opacity: .7;
+}
+nav a:hover {
+    opacity: 1;
+}
+/* HERO */
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 100px 25px;
+    background:
+    radial-gradient(
+        circle at center,
+        #292929 0%,
+        #111111 45%,
+        #050505 100%
+    );
+}
+.hero-content {
+    max-width: 900px;
+}
+.hero h1 {
+    font-size: clamp(48px, 9vw, 92px);
+    font-weight: 300;
+    letter-spacing: 8px;
+}
+.hero-line {
+    width: 65px;
+    height: 1px;
+    background: #b69a65;
+    margin: 25px auto;
+}
+.hero p {
+    font-size: 12px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #c7c2b9;
+}
+.hero-button {
+    display: inline-block;
+    margin-top: 42px;
+    padding: 12px 26px;
+    border: 1px solid #b69a65;
+    font-size: 10px;
+    letter-spacing: 2px;
+}
+.hero-button:hover,
+.amazon-button:hover {
+    background: #b69a65;
+    color: #080808;
+}
+/* SECTIONS */
+section {
+    padding: 100px 7%;
+}
+.section-label {
+    font-size: 10px;
+    letter-spacing: 4px;
+    color: #b69a65;
+    margin-bottom: 15px;
+}
+.section-title {
+    font-size: clamp(34px, 6vw, 58px);
+    font-weight: 300;
+}
+/* BOOKS */
+.books {
+    background: #0e0e0e;
+}
+.book-intro {
+    max-width: 680px;
+    color: #aaa7a1;
+    margin-top: 25px;
+}
+.book-main-title {
+    font-size: clamp(35px, 6vw, 62px);
+    font-weight: 300;
+    letter-spacing: 2px;
+}
+.book-subtitle {
+    color: #aaa;
+    font-size: 11px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+.editions {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 55px;
+    margin-top: 60px;
+}
+.edition {
+    text-align: center;
+}
+.cover {
+    width: 270px;
+    max-width: 100%;
+    margin: 0 auto 30px;
+    box-shadow: 0 20px 50px rgba(0,0,0,.55);
+}
+.cover img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+.edition h3 {
+    font-size: 27px;
+    font-weight: 400;
+}
+.edition-label {
+    color: #b69a65;
+    font-size: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+.genre {
+    color: #999;
+    font-size: 11px;
+    letter-spacing: 1px;
+    margin: 17px 0;
+}
+.synopsis {
+    max-width: 450px;
+    margin: 0 auto 28px;
+    color: #c7c3bc;
+    font-size: 15px;
+}
+.amazon-button {
+    display: inline-block;
+    border: 1px solid #b69a65;
+    padding: 11px 21px;
+    font-size: 9px;
+    letter-spacing: 2px;
+}
+/* ABOUT */
+.about {
+    background: #101010;
+}
+.about-grid {
+    max-width: 1000px;
+    margin-top: 55px;
+    display: grid;
+    grid-template-columns: 210px 1fr;
+    gap: 65px;
+    align-items: center;
+}
+.portrait {
+    width: 190px;
+    margin: 0 auto;
+}
+.portrait img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+.about-text {
+    max-width: 720px;
+    color: #ccc8c1;
+    font-size: 17px;
+}
+.signature {
+    margin-top: 30px;
+    color: #b69a65;
+    font-style: italic;
+}
+/* FOOTER */
+footer {
+    padding: 40px 20px;
+    text-align: center;
+    background: #070707;
+    color: #666;
+    font-size: 9px;
+    letter-spacing: 2px;
+}
+/* MOBILE */
+@media (max-width: 700px) {
+    header {
+        padding: 22px 6%;
+    }
+    .logo {
+        font-size: 13px;
+        letter-spacing: 3px;
+    }
+    nav {
+        gap: 15px;
+        font-size: 8px;
+    }
+    .hero h1 {
+        font-size: 43px;
+        letter-spacing: 5px;
+    }
+    .hero p {
+        font-size: 10px;
+        letter-spacing: 2px;
+    }
+    section {
+        padding: 80px 6%;
+    }
+    .editions {
+        grid-template-columns: 1fr;
+        gap: 70px;
+    }
+    .cover {
+        width: 240px;
+    }
+    .about-grid {
+        grid-template-columns: 1fr;
+        gap: 35px;
+        text-align: center;
+    }
+    .portrait {
+        width: 155px;
+    }
+    .about-text {
+        font-size: 16px;
+        text-align: left;
+    }
+}
+</style>
+</head>
+<body>
+<header>
+    <div class="logo">R. B. CLAYMORE</div>
+    <nav>
+        <a href="#books">BOOKS</a>
+        <a href="#about">ABOUT</a>
+    </nav>
+</header>
+<section class="hero">
+    <div class="hero-content">
+        <h1>R. B. CLAYMORE</h1>
+        <div class="hero-line"></div>
+        <p>Dark Psychological &amp; Action Thrillers</p>
+        <a href="#books" class="hero-button">
+            EXPLORE THE BOOK
+        </a>
+    </div>
+</section>
+<section class="books" id="books">
+    <div class="section-label">
+        THE BOOK
+    </div>
+    <h2 class="book-main-title">
+        NO VENGÁIS / DO NOT COME
+    </h2>
+    <div class="book-subtitle">
+        One story. Two languages.
+    </div>
+    <p class="book-intro">
+        A dark psychological and action thriller about power,
+        disappearance and the hidden machinery behind a
+        multibillion-dollar criminal business.
+    </p>
+    <div class="editions">
+        <article class="edition">
+            <div class="cover">
+                <img
+                    src="images/no-vengais.jpg"
+                    alt="No Vengáis book cover"
+                >
+            </div>
+            <h3>
+                NO VENGÁIS
+            </h3>
+            <div class="edition-label">
+                Edición española
+            </div>
+            <div class="genre">
+                Thriller psicológico y de acción
+            </div>
+            <p class="synopsis">
+                El tráfico ilegal de órganos mueve millones.
+                Las víctimas desaparecen sin dejar rastro.
+                Y quienes están detrás del negocio tienen
+                demasiado poder para ser detenidos.
+            </p>
+            <a
+                href="https://amzn.eu/d/00tSXmSK"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="amazon-button"
+            >
+                COMPRAR EN AMAZON
+            </a>
+        </article>
+        <article class="edition">
+            <div class="cover">
+                <img
+                    src="images/do-not-come.jpg"
+                    alt="Do Not Come book cover"
+                >
+            </div>
+            <h3>
+                DO NOT COME
+            </h3>
+            <div class="edition-label">
+                English Edition
+            </div>
+            <div class="genre">
+                Dark Psychological Thriller
+            </div>
+            <p class="synopsis">
+                The illegal organ trade is worth billions.
+                Victims disappear without a trace.
+                And the people behind the business have
+                too much power to be stopped.
+            </p>
+            <a
+                href="https://amzn.eu/d/05VDHPws"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="amazon-button"
+            >
+                BUY ON AMAZON
+            </a>
+        </article>
+    </div>
+</section>
+<section class="about" id="about">
+    <div class="section-label">
+        THE AUTHOR
+    </div>
+    <h2 class="section-title">
+        R. B. CLAYMORE
+    </h2>
+    <div class="about-grid">
+        <div class="portrait">
+            <img
+                src="images/autor.jpg"
+                alt="R. B. Claymore"
+            >
+        </div>
+        <div class="about-text">
+            <p>
+                R. B. Claymore has lived and worked across
+                the United States, Europe, and Asia.
+                That international experience shapes his
+                fiction, which explores intelligence services,
+                power, and the hidden mechanisms that shape
+                the modern world.
+            </p>
+            <br>
+            <p>
+                His novels delve into ambition, secrecy,
+                and the moral cost of knowing the truth,
+                following characters caught between violence,
+                loyalty, and survival in places where every
+                decision leaves an irreversible mark.
+            </p>
+            <p class="signature">
+                Just a writer. Thrillers, intelligence,
+                power, secrets and the dark side of truth.
+            </p>
+        </div>
+    </div>
+</section>
+<footer>
+    © 2026 R. B. CLAYMORE — ALL RIGHTS RESERVED
+</footer>
+</body>
+</html>
