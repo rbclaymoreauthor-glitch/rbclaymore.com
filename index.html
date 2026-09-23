@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>R. B. Claymore | Author</title>
+<meta name="description" content="Official website of R. B. Claymore, author of dark psychological and action thrillers.">
+
+<style>
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #0b0b0b;
+    color: #f2f2f2;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+}
+
+header {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 40px 20px;
+    background:
+        linear-gradient(rgba(0,0,0,.72), rgba(0,0,0,.92)),
+        radial-gradient(circle at center, #333 0%, #111 45%, #050505 100%);
+}
+
+.hero h1 {
+    font-size: clamp(3rem, 10vw, 7rem);
+    letter-spacing: .12em;
+    font-weight: 700;
+}
+
+.hero p {
+    margin-top: 20px;
+    font-size: clamp(1rem, 3vw, 1.4rem);
+    letter-spacing: .18em;
+    text-transform: uppercase;
+    color: #bdbdbd;
+}
+
+.button {
+    display: inline-block;
+    margin-top: 35px;
+    padding: 14px 30px;
+    border: 1px solid #777;
+    color: white;
+    text-decoration: none;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    transition: .3s;
+}
+
+.button:hover {
+    background: white;
+    color: black;
+}
+
+section {
+    max-width: 1100px;
+    margin: auto;
+    padding: 90px 25px;
+}
+
+h2 {
+    font-size: 2.3rem;
+    letter-spacing: .12em;
+    margin-bottom: 45px;
+}
+
+.books {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 35px;
+}
+
+.book {
+    border: 1px solid #292929;
+    padding: 30px;
+    background: #111;
+}
+
+.book-cover {
+    height: 360px;
+    background: linear-gradient(145deg, #333, #080808);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.book-cover span {
+    font-size: 1.8rem;
+    letter-spacing: .12em;
+}
+
+.book h3 {
+    font-size: 1.4rem;
+    letter-spacing: .08em;
+    margin-bottom: 10px;
+}
+
+.book p {
+    color: #aaa;
+}
+
+.about {
+    border-top: 1px solid #222;
+    border-bottom: 1px solid #222;
+}
+
+.about p {
+    max-width: 750px;
+    color: #bbb;
+    font-size: 1.1rem;
+}
+
+footer {
+    text-align: center;
+    padding: 50px 20px;
+    color: #777;
+    font-size: .9rem;
+}
+
+.social {
+    margin-top: 20px;
+}
+
+.social a {
+    color: #aaa;
+    text-decoration: none;
+    margin: 0 12px;
+}
+
+.social a:hover {
+    color: white;
+}
+
+@media (max-width: 600px) {
+    .hero h1 {
+        letter-spacing: .06em;
+    }
+
+    section {
+        padding: 65px 20px;
+    }
+
+    .book-cover {
+        height: 300px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="hero">
+        <h1>R. B. CLAYMORE</h1>
+        <p>Dark psychological &amp; action thrillers</p>
+        <a href="#books" class="button">Explore the books</a>
+    </div>
+</header>
+
+<section id="books">
+    <h2>BOOKS</h2>
+
+    <div class="books">
+
+        <div class="book">
+            <div class="book-cover">
+                <span>DO NOT<br>COME</span>
+            </div>
+
+            <h3>DO NOT COME</h3>
+
+            <p>
+                A dark psychological thriller.
+                Power, survival and a business where human lives have a price.
+            </p>
+
+            <a href="#" class="button">Amazon</a>
+        </div>
+
+        <div class="book">
+            <div class="book-cover">
+                <span>NO<br>VENGÁIS</span>
+            </div>
+
+            <h3>NO VENGÁIS</h3>
+
+            <p>
+                A psychological and action thriller where friendship,
+                power and survival collide.
+            </p>
+
+            <a href="#" class="button">Amazon</a>
+        </div>
+
+    </div>
+</section>
+
+<section class="about" id="about">
+    <h2>ABOUT</h2>
+
+    <p>
+        R. B. Claymore is an author of dark psychological and action thrillers.
+        His stories explore power, secrets, ambition, loyalty and the darker
+        side of human nature.
+    </p>
+</section>
+
+<footer>
+    <div>© 2026 R. B. Claymore</div>
+
+    <div class="social">
+        <a href="#">Instagram</a>
+        <a href="#">Amazon</a>
+    </div>
+</footer>
+
+</body>
+</html>
