@@ -6,18 +6,11 @@
 
 <title>Interviews | R. B. Claymore</title>
 
-<meta name="description" content="Interviews with R. B. Claymore, author of dark psychological and action thrillers.">
-<meta name="author" content="R. B. Claymore">
-
-<link rel="icon" href="/favicon.png">
+<meta name="description" content="Interviews with R. B. Claymore, author of dark psychological thrillers.">
 
 <style>
 * {
     box-sizing: border-box;
-}
-
-html {
-    scroll-behavior: smooth;
 }
 
 body {
@@ -30,15 +23,11 @@ body {
 /* HEADER */
 
 header {
-    position: absolute;
-    top: 0;
-    left: 0;
     width: 100%;
     padding: 28px 5%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    z-index: 10;
 }
 
 .logo {
@@ -54,7 +43,7 @@ nav {
 }
 
 nav a {
-    color: #ddd;
+    color: #ccc;
     text-decoration: none;
     font-size: 13px;
     letter-spacing: 1.5px;
@@ -68,30 +57,30 @@ nav a:hover {
 /* HERO */
 
 .hero {
-    min-height: 58vh;
+    min-height: 45vh;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-    padding: 120px 20px 80px;
+    padding: 80px 20px;
     background: radial-gradient(
         circle at center,
         #202020 0%,
-        #0d0d0d 45%,
-        #080808 75%
+        #0d0d0d 50%,
+        #080808 80%
     );
 }
 
 .hero h1 {
     margin: 0;
-    font-size: clamp(48px, 8vw, 100px);
+    font-size: clamp(48px, 8vw, 96px);
     font-weight: 400;
     letter-spacing: 8px;
 }
 
 .hero p {
     margin-top: 22px;
-    color: #aaa;
+    color: #999;
     font-size: 14px;
     letter-spacing: 3px;
     text-transform: uppercase;
@@ -102,20 +91,20 @@ nav a:hover {
 .content {
     max-width: 900px;
     margin: 0 auto;
-    padding: 100px 30px;
+    padding: 90px 30px;
 }
 
 .article-header {
     text-align: center;
-    margin-bottom: 75px;
+    margin-bottom: 70px;
 }
 
 .label {
-    color: #888;
+    color: #777;
     font-size: 12px;
     letter-spacing: 3px;
     text-transform: uppercase;
-    margin-bottom: 25px;
+    margin-bottom: 22px;
 }
 
 .article-header h2 {
@@ -137,19 +126,21 @@ nav a:hover {
 .languages {
     display: flex;
     justify-content: center;
-    gap: 14px;
-    margin-top: 35px;
+    gap: 12px;
+    margin-top: 30px;
 }
 
 .language {
-    width: 36px;
-    height: 24px;
+    width: 42px;
+    height: 28px;
     padding: 0;
-    border: 1px solid #444;
     background: transparent;
+    border: 1px solid #444;
     cursor: pointer;
     opacity: 0.45;
-    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .language.active {
@@ -161,10 +152,12 @@ nav a:hover {
     opacity: 1;
 }
 
-.language img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+/* SVG FLAGS */
+
+.flag {
+    width: 28px;
+    height: 19px;
+    display: block;
 }
 
 /* INTERVIEW */
@@ -175,7 +168,7 @@ nav a:hover {
 }
 
 .question {
-    margin-bottom: 55px;
+    margin-bottom: 52px;
 }
 
 .question h3 {
@@ -208,7 +201,7 @@ nav a:hover {
 
 .back-home {
     text-align: center;
-    margin-top: 100px;
+    margin-top: 90px;
 }
 
 .back-home a {
@@ -259,8 +252,8 @@ footer {
     }
 
     .hero {
-        min-height: 50vh;
-        padding-top: 150px;
+        min-height: 40vh;
+        padding-top: 80px;
     }
 
     .hero h1 {
@@ -268,15 +261,7 @@ footer {
     }
 
     .content {
-        padding: 70px 22px;
-    }
-
-    .article-header {
-        margin-bottom: 60px;
-    }
-
-    .question {
-        margin-bottom: 45px;
+        padding: 65px 22px;
     }
 
     .question h3 {
@@ -330,14 +315,44 @@ footer {
 An interview with R. B. Claymore
 </div>
 
+
 <div class="languages">
 
-<button class="language active" onclick="showLanguage('english', this)" aria-label="English">
-<img src="https://flagcdn.com/w80/us.png" alt="English">
+<!-- ENGLISH FLAG -->
+
+<button
+class="language active"
+onclick="showLanguage('english', this)"
+aria-label="English">
+
+<svg class="flag" viewBox="0 0 60 40" xmlns="http://www.w3.org/2000/svg">
+
+<rect width="60" height="40" fill="#b22234"/>
+
+<path d="M0 4h60v4H0zm0 8h60v4H0zm0 8h60v4H0zm0 8h60v4H0z" fill="#fff"/>
+
+<rect width="28" height="22" fill="#3c3b6e"/>
+
+</svg>
+
 </button>
 
-<button class="language" onclick="showLanguage('spanish', this)" aria-label="Español">
-<img src="https://flagcdn.com/w80/es.png" alt="Español">
+
+<!-- SPANISH FLAG -->
+
+<button
+class="language"
+onclick="showLanguage('spanish', this)"
+aria-label="Español">
+
+<svg class="flag" viewBox="0 0 60 40" xmlns="http://www.w3.org/2000/svg">
+
+<rect width="60" height="40" fill="#c60b1e"/>
+
+<rect y="10" width="60" height="20" fill="#ffc400"/>
+
+</svg>
+
 </button>
 
 </div>
@@ -345,13 +360,14 @@ An interview with R. B. Claymore
 </div>
 
 
-<!-- ========================= -->
+<!-- ==================== -->
 <!-- ENGLISH -->
-<!-- ========================= -->
+<!-- ==================== -->
 
 <div id="english" class="language-content active">
 
 <div class="interview">
+
 
 <div class="question">
 <h3>1. Where did the idea for <em>Do Not Come</em> come from?</h3>
@@ -422,9 +438,7 @@ I'm interested in the less visible side, the consequences and collateral damage 
 <div class="question">
 <h3>7. Which writers have influenced you?</h3>
 <p>
-European writers, especially Pierre Lemaitre and his approach to stories and characters.
-<br><br>
-I've also read the classic espionage writers. Everything you read becomes part of what you write.
+European writers, especially Pierre Lemaitre and his approach to stories and characters. I've also read the classic espionage writers. Everything you read becomes part of what you write.
 </p>
 </div>
 
@@ -442,9 +456,7 @@ I enjoy that. Readers appreciate unexpected turns.
 <div class="question">
 <h3>9. How did you develop the three main characters?</h3>
 <p>
-They are three very different people, but close friends.
-<br><br>
-I started with small personality traits. Those traits grew, and the events helped me discover who the characters really were.
+They are three very different people, but close friends. I started with small personality traits. Those traits grew, and the events helped me discover who the characters really were.
 </p>
 </div>
 
@@ -452,9 +464,7 @@ I started with small personality traits. Those traits grew, and the events helpe
 <div class="question">
 <h3>10. What was the most difficult part of the research?</h3>
 <p>
-The medical material. I had to do a lot of research to make it believable.
-<br><br>
-Technical subjects require actual research. You have to make sure that what you're describing makes sense.
+The medical material. I had to do a lot of research to make it believable. Technical subjects require actual research. You have to make sure that what you're describing makes sense.
 </p>
 </div>
 
@@ -462,9 +472,7 @@ Technical subjects require actual research. You have to make sure that what you'
 <div class="question">
 <h3>11. Which part of the novel did you enjoy writing the most?</h3>
 <p>
-Probably the New York section.
-<br><br>
-Places and scenes have their own atmosphere, and New York was one of them.
+Probably the New York section. Places and scenes have their own atmosphere, and New York was one of them.
 </p>
 </div>
 
@@ -472,9 +480,7 @@ Places and scenes have their own atmosphere, and New York was one of them.
 <div class="question">
 <h3>12. How much research did you do into intelligence and geopolitics?</h3>
 <p>
-I've always been interested in geopolitics and intelligence, so I was already curious about those subjects.
-<br><br>
-For the book, I spent almost a year doing intensive research. I needed to understand certain aspects before incorporating them.
+I've always been interested in geopolitics and intelligence, so I was already curious about those subjects. For the book, I spent almost a year doing intensive research. I needed to understand certain aspects before incorporating them.
 </p>
 </div>
 
@@ -482,9 +488,7 @@ For the book, I spent almost a year doing intensive research. I needed to unders
 <div class="question">
 <h3>13. The characters are placed under extreme pressure. Why?</h3>
 <p>
-Because pressure outside your comfort zone reveals who you are.
-<br><br>
-It reveals values, limits and decisions. I'm interested in what happens when people are forced to confront situations they never imagined.
+Because pressure outside your comfort zone reveals who you are. It reveals values, limits and decisions. I'm interested in what happens when people are forced to confront situations they never imagined.
 </p>
 </div>
 
@@ -492,9 +496,7 @@ It reveals values, limits and decisions. I'm interested in what happens when peo
 <div class="question">
 <h3>14. What made you interested in the survival instinct?</h3>
 <p>
-I first saw the appeal while watching <em>Black Hawk Down</em>.
-<br><br>
-There's something powerful about putting people in situations where they have to improvise and act on survival instinct. Pressure reveals who they are.
+I first saw the appeal while watching <em>Black Hawk Down</em>. There's something powerful about putting people in situations where they have to improvise and act on survival instinct. Pressure reveals who they are.
 </p>
 </div>
 
@@ -502,9 +504,7 @@ There's something powerful about putting people in situations where they have to
 <div class="question">
 <h3>15. What do you hope readers take away from <em>Do Not Come</em>?</h3>
 <p>
-I hope they feel their time was well spent and that they got something from the book.
-<br><br>
-I want them to be entertained, but also left with something to think about. I want it to feel like a journey.
+I hope they feel their time was well spent and that they got something from the book. I want them to be entertained, but also left with something to think about. I want it to feel like a journey.
 <br><br>
 If they finish thinking, "Wow," even better.
 </p>
@@ -514,9 +514,7 @@ If they finish thinking, "Wow," even better.
 <div class="question">
 <h3>16. When did you first start writing?</h3>
 <p>
-I started at school.
-<br><br>
-Sometimes we were punished with stories about saints. The sooner you finished, the sooner you could play.
+I started at school. Sometimes we were punished with stories about saints. The sooner you finished, the sooner you could play.
 <br><br>
 Whenever the subject was free, I wrote fiction. I could write a story in five minutes. That's probably where it started.
 </p>
@@ -536,9 +534,7 @@ Writing is the closest thing to being God. There's no budget and no limit. You c
 <div class="question">
 <h3>18. What have you learned about the writing process?</h3>
 <p>
-Not many rules.
-<br><br>
-You can build characters and situations without following the usual genre rules and the story can still work.
+Not many rules. You can build characters and situations without following the usual genre rules and the story can still work.
 <br><br>
 The important thing is that characters feel alive and have personalities. Then they sometimes do things that surprise you.
 </p>
@@ -558,13 +554,9 @@ With <em>Do Not Come</em>, Fred generates the most debate. Readers want to talk 
 <div class="question">
 <h3>20. Is <em>Do Not Come</em> simply a thriller, or is there something more?</h3>
 <p>
-It's always more.
+It's always more. There's social criticism, black humor, and characters who aren't what they seem.
 <br><br>
-There's social criticism, black humor, and characters who aren't what they seem.
-<br><br>
-The thriller is the vehicle. Underneath, there's a look at people, ambitions, decisions and consequences.
-<br><br>
-I'm interested in characters under pressure and in confronting things they never thought they were capable of.
+The thriller is the vehicle. Underneath, there's a look at people, ambitions, decisions and consequences. I'm interested in characters under pressure and in confronting things they never thought they were capable of.
 </p>
 </div>
 
@@ -572,13 +564,14 @@ I'm interested in characters under pressure and in confronting things they never
 </div>
 
 
-<!-- ========================= -->
+<!-- ==================== -->
 <!-- SPANISH -->
-<!-- ========================= -->
+<!-- ==================== -->
 
 <div id="spanish" class="language-content">
 
 <div class="interview">
+
 
 <div class="question">
 <h3>1. ¿De dónde surgió la idea de <em>No Vengáis</em>?</h3>
@@ -649,9 +642,7 @@ Me interesa la parte menos visible, las consecuencias y los daños colaterales q
 <div class="question">
 <h3>7. ¿Qué escritores te han influido?</h3>
 <p>
-Escritores europeos, especialmente Pierre Lemaitre y su manera de abordar las historias y los personajes.
-<br><br>
-También he leído a los clásicos de la novela de espionaje. Todo lo que lees termina formando parte de lo que escribes.
+Escritores europeos, especialmente Pierre Lemaitre y su manera de abordar las historias y los personajes. También he leído a los clásicos de la novela de espionaje. Todo lo que lees termina formando parte de lo que escribes.
 </p>
 </div>
 
@@ -669,9 +660,7 @@ Me gusta esa parte del proceso. A los lectores les gustan los giros inesperados.
 <div class="question">
 <h3>9. ¿Cómo desarrollaste a los tres personajes principales?</h3>
 <p>
-Son tres personas muy diferentes, pero buenos amigos.
-<br><br>
-Empecé con pequeños rasgos de personalidad. Esos rasgos fueron creciendo y los acontecimientos me ayudaron a descubrir quiénes eran realmente los personajes.
+Son tres personas muy diferentes, pero buenos amigos. Empecé con pequeños rasgos de personalidad. Esos rasgos fueron creciendo y los acontecimientos me ayudaron a descubrir quiénes eran realmente los personajes.
 </p>
 </div>
 
@@ -679,9 +668,7 @@ Empecé con pequeños rasgos de personalidad. Esos rasgos fueron creciendo y los
 <div class="question">
 <h3>10. ¿Cuál fue la parte más difícil de la investigación?</h3>
 <p>
-El material médico. Tuve que hacer mucha investigación para conseguir que resultara creíble.
-<br><br>
-Los temas técnicos requieren investigar de verdad. Hay que asegurarse de que aquello que describes tenga sentido.
+El material médico. Tuve que hacer mucha investigación para conseguir que resultara creíble. Los temas técnicos requieren investigar de verdad. Hay que asegurarse de que aquello que describes tenga sentido.
 </p>
 </div>
 
@@ -689,9 +676,7 @@ Los temas técnicos requieren investigar de verdad. Hay que asegurarse de que aq
 <div class="question">
 <h3>11. ¿Qué parte disfrutaste más escribiendo?</h3>
 <p>
-Probablemente la parte de Nueva York.
-<br><br>
-Los lugares y las escenas tienen su propia atmósfera, y Nueva York fue uno de ellos.
+Probablemente la parte de Nueva York. Los lugares y las escenas tienen su propia atmósfera, y Nueva York fue uno de ellos.
 </p>
 </div>
 
@@ -699,9 +684,7 @@ Los lugares y las escenas tienen su propia atmósfera, y Nueva York fue uno de e
 <div class="question">
 <h3>12. ¿Cuánta investigación hiciste sobre inteligencia y geopolítica?</h3>
 <p>
-Siempre me han interesado la geopolítica y la inteligencia, así que ya tenía curiosidad por esos temas.
-<br><br>
-Para el libro pasé casi un año haciendo una investigación intensiva. Necesitaba comprender determinados aspectos antes de incorporarlos.
+Siempre me han interesado la geopolítica y la inteligencia, así que ya tenía curiosidad por esos temas. Para el libro pasé casi un año haciendo una investigación intensiva. Necesitaba comprender determinados aspectos antes de incorporarlos.
 </p>
 </div>
 
@@ -709,9 +692,7 @@ Para el libro pasé casi un año haciendo una investigación intensiva. Necesita
 <div class="question">
 <h3>13. Los personajes están sometidos a una presión extrema. ¿Por qué?</h3>
 <p>
-Porque la presión fuera de nuestra zona de confort revela quiénes somos.
-<br><br>
-Revela nuestros valores, nuestros límites y nuestras decisiones. Me interesa lo que ocurre cuando las personas se ven obligadas a enfrentarse a situaciones que nunca imaginaron.
+Porque la presión fuera de nuestra zona de confort revela quiénes somos. Revela nuestros valores, nuestros límites y nuestras decisiones. Me interesa lo que ocurre cuando las personas se ven obligadas a enfrentarse a situaciones que nunca imaginaron.
 </p>
 </div>
 
@@ -719,9 +700,7 @@ Revela nuestros valores, nuestros límites y nuestras decisiones. Me interesa lo
 <div class="question">
 <h3>14. ¿Qué hizo que te interesara el instinto de supervivencia?</h3>
 <p>
-Me interesó por primera vez viendo <em>Black Hawk Down</em>.
-<br><br>
-Hay algo muy poderoso en colocar a las personas en situaciones en las que tienen que improvisar y actuar por instinto de supervivencia. La presión revela quiénes son.
+Me interesó por primera vez viendo <em>Black Hawk Down</em>. Hay algo muy poderoso en colocar a las personas en situaciones en las que tienen que improvisar y actuar por instinto de supervivencia. La presión revela quiénes son.
 </p>
 </div>
 
@@ -729,9 +708,7 @@ Hay algo muy poderoso en colocar a las personas en situaciones en las que tienen
 <div class="question">
 <h3>15. ¿Qué esperas que se lleven los lectores de <em>No Vengáis</em>?</h3>
 <p>
-Espero que sientan que su tiempo ha estado bien invertido y que han obtenido algo del libro.
-<br><br>
-Quiero que se entretengan, pero también que la historia les deje algo en lo que pensar. Quiero que se sienta como un viaje.
+Espero que sientan que su tiempo ha estado bien invertido y que han obtenido algo del libro. Quiero que se entretengan, pero también que la historia les deje algo en lo que pensar. Quiero que se sienta como un viaje.
 <br><br>
 Y si terminan pensando «Wow», todavía mejor.
 </p>
@@ -741,9 +718,7 @@ Y si terminan pensando «Wow», todavía mejor.
 <div class="question">
 <h3>16. ¿Cuándo empezaste a escribir?</h3>
 <p>
-Empecé en el colegio.
-<br><br>
-A veces nos castigaban escribiendo historias sobre santos. Cuanto antes terminabas, antes podías salir a jugar.
+Empecé en el colegio. A veces nos castigaban escribiendo historias sobre santos. Cuanto antes terminabas, antes podías salir a jugar.
 <br><br>
 Cuando podíamos elegir el tema, yo escribía ficción. Podía escribir una historia en cinco minutos. Probablemente todo empezó ahí.
 </p>
@@ -763,9 +738,7 @@ Escribir es lo más parecido a ser Dios. No hay presupuesto ni límites. Puedes 
 <div class="question">
 <h3>18. ¿Qué has aprendido sobre el proceso de escritura?</h3>
 <p>
-No demasiadas reglas.
-<br><br>
-Puedes construir personajes y situaciones sin seguir las reglas habituales del género y la historia puede seguir funcionando.
+No demasiadas reglas. Puedes construir personajes y situaciones sin seguir las reglas habituales del género y la historia puede seguir funcionando.
 <br><br>
 Lo importante es que los personajes parezcan vivos y tengan personalidad. Entonces, a veces, hacen cosas que te sorprenden.
 </p>
@@ -785,13 +758,9 @@ En <em>No Vengáis</em>, Fred es el personaje que más debate genera. Los lector
 <div class="question">
 <h3>20. ¿Es <em>No Vengáis</em> simplemente un thriller o hay algo más?</h3>
 <p>
-Siempre hay algo más.
+Siempre hay algo más. Hay crítica social, humor negro y personajes que no son lo que parecen.
 <br><br>
-Hay crítica social, humor negro y personajes que no son lo que parecen.
-<br><br>
-El thriller es el vehículo. Debajo hay una mirada sobre las personas, sus ambiciones, sus decisiones y sus consecuencias.
-<br><br>
-Me interesan los personajes sometidos a presión y enfrentándose a cosas que nunca pensaron que serían capaces de hacer.
+El thriller es el vehículo. Debajo hay una mirada sobre las personas, sus ambiciones, sus decisiones y sus consecuencias. Me interesan los personajes sometidos a presión y enfrentándose a cosas que nunca pensaron que serían capaces de hacer.
 </p>
 </div>
 
@@ -820,7 +789,11 @@ function showLanguage(language, button) {
         contents[i].classList.remove("active");
     }
 
-    document.getElementById(language).classList.add("active");
+    var selected = document.getElementById(language);
+
+    if (selected) {
+        selected.classList.add("active");
+    }
 
     var buttons = document.querySelectorAll(".language");
 
@@ -830,7 +803,11 @@ function showLanguage(language, button) {
 
     button.classList.add("active");
 
-    document.documentElement.lang = language === "english" ? "en" : "es";
+    if (language === "english") {
+        document.documentElement.lang = "en";
+    } else {
+        document.documentElement.lang = "es";
+    }
 }
 </script>
 
