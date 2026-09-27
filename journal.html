@@ -1,16 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<link rel="icon" type="image/png" href="/favicon.png">
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Journal | R. B. Claymore</title>
 
-<meta name="description" content="Journal by R. B. Claymore — thoughts on thrillers, crime, ambition, power and the darker side of the American Dream.">
+<meta name="description" content="Stories, interviews and reflections from R. B. Claymore, author of dark psychological and action thrillers.">
+<meta name="author" content="R. B. Claymore">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://www.rbclaymore.com/journal.html">
 
 <style>
 * {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 html {
@@ -18,221 +24,241 @@ html {
 }
 
 body {
-    margin: 0;
     background: #080808;
     color: #f2f2f2;
     font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.7;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
 }
 
 /* HEADER */
 
 header {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
-    padding: 28px 5%;
+    z-index: 10;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 28px 6%;
 }
 
 .logo {
-    color: #fff;
-    text-decoration: none;
     font-size: 18px;
     letter-spacing: 3px;
+    font-weight: 600;
 }
 
 nav {
     display: flex;
-    gap: 28px;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-nav a {
-    color: #ccc;
-    text-decoration: none;
+    gap: 30px;
     font-size: 13px;
     letter-spacing: 1.5px;
     text-transform: uppercase;
 }
 
+nav a {
+    opacity: 0.75;
+    transition: opacity 0.3s ease;
+}
+
 nav a:hover {
-    color: #fff;
+    opacity: 1;
 }
 
 /* HERO */
 
 .hero {
-    min-height: 45vh;
+    min-height: 58vh;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-    padding: 80px 20px;
+    padding: 120px 20px 80px;
     background: radial-gradient(
         circle at center,
         #202020 0%,
-        #0d0d0d 50%,
-        #080808 80%
+        #0d0d0d 45%,
+        #050505 100%
     );
 }
 
+.hero-content {
+    max-width: 900px;
+}
+
 .hero h1 {
-    margin: 0;
-    font-size: clamp(48px, 8vw, 96px);
-    font-weight: 400;
+    font-size: clamp(48px, 8vw, 88px);
     letter-spacing: 8px;
+    font-weight: 500;
+    margin-bottom: 25px;
 }
 
 .hero p {
-    margin-top: 22px;
-    color: #999;
-    font-size: 14px;
-    letter-spacing: 3px;
+    font-size: 15px;
+    letter-spacing: 4px;
     text-transform: uppercase;
+    color: #bdbdbd;
 }
 
-/* CONTENT */
+/* JOURNAL */
 
-.content {
+.journal {
+    background: #0a0a0a;
+    border-top: 1px solid #1c1c1c;
+}
+
+.section-inner {
     max-width: 900px;
     margin: 0 auto;
-    padding: 90px 30px;
+    padding: 100px 30px 120px;
 }
 
 .article-header {
     text-align: center;
-    margin-bottom: 70px;
+    margin-bottom: 65px;
 }
 
-.label {
-    color: #777;
-    font-size: 12px;
-    letter-spacing: 3px;
+.section-label {
+    text-align: center;
+    font-size: 13px;
+    letter-spacing: 5px;
     text-transform: uppercase;
+    color: #777;
     margin-bottom: 22px;
 }
 
 .article-header h2 {
-    margin: 0;
-    font-size: clamp(30px, 5vw, 46px);
+    font-size: clamp(30px, 5vw, 48px);
     font-weight: 400;
-    line-height: 1.2;
+    letter-spacing: 2px;
+    line-height: 1.25;
+    margin-bottom: 18px;
 }
 
-.subtitle {
-    color: #999;
-    font-size: 18px;
-    margin-top: 18px;
-    font-style: italic;
+.article-subtitle {
+    color: #888;
+    font-size: 15px;
+    letter-spacing: 2px;
 }
 
-/* LANGUAGE BUTTONS */
+/* LANGUAGE SELECTOR */
 
-.languages {
+.language-selector {
     display: flex;
     justify-content: center;
-    gap: 12px;
-    margin-top: 30px;
+    align-items: center;
+    gap: 22px;
+    margin-bottom: 65px;
 }
 
-.language {
-    width: 42px;
-    height: 28px;
-    padding: 0;
-    background: transparent;
-    border: 1px solid #444;
+.language-button {
+    background: none;
+    border: none;
+    padding: 5px;
     cursor: pointer;
-    opacity: 0.45;
+    opacity: 0.38;
+    transition: opacity 0.3s ease, transform 0.3s ease;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.language.active {
-    opacity: 1;
-    border-color: #aaa;
+.language-button:hover {
+    opacity: 0.85;
+    transform: translateY(-2px) scale(1.05);
 }
 
-.language:hover {
+.language-button.active {
     opacity: 1;
+    transform: scale(1.05);
 }
 
 .flag {
-    width: 28px;
-    height: 19px;
+    width: 38px;
+    height: 26px;
     display: block;
+    border-radius: 3px;
+    overflow: hidden;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.45);
 }
 
-/* ARTICLE */
+.language-separator {
+    color: #444;
+    font-size: 13px;
+}
 
-.article {
+/* INTERVIEW */
+
+.interview {
     max-width: 760px;
     margin: 0 auto;
 }
 
-.article h3 {
-    margin: 55px 0 20px;
-    font-size: 22px;
-    font-weight: 500;
+.question {
+    margin-bottom: 50px;
 }
 
-.article p {
-    margin: 0 0 25px;
-    color: #ccc;
+.question h3 {
+    font-size: 19px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    line-height: 1.5;
+    margin-bottom: 18px;
+    color: #f2f2f2;
+}
+
+.question p {
+    color: #bdbdbd;
     font-size: 16px;
     line-height: 1.9;
+    margin-bottom: 17px;
 }
 
-.article em {
-    color: #ddd;
+.question p:last-child {
+    margin-bottom: 0;
 }
 
-.signature {
-    margin-top: 50px !important;
-    color: #eee !important;
-    font-style: italic;
+.question em {
+    color: #d0d0d0;
 }
 
-.language-content {
-    display: none;
-}
-
-.language-content.active {
-    display: block;
-}
-
-/* BACK */
+/* BACK HOME */
 
 .back-home {
     text-align: center;
-    margin-top: 90px;
+    margin-top: 75px;
 }
 
 .back-home a {
     display: inline-block;
+    padding: 12px 28px;
     border: 1px solid #555;
-    color: #ddd;
-    text-decoration: none;
-    padding: 13px 25px;
-    font-size: 12px;
+    font-size: 11px;
     letter-spacing: 2px;
     text-transform: uppercase;
+    transition: background 0.3s ease, color 0.3s ease;
 }
 
 .back-home a:hover {
-    border-color: #fff;
-    color: #fff;
+    background: #f2f2f2;
+    color: #080808;
 }
 
 /* FOOTER */
 
 footer {
-    border-top: 1px solid #1d1d1d;
-    padding: 35px 20px;
+    border-top: 1px solid #1c1c1c;
     text-align: center;
+    padding: 30px 20px;
     color: #666;
-    font-size: 12px;
+    font-size: 11px;
     letter-spacing: 1px;
 }
 
@@ -242,33 +268,60 @@ footer {
 
     header {
         padding: 22px 20px;
-        flex-direction: column;
-        gap: 20px;
     }
 
     nav {
         gap: 15px;
-    }
-
-    nav a {
-        font-size: 11px;
+        font-size: 10px;
     }
 
     .hero {
-        min-height: 40vh;
+        min-height: 52vh;
+        padding: 110px 20px 70px;
     }
 
     .hero h1 {
         letter-spacing: 5px;
     }
 
-    .content {
-        padding: 65px 22px;
+    .hero p {
+        font-size: 11px;
+        letter-spacing: 2.5px;
     }
 
-    .article p {
-        font-size: 15px;
-        line-height: 1.85;
+    .section-inner {
+        padding: 80px 20px 90px;
+    }
+
+    .article-header {
+        margin-bottom: 50px;
+    }
+
+    .article-header h2 {
+        font-size: 30px;
+        line-height: 1.35;
+    }
+
+    .language-selector {
+        margin-bottom: 50px;
+    }
+
+    .flag {
+        width: 38px;
+        height: 26px;
+    }
+
+    .question {
+        margin-bottom: 42px;
+    }
+
+    .question h3 {
+        font-size: 18px;
+    }
+
+    .question p {
+        font-size: 16px;
+        line-height: 1.8;
     }
 }
 </style>
@@ -277,670 +330,693 @@ footer {
 <body>
 
 <header>
+    <div class="logo">R. B. CLAYMORE</div>
 
-<a href="index.html" class="logo">R. B. CLAYMORE</a>
-
-<nav>
-<a href="books.html">Books</a>
-<a href="about.html">About</a>
-<a href="journal.html">Journal</a>
-<a href="interviews.html">Interviews</a>
-<a href="contact.html">Contact</a>
-</nav>
-
+    <nav>
+        <a href="index.html#books">Books</a>
+        <a href="index.html#about">About</a>
+        <a href="journal.html">Journal</a>
+        <a href="index.html#contact">Contact</a>
+    </nav>
 </header>
 
 
 <section class="hero">
+    <div class="hero-content">
+        <h1>JOURNAL</h1>
+        <p>Stories, interviews and reflections</p>
+    </div>
+</section>
 
-<div>
-<h1>JOURNAL</h1>
-<p>Thoughts, stories and reflections</p>
+
+<section class="journal">
+
+<div class="section-inner">
+
+    <div class="article-header">
+        <div class="section-label">Interview</div>
+
+        <h2>The Story Behind <em>Do Not Come</em></h2>
+
+        <div class="article-subtitle">
+            An interview with R. B. Claymore
+        </div>
+    </div>
+
+
+    <div class="language-selector">
+
+        <button
+            type="button"
+            class="language-button active"
+            onclick="showInterview('en')"
+            aria-label="English">
+
+            <svg class="flag" viewBox="0 0 38 26" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <rect width="38" height="26" fill="#fff"/>
+                <rect y="0" width="38" height="2" fill="#b22234"/>
+                <rect y="4" width="38" height="2" fill="#b22234"/>
+                <rect y="8" width="38" height="2" fill="#b22234"/>
+                <rect y="12" width="38" height="2" fill="#b22234"/>
+                <rect y="16" width="38" height="2" fill="#b22234"/>
+                <rect y="20" width="38" height="2" fill="#b22234"/>
+                <rect y="24" width="38" height="2" fill="#b22234"/>
+                <rect width="16" height="14" fill="#3c3b6e"/>
+                <g fill="#fff">
+                    <circle cx="2.2" cy="2" r=".65"/>
+                    <circle cx="6" cy="2" r=".65"/>
+                    <circle cx="9.8" cy="2" r=".65"/>
+                    <circle cx="13.6" cy="2" r=".65"/>
+                    <circle cx="4.1" cy="4.3" r=".65"/>
+                    <circle cx="7.9" cy="4.3" r=".65"/>
+                    <circle cx="11.7" cy="4.3" r=".65"/>
+                    <circle cx="2.2" cy="6.6" r=".65"/>
+                    <circle cx="6" cy="6.6" r=".65"/>
+                    <circle cx="9.8" cy="6.6" r=".65"/>
+                    <circle cx="13.6" cy="6.6" r=".65"/>
+                    <circle cx="4.1" cy="8.9" r=".65"/>
+                    <circle cx="7.9" cy="8.9" r=".65"/>
+                    <circle cx="11.7" cy="8.9" r=".65"/>
+                    <circle cx="2.2" cy="11.2" r=".65"/>
+                    <circle cx="6" cy="11.2" r=".65"/>
+                    <circle cx="9.8" cy="11.2" r=".65"/>
+                    <circle cx="13.6" cy="11.2" r=".65"/>
+                </g>
+            </svg>
+
+        </button>
+
+        <span class="language-separator">|</span>
+
+        <button
+            type="button"
+            class="language-button"
+            onclick="showInterview('es')"
+            aria-label="Español">
+
+            <svg class="flag" viewBox="0 0 38 26" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <rect width="38" height="26" fill="#c60b1e"/>
+                <rect y="6" width="38" height="14" fill="#ffc400"/>
+                <rect y="0" width="38" height="6" fill="#c60b1e"/>
+                <rect y="20" width="38" height="6" fill="#c60b1e"/>
+                <g transform="translate(9 8)">
+                    <rect x="0" y="0" width="2.8" height="10" fill="#aa151b"/>
+                    <rect x="2.8" y="1.8" width="2.5" height="6.4" fill="#f1bf00"/>
+                    <rect x="5.3" y="3.1" width="2.2" height="4.2" fill="#aa151b"/>
+                </g>
+            </svg>
+
+        </button>
+
+    </div>
+
+
+    <!-- ENGLISH -->
+
+    <div class="interview" id="interview-en">
+
+        <div class="question">
+            <h3>1. Where did the idea for <em>Do Not Come</em> come from?</h3>
+
+            <p>
+                The idea came from a Spring Break trip I took with some friends through Mexico in the early 1990s. Some of the events in the novel were inspired by that trip.
+            </p>
+
+            <p>
+                After staying at a pretty run-down hotel, we ended up at a kind of resort in the middle of nowhere. It was almost entirely filled with women attending a convention, and we were practically the only foreigners there. The night got pretty wild.
+            </p>
+
+            <p>
+                But because we were isolated and surrounded by Mexican staff who seemed somewhat wary of us, I started feeling that the looks we were getting weren't exactly friendly. Maybe it was the tequila talking, but I remember that feeling very clearly.
+            </p>
+
+            <p>
+                “We're on our own. We'll get out of here because they want us to. But what if they decide they don't?”
+            </p>
+
+            <p>
+                That feeling of vulnerability was the real starting point for the novel. That sense of danger was the first thing I wrote, almost without stopping. Reality gave me the starting point. Fiction took it from there.
+            </p>
+        </div>
+
+        <div class="question">
+            <h3>2. Did anything from that trip actually make it into the novel?</h3>
+
+            <p>
+                Yes. There were a few uncomfortable and tense moments, although fortunately we all made it home safe and sound.
+            </p>
+
+            <p>
+                What's interesting is that, over time, some of those memories became mixed up with my imagination and eventually found their way into the novel. Reality was the starting point, but fiction took it from there.
+            </p>
+        </div>
+
+        <div class="question">
+            <h3>3. The novel revolves around three friends. Why three?</h3>
+
+            <p>
+                Because, in a way, those three friends grew out of that trip. The people I was traveling with were friends of mine, and we'd been college classmates.
+            </p>
+
+            <p>
+                A lot of crazy things happened on that trip, but fortunately we made it home. Years later, I started thinking about what might happen if I put three friends in a much more extreme situation.
+            </p>
+        </div>
+
+        <div class="question">
+            <h3>4. You have lived and worked in different parts of the world. How did that influence the novel?</h3>
+
+            <p>
+                It mainly influenced the setting and the way I approached the different countries and characters. Living in different places gives you a firsthand sense of different ways of thinking and behaving.
+            </p>
+
+            <p>
+                I wanted the settings to feel believable and for the characters from different countries to have a certain authenticity as well.
+            </p>
+        </div>
+
+        <div class="question">
+            <h3>5. Why did you choose Mexico as one of the main settings?</h3>
+
+            <p>
+                Mexico is a fascinating country, and sharing a border with the United States made it a natural fit for the story. It had many of the ingredients I needed.
+            </p>
+
+            <p>
+                There was also a personal connection, since Mexico was tied to the very origins of the novel.
+            </p>
+        </div>
+
+        <div class="question">
+            <h3>6. The novel touches on intelligence and international operations. What interests you about that world?</h3>
+
+            <p>
+                I've always been interested in what goes on between the United States and the rest of the Americas. Some operations work out. Others don't. And there are often consequences for people who had nothing to do with the decisions being made.
+            </p>
+
+            <p>
+                I'm particularly interested in that less visible side of things—the consequences and collateral damage that can remain outside the official story.
+            </p>
+        </div>
+
+        <div class="question">
+            <h3>7. Which writers have influenced you?</h3>
+
+            <p>
+                There are always influences, even when you're not necessarily aware of them. Among European writers, I particularly like Pierre Lemaitre and the way he approaches stories and characters.
+            </p>
+
+            <p>
+                I've also read many of the classic espionage writers. I suppose everything you read becomes part of what you write in one way or another.
+            </p>
+        </div>
+
+        <div class="question">
+            <h3>8. How do you approach plotting?</h3>
+
+            <p>
+                I usually start with the main plot roughly mapped out, but then the side stories start to take on a life of their own. They intersect with the main story and sometimes take the characters in directions I hadn't planned.
+            </p>
+
+            <p>
+                That's something I enjoy. I think readers appreciate it too, when a story opens up and takes unexpected turns.
+            </p>
+        </div>
+
+        <div class="question">
+            <h3>9. How did you develop the three main characters?</h3>
+
+            <p>
+                I liked the idea of three very different people who were still very close friends.
+            </p>
+
+            <p>
+                I started with a few small personality traits, and as the story developed, those traits grew. In a way, the events themselves helped me discover who the characters really were.
+            </p>
+        </div>
+
+        <div class="question">
+            <h3>10. What was the most difficult part of researching the novel?</h3>
+
+            <p>
+                Probably the medical material. I had to do a lot of research to make those parts believable.
+            </p>
+
+            <p>
+                When you're writing about technical subjects, you can't simply imagine how things work. You have to do the research and make sure what you're describing actually makes sense.
+            </p>
+        </div>
+
+        <div class="question">
+            <h3>11. Was there a particular part of the book you especially enjoyed writing?</h3>
+
+            <p>
+                The New York section was probably the most fun to write.
+            </p>
+
+            <p>
+                There are places and scenes that simply have an atmosphere that makes writing them more enjoyable. New York was one of them.
+            </p>
+        </div>
+
+        <div class="question">
+            <h3>12. How much research did you do into intelligence and geopolitics?</h3>
+
+            <p>
+                I've always been interested in geopolitics and how intelligence services operate, so I was already curious about those subjects.
+            </p>
+
+            <p>
+                For this book, I spent almost a year doing intensive research. It was important to understand certain aspects before bringing them into the story.
+            </p>
+        </div>
+
+        <div class="question">
+            <h3>13. Your characters are often placed under extreme pressure. Why?</h3>
+
+            <p>
+                When you put someone under extreme pressure, outside their comfort zone, you find out who they really are. That's when their values, their limits, and the decisions they're willing to make begin to emerge.
+            </p>
+
+            <p>
+                I'm particularly interested in what happens when someone is forced to confront situations they never imagined they'd have to face.
+            </p>
+        </div>
+
+        <div class="question">
+            <h3>14. What made you interested in characters driven by survival instinct?</h3>
+
+            <p>
+                The first time I really saw the appeal of that kind of character was when I watched <em>Black Hawk Down</em>.
+            </p>
+
+            <p>
+                That's when I realized how powerful it can be to put people in situations where they have to improvise and act on pure survival instinct. When someone is under constant pressure, their decisions can reveal a great deal about who they really are.
+            </p>
+        </div>
+
+        <div class="question">
+            <h3>15. What do you hope readers take away from <em>Do Not Come</em>?</h3>
+
+            <p>
+                Above all, I want readers to feel that their time was well spent and that they got something in return: a story that entertained them, but also left them with something to think about.
+            </p>
+
+            <p>
+                I'd like them to feel like they've been on a journey. And if they finish the book thinking, “Wow,” even better.
+            </p>
+        </div>
+
+        <div class="question">
+            <h3>16. When did you first start writing?</h3>
+
+            <p>
+                Interestingly enough, I think it started at school.
+            </p>
+
+            <p>
+                Sometimes we'd get punished by having to write stories about saints. The good part, as far as I was concerned, was simple: the sooner I finished, the sooner I could go out and play.
+            </p>
+
+            <p>
+                Whenever we could choose the subject, I usually wrote fiction. I could usually write a story in five minutes. I think that's probably where I first started writing.
+            </p>
+        </div>
+
+        <div class="question">
+            <h3>17. You have a strong cinematic quality in your writing. Does cinema influence you?</h3>
+
+            <p>
+                I love movies, but movies are expensive to make, and eventually the budget starts making decisions for you.
+            </p>
+
+            <p>
+                Writing is the closest thing to being God: there's no budget and no limit to what you can imagine. You can create a character, take them anywhere, and make almost anything happen.
+            </p>
+        </div>
+
+        <div class="question">
+            <h3>18. What have you learned about your own writing process?</h3>
+
+            <p>
+                I've learned that I don't have many rules.
+            </p>
+
+            <p>
+                I can build characters and situations without following the usual rules of a particular genre, and the story can still work. What matters to me is that the characters feel alive and have personalities of their own.
+            </p>
+
+            <p>
+                When that happens, they sometimes start doing things that surprise even me.
+            </p>
+        </div>
+
+        <div class="question">
+            <h3>19. What is the most rewarding part of being a writer?</h3>
+
+            <p>
+                The best part is knowing your characters can stay with someone for a while and, in some cases, even for the rest of their lives.
+            </p>
+
+            <p>
+                That's probably the most rewarding thing that can happen to a writer. With <em>Do Not Come</em>, Fred is one of the characters who tends to generate the most debate and the one readers often want to talk about.
+            </p>
+
+            <p>
+                To me, that's a good sign. It means the character has made it off the page and into the reader's mind.
+            </p>
+        </div>
+
+        <div class="question">
+            <h3>20. Is <em>Do Not Come</em> simply a thriller, or is there something more underneath?</h3>
+
+            <p>
+                I think there's always something more. In <em>Do Not Come</em>, there's also social criticism, black humor, and characters who aren't necessarily what they seem.
+            </p>
+
+            <p>
+                The thriller is the vehicle, but underneath it there's also a look at people, their ambitions, their decisions, and the consequences those decisions can have. I'm particularly interested in characters when they're under pressure and forced to confront things they never thought they were capable of doing.
+            </p>
+        </div>
+
+    </div>
+
+
+    <!-- SPANISH -->
+
+    <div class="interview" id="interview-es" style="display: none;">
+
+        <div class="question">
+            <h3>1. ¿De dónde surgió la idea de <em>No Vengáis</em>?</h3>
+
+            <p>
+                La idea surgió de un viaje que hice con unos amigos durante las vacaciones de Spring Break por México a principios de los años noventa. Algunos de los acontecimientos de la novela están inspirados en aquel viaje.
+            </p>
+
+            <p>
+                Después de pasar por un hotel bastante ruinoso, decidimos alojarnos en una especie de resort en medio de la nada. Estaba casi lleno de chicas que asistían a un congreso y nosotros éramos prácticamente los únicos extranjeros. La noche fue una locura.
+            </p>
+
+            <p>
+                Pero, precisamente por estar allí, aislados y rodeados de empleados mexicanos que nos observaban con cierta desconfianza, empecé a tener la sensación de que aquellas miradas no eran precisamente amistosas. Puede que el tequila tuviera algo que ver con mi percepción, pero recuerdo perfectamente aquella sensación.
+            </p>
+
+            <p>
+                En algún momento pensé: «Estamos solos. Saldremos vivos de aquí porque ellos quieren. Pero ¿qué ocurriría si dejaran de quererlo?».
+            </p>
+
+            <p>
+                Esa sensación de vulnerabilidad fue el verdadero germen de la novela. Aquella situación de peligro fue lo primero que escribí, casi sin parar. Después fui construyendo todo lo demás.
+            </p>
+        </div>
+
+        <div class="question">
+            <h3>2. ¿Algo de aquel viaje llegó realmente a la novela?</h3>
+
+            <p>
+                Sí. Hubo algunos momentos incómodos y tensos, aunque afortunadamente todos volvimos a casa sanos y salvos.
+            </p>
+
+            <p>
+                Lo interesante es que, con el tiempo, algunos de aquellos recuerdos se mezclaron con mi imaginación y acabaron encontrando su camino hacia la novela. La realidad fue el punto de partida, pero a partir de ahí entró en juego la ficción.
+            </p>
+        </div>
+
+        <div class="question">
+            <h3>3. La novela gira alrededor de tres amigos. ¿Por qué tres?</h3>
+
+            <p>
+                Porque, de alguna manera, esos tres amigos nacieron de aquel viaje. Las personas con las que viajé eran amigos míos y habíamos sido compañeros de universidad.
+            </p>
+
+            <p>
+                En aquel viaje ocurrieron muchas cosas disparatadas, pero afortunadamente conseguimos volver a casa. Años después empecé a pensar qué podría ocurrir si colocaba a tres amigos en una situación mucho más extrema.
+            </p>
+        </div>
+
+        <div class="question">
+            <h3>4. Has vivido y trabajado en diferentes partes del mundo. ¿Cómo influyó eso en la novela?</h3>
+
+            <p>
+                Influyó principalmente en los escenarios y en la forma de abordar los distintos países y personajes. Vivir en diferentes lugares te permite conocer de primera mano distintas formas de pensar y de comportarse.
+            </p>
+
+            <p>
+                Quería que los escenarios resultaran creíbles y que los personajes de diferentes países tuvieran también cierta autenticidad.
+            </p>
+        </div>
+
+        <div class="question">
+            <h3>5. ¿Por qué elegiste México como uno de los escenarios principales?</h3>
+
+            <p>
+                México es un país fascinante y, además, comparte una enorme frontera con Estados Unidos. Tenía muchos de los ingredientes que necesitaba para la historia.
+            </p>
+
+            <p>
+                También existía una conexión personal, ya que México estaba ligado a los propios orígenes de la novela.
+            </p>
+        </div>
+
+        <div class="question">
+            <h3>6. La novela aborda la inteligencia y las operaciones internacionales. ¿Qué te interesa de ese mundo?</h3>
+
+            <p>
+                Siempre me han interesado las relaciones y las operaciones entre Estados Unidos y el resto de América. Algunas operaciones salen bien y otras no, y a menudo hay consecuencias para personas que no tienen nada que ver con las decisiones que se toman.
+            </p>
+
+            <p>
+                Me interesa especialmente esa parte menos visible: las consecuencias y los daños colaterales que pueden quedar fuera de la versión oficial de los acontecimientos.
+            </p>
+        </div>
+
+        <div class="question">
+            <h3>7. ¿Qué escritores te han influido?</h3>
+
+            <p>
+                Siempre hay influencias, incluso cuando uno no es necesariamente consciente de ellas. Entre los escritores europeos, me gusta especialmente Pierre Lemaitre y su forma de abordar las historias y los personajes.
+            </p>
+
+            <p>
+                También he leído a muchos de los grandes autores clásicos de espionaje. Supongo que todo lo que lees acaba formando parte, de una manera u otra, de lo que escribes.
+            </p>
+        </div>
+
+        <div class="question">
+            <h3>8. ¿Cómo abordas la construcción de la trama?</h3>
+
+            <p>
+                Normalmente empiezo con la trama principal más o menos definida, pero después las historias secundarias empiezan a cobrar vida propia. Se cruzan con la historia principal y a veces llevan a los personajes por caminos que no había previsto.
+            </p>
+
+            <p>
+                Es algo que me gusta. Creo que a los lectores también les gusta cuando una historia se abre y toma giros inesperados.
+            </p>
+        </div>
+
+        <div class="question">
+            <h3>9. ¿Cómo desarrollaste a los tres personajes principales?</h3>
+
+            <p>
+                Me gustaba la idea de tener a tres personas muy diferentes que, al mismo tiempo, fueran muy buenos amigos.
+            </p>
+
+            <p>
+                Empecé con pequeños rasgos de personalidad y, a medida que la historia avanzaba, esos rasgos fueron creciendo. De alguna manera, los propios acontecimientos me ayudaron a descubrir quiénes eran realmente los personajes.
+            </p>
+        </div>
+
+        <div class="question">
+            <h3>10. ¿Cuál fue la parte más difícil de investigar?</h3>
+
+            <p>
+                Probablemente los aspectos médicos. Requirieron bastante investigación si quería que resultaran creíbles.
+            </p>
+
+            <p>
+                Cuando escribes sobre cuestiones técnicas, no puedes limitarte a imaginar cómo funcionan. Tienes que investigar y asegurarte de que lo que describes tiene sentido.
+            </p>
+        </div>
+
+        <div class="question">
+            <h3>11. ¿Hubo alguna parte del libro que disfrutaras especialmente escribiendo?</h3>
+
+            <p>
+                La parte de Nueva York fue probablemente la que más disfruté escribiendo.
+            </p>
+
+            <p>
+                Hay lugares y escenas que tienen una atmósfera que simplemente hace que resulte más agradable escribirlas. Nueva York fue uno de ellos.
+            </p>
+        </div>
+
+        <div class="question">
+            <h3>12. ¿Cuánta investigación hiciste sobre inteligencia y geopolítica?</h3>
+
+            <p>
+                Siempre me han interesado la geopolítica y el funcionamiento de los servicios de inteligencia, así que ya tenía curiosidad por esos temas.
+            </p>
+
+            <p>
+                Para esta novela hice una investigación especialmente intensa durante casi un año. Era importante comprender determinados aspectos antes de incorporarlos a la historia.
+            </p>
+        </div>
+
+        <div class="question">
+            <h3>13. Tus personajes suelen encontrarse bajo una enorme presión. ¿Por qué?</h3>
+
+            <p>
+                Cuando colocas a una persona en una situación extrema, fuera de su zona de confort, descubres realmente quién es. Es ahí donde aparecen sus valores, sus límites y las decisiones que está dispuesto a tomar.
+            </p>
+
+            <p>
+                Me interesa especialmente lo que ocurre cuando una persona se ve obligada a enfrentarse a situaciones para las que nunca se había preparado.
+            </p>
+        </div>
+
+        <div class="question">
+            <h3>14. ¿Qué hizo que te interesaran los personajes movidos por el instinto de supervivencia?</h3>
+
+            <p>
+                La primera vez que vi con claridad el atractivo de ese tipo de personajes fue viendo <em>Black Hawk Down</em> (<em>Black Hawk derribado</em>).
+            </p>
+
+            <p>
+                Entendí entonces que las situaciones en las que las personas tienen que improvisar y actuar casi por puro instinto de supervivencia tienen una enorme fuerza narrativa. Cuando alguien está bajo una presión constante, sus decisiones pueden revelar mucho sobre quién es realmente.
+            </p>
+        </div>
+
+        <div class="question">
+            <h3>15. ¿Qué esperas que se lleven los lectores de <em>No Vengáis</em>?</h3>
+
+            <p>
+                Sobre todo, que haya sentido que ha invertido bien su tiempo y que ha recibido algo a cambio: una historia que le ha entretenido, pero que también le haya dejado algo en lo que pensar.
+            </p>
+
+            <p>
+                Me gustaría que terminara el libro con una buena sensación, pensando que ha vivido un viaje. Y, si además acaba pensando «wow», mucho mejor.
+            </p>
+        </div>
+
+        <div class="question">
+            <h3>16. ¿Cuándo empezaste a escribir?</h3>
+
+            <p>
+                Curiosamente, creo que todo empezó en el colegio.
+            </p>
+
+            <p>
+                A veces nos castigaban obligándonos a escribir historias sobre santos. La parte buena, desde mi punto de vista, era sencilla: cuanto antes terminara, antes podía salir a jugar.
+            </p>
+
+            <p>
+                Cuando podíamos elegir el tema, normalmente escribía ficción y podía hacerlo muy rápido, a veces en cinco minutos. Creo que aquel fue, de alguna manera, el germen que me hizo escribir desde muy joven.
+            </p>
+        </div>
+
+        <div class="question">
+            <h3>17. Tu escritura tiene un marcado carácter cinematográfico. ¿Te influye el cine?</h3>
+
+            <p>
+                Me encanta el cine, pero hacer una película tiene unos costes enormes y, al final, siempre tienes que adaptar la historia a un presupuesto.
+            </p>
+
+            <p>
+                Escribir es lo más parecido a ser Dios: no hay límites económicos ni límites para la imaginación. Puedes crear un personaje, llevarlo a cualquier lugar y hacer que ocurra prácticamente cualquier cosa.
+            </p>
+        </div>
+
+        <div class="question">
+            <h3>18. ¿Qué has aprendido sobre tu propia forma de escribir?</h3>
+
+            <p>
+                He descubierto que no tengo demasiadas reglas.
+            </p>
+
+            <p>
+                Puedo crear personajes y situaciones sin seguir necesariamente las reglas rígidas de un género concreto y, aun así, la historia puede funcionar. Para mí lo importante es que los personajes parezcan vivos y tengan personalidad propia.
+            </p>
+
+            <p>
+                Cuando eso ocurre, a veces empiezan a hacer cosas que incluso me sorprenden a mí.
+            </p>
+        </div>
+
+        <div class="question">
+            <h3>19. ¿Cuál es la parte más gratificante de ser escritor?</h3>
+
+            <p>
+                Saber que tus personajes pueden acompañar a alguien durante un tiempo y, en algunos casos, incluso durante toda su vida.
+            </p>
+
+            <p>
+                Probablemente sea lo más gratificante que le puede ocurrir a un escritor. En <em>No Vengáis</em>, Fred es uno de los personajes que más controversia suele generar y del que los lectores suelen querer hablar.
+            </p>
+
+            <p>
+                Para mí, que un personaje pueda provocar ese tipo de conversaciones es una buena señal. Significa que ha conseguido salir de las páginas y permanecer durante un tiempo en la mente del lector.
+            </p>
+        </div>
+
+        <div class="question">
+            <h3>20. ¿Es <em>No Vengáis</em> simplemente un thriller o hay algo más debajo?</h3>
+
+            <p>
+                Creo que siempre hay algo más. En <em>No Vengáis</em> hay también crítica social, humor negro y personajes que no son necesariamente lo que parecen.
+            </p>
+
+            <p>
+                El thriller es el vehículo, pero debajo de la historia hay también una mirada sobre las personas, sus ambiciones, sus decisiones y las consecuencias que pueden tener. Me interesan especialmente los personajes cuando se encuentran bajo presión y tienen que enfrentarse a cosas que quizá nunca pensaron que serían capaces de hacer.
+            </p>
+        </div>
+
+    </div>
+
+
+    <div class="back-home">
+        <a href="index.html">Back to Home</a>
+    </div>
+
 </div>
 
 </section>
 
 
-<main class="content">
-
-<div class="article-header">
-
-<div class="label">Journal</div>
-
-<h2>
-<span id="english-title">From The Great Gatsby to <em>Do Not Come</em></span>
-<span id="spanish-title" style="display:none;">
-Del Gran Gatsby a <em>No Vengáis</em>
-</span>
-</h2>
-
-<div class="subtitle">
-
-<span id="english-subtitle">
-The Dark Side of the American Dream
-</span>
-
-<span id="spanish-subtitle" style="display:none;">
-El lado oscuro del sueño americano
-</span>
-
-</div>
-
-
-<div class="languages">
-
-<button
-class="language active"
-onclick="showLanguage('english', this)"
-aria-label="English">
-
-<svg class="flag" viewBox="0 0 60 40" xmlns="http://www.w3.org/2000/svg">
-
-<rect width="60" height="40" fill="#b22234"/>
-
-<path d="M0 4h60v4H0zm0 8h60v4H0zm0 8h60v4H0zm0 8h60v4H0z"
-fill="#fff"/>
-
-<rect width="28" height="22" fill="#3c3b6e"/>
-
-</svg>
-
-</button>
-
-
-<button
-class="language"
-onclick="showLanguage('spanish', this)"
-aria-label="Español">
-
-<svg class="flag" viewBox="0 0 60 40" xmlns="http://www.w3.org/2000/svg">
-
-<rect width="60" height="40" fill="#c60b1e"/>
-
-<rect y="10" width="60" height="20" fill="#ffc400"/>
-
-</svg>
-
-</button>
-
-</div>
-
-</div>
-
-
-<!-- ========================= -->
-<!-- ENGLISH -->
-<!-- ========================= -->
-
-<div id="english" class="language-content active">
-
-<article class="article">
-
-<p>
-The American Dream has always made me a little uneasy. Not because I think the idea is a bad one, but almost for the opposite reason. The possibility of changing your life, escaping the circumstances you were born into, and becoming someone different strikes me as one of the most compelling ideas a society can offer.
-</p>
-
-<p>
-It can also be one of the most dangerous.
-</p>
-
-<p>
-Because there is a big difference between being told that you can become anything you want and eventually feeling that you have to.
-</p>
-
-<p>
-If you grow up hearing that you can be anything, sooner or later you may start asking yourself why you haven't made it yet. And that is where one of the contradictions I find most interesting about the American Dream begins: it can be an extraordinary source of ambition, but it can also become a form of pressure.
-</p>
-
-<p>
-We are all shaped by the society we grow up in. From an early age, we learn what success is supposed to look like, even though nobody ever sits us down and explains it. We see it in our families, in movies, in advertising, in our friends, and in the people we admire.
-</p>
-
-<p>
-We learn that certain things mean you've made it: money, a good career, a house, recognition, power, or simply the feeling that you've achieved something other people consider important. We also learn what it means to fall behind.
-</p>
-
-<p>
-That pressure can produce very good things. It can make someone study harder, work harder, take risks, start a business, or move somewhere else and begin again. One of the most appealing ideas in America is precisely that your origins don't necessarily have to determine your future.
-</p>
-
-<p>
-But the same idea can take us in very different directions when it becomes an obsession.
-</p>
-
-<p>
-There is a difference between wanting to win and feeling that you have to win. Between wanting to improve your life and feeling that if you don't, you've failed as a person.
-</p>
-
-<p>
-Maybe that's why American literature and cinema have spent so much time exploring the American Dream and, above all, what happens when it begins to fall apart. If you look at some of the great stories American culture has produced over the past century, it's striking how often they return to the same questions: who gets the chance to become somebody, what are they willing to pay to get there, and what happens to those who are left outside?
-</p>
-
-<p>
-One of the first that comes to mind is <em>The Great Gatsby</em>, by F. Scott Fitzgerald. It's one of my favorite American novels and, to me, one of the works that best captures our fascination with reinventing ourselves.
-</p>
-
-<p>
-Gatsby doesn't simply want money. Money is the means by which he builds a new identity and enters a world that was once beyond his reach. He has reinvented himself because he refuses to accept that the person he was at the beginning of his life has to determine who he will become.
-</p>
-
-<p>
-At heart, he wants to become somebody.
-</p>
-
-<p>
-And maybe that's one of the keys to the American Dream. It isn't always about getting rich. Sometimes it's simply about escaping the person other people believe you are and becoming the person you've decided to be.
-</p>
-
-<p>
-But not everyone starts from the same place.
-</p>
-
-<p>
-I also think of <em>In Cold Blood</em>, by Truman Capote, another one of my favorite books and, to me, one of the masterpieces of American literature.
-</p>
-
-<p>
-The story is completely different from Gatsby's. There is a family in Kansas that has managed to build a stable life, and two men who arrive there and eventually murder them.
-</p>
-
-<p>
-It would be far too simple to explain Perry Smith and Richard Hickock's crimes as a direct consequence of frustration with the American Dream. Their motivations are more complicated than that. But Capote places two very different realities side by side: a family representing a certain idea of stability and prosperity, and two people looking at that world from the outside.
-</p>
-
-<p>
-The question that hangs over the story is an uncomfortable one: what happens when someone else's life becomes a permanent reminder of the life you never managed to have?
-</p>
-
-<p>
-It can produce ambition, frustration, resentment—and, under certain circumstances, something much worse.
-</p>
-
-<p>
-There is also a much more hopeful version of this idea in <em>Back to the Future</em>. Marty McFly discovers that his own existence depends on his parents meeting and falling in love, but he also discovers that his father is an insecure man who never became the person he might have been.
-</p>
-
-<p>
-When Marty returns to his own time, he finds a different family: his father has become a writer, his mother seems much happier, and everyone has a better life.
-</p>
-
-<p>
-I've always liked that idea. The American Dream doesn't have to be about money or power. It can also be the hope that someone finds the courage to change their life and that the change ends up benefiting an entire family.
-</p>
-
-<p>
-The movie takes the idea into the realm of fantasy, but the basic concept is very real: our lives aren't completely determined by where we come from.
-</p>
-
-<p>
-The problem begins when that possibility becomes an obligation.
-</p>
-
-<p>
-And perhaps social media has taken that pressure into completely new territory.
-</p>
-
-<p>
-For a long time, the American Dream was an idea associated with the United States. Today, we can live in Madrid, Mexico City, London, or Tokyo and spend much of our day looking at the same images of success: spectacular houses, cars, travel, restaurants, businesses, money, and people who seem to have figured out how to turn their lives into something extraordinary.
-</p>
-
-<p>
-The American Dream has gone global.
-</p>
-
-<p>
-You no longer have to live in the United States to want that life. You don't even have to consciously think about the American Dream. All you have to do is be connected.
-</p>
-
-<p>
-Social media didn't invent our need for recognition, but it has turned comparison into something constant and global. You used to be able to imagine that somewhere out there, people were living the life you wanted. Now those people show up on your phone every day.
-</p>
-
-<p>
-And they don't just show us what we could become. They constantly remind us of what we aren't yet.
-</p>
-
-<p>
-<em>Scarface</em> takes that idea to a much darker extreme. Tony Montana arrives with almost nothing and wants everything: money, power, and respect. What's interesting is that when he reaches a position that would have seemed impossible at the beginning, it still isn't enough. He needs more.
-</p>
-
-<p>
-The finish line never stays in the same place.
-</p>
-
-<p>
-Maybe because, in the end, what he's looking for isn't just money or power, but proof that he has left behind the place he came from and that nobody can ever put him back there.
-</p>
-
-<p>
-But there is an even darker possibility: what happens when someone stops believing that success has to be achieved by playing within the rules?
-</p>
-
-<p>
-The American Dream can be distorted into a simple imperative: win. If the goal is important enough, the path to getting there can begin to seem secondary. Ambition becomes entitlement, and entitlement becomes justification.
-</p>
-
-<p>
-That's where the dream can take the road to crime.
-</p>
-
-<p>
-Instead of studying harder, building something, taking a risk, or starting over, someone may decide they are entitled to take what they believe they deserve. Money becomes more important than the law. Power becomes more important than loyalty. Other people stop being people and become obstacles.
-</p>
-
-<p>
-This is one of the darkest ideas in crime stories: it's not simply that someone wants money or power. It's that they've convinced themselves they have a right to them.
-</p>
-
-<p>
-In that sense, the criminal path doesn't have to be the exact opposite of the American Dream. It can be a distorted version of it.
-</p>
-
-<p>
-<em>Natural Born Killers</em> takes the idea in another direction. Mickey and Mallory aren't simply criminals; they become a media phenomenon. Crime and fame become so intertwined that the killers' public image becomes part of the story itself.
-</p>
-
-<p>
-Seen from today, the movie is particularly interesting. The need to turn life into spectacle that Oliver Stone pushed to an extreme in the 1990s doesn't seem quite so distant anymore. Social media has made constant exposure and the need to be seen a normal part of our culture.
-</p>
-
-<p>
-And maybe that's the darkest version of the American Dream: when success stops being something you want and becomes something you believe you're entitled to.
-</p>
-
-<p>
-The dream itself doesn't have to be the problem. What matters is what happens when success becomes the only measure that counts, when losing becomes unbearable, and when the people who stand in our way become obstacles rather than people.
-</p>
-
-<p>
-That is where this idea becomes particularly interesting to me. The American Dream may have been born as an idea associated with the United States, but it no longer belongs exclusively to the United States. Global culture has made many of its promises recognizable everywhere: improving our lives, earning recognition, escaping our circumstances, and proving that we can go further than anyone expected.
-</p>
-
-<p>
-That can be a wonderful thing.
-</p>
-
-<p>
-But wanting a better life is not the same as needing to prove that your life is better than everyone else's.
-</p>
-
-<p>
-That tension was, in some ways, behind <em>Do Not Come</em> when I began writing it. The novel grew out of a simple question: what might a person be willing to do when they feel they can no longer afford to lose?
-</p>
-
-<p>
-The characters aren't all pursuing the same thing, but they share something important: they are caught between what they want to achieve and what they believe they have to achieve. Money, power, information, loyalty, and survival become tangled together, making it harder and harder to tell the difference between a necessary decision and one driven by ambition.
-</p>
-
-<p>
-And that's where the story becomes uncomfortable. In <em>Do Not Come</em>, nobody can change their situation without paying a price. Every character has something to lose, and as the pressure builds, their decisions stop being simply right or wrong. They become decisions about survival, power, fear, or pride. What begins as necessity can turn into obsession, and obsession can eventually justify almost anything.
-</p>
-
-<p>
-That's what interested me most while writing the novel: not so much what we would do if we had power, money, or information, but what we might be willing to do to get them when we feel our lives depend on it.
-</p>
-
-<p>
-That's why the American Dream fits so naturally into the world of <em>Do Not Come</em>. The novel isn't literally about the American Dream, but it does explore one of its most powerful ideas: the possibility of changing your position, escaping the circumstances you've been given, and becoming someone different.
-</p>
-
-<p>
-Only in a thriller, that promise comes with consequences.
-</p>
-
-<p>
-When ambition enters a world of secrets, intelligence, violence, and survival, every step forward can close a door behind you. Eventually, the question is no longer how much you're willing to risk to get what you want, but what part of yourself you're willing to lose.
-</p>
-
-<p>
-That's what interests me about ambition as a writer. There is nothing inherently wrong with wanting to improve your life or proving to yourself that you can accomplish something that once seemed difficult. Many of the things we admire in other people come from that same drive.
-</p>
-
-<p>
-And that's where the stories that interest me begin: people who want something and are willing to do more and more to get it, people who believe they can still change their fate, and people who need to prove something, perhaps even to themselves, without knowing when they should stop.
-</p>
-
-<p>
-I don't think the American Dream is a lie. In fact, its power probably comes precisely from the fact that it contains something deeply appealing: the idea that we aren't completely condemned to become whatever circumstances we were born into.
-</p>
-
-<p>
-But any dream can become a nightmare when achieving it stops being a possibility and starts feeling like an obligation.
-</p>
-
-<p>
-The American Dream tells us that we can become somebody.
-</p>
-
-<p>
-The darker question is who we will become.
-</p>
-
-<p class="signature">
-— R. B. Claymore
-</p>
-
-</article>
-
-</div>
-
-
-<!-- ========================= -->
-<!-- SPANISH -->
-<!-- ========================= -->
-
-<div id="spanish" class="language-content">
-
-<article class="article">
-
-<p>
-Siempre me ha producido cierta inquietud el sueño americano. No porque piense que la idea sea mala, sino casi por lo contrario. La posibilidad de cambiar de vida, escapar de las circunstancias en las que has nacido y llegar a convertirte en alguien diferente me parece una de las ideas más atractivas que puede ofrecer una sociedad.
-</p>
-
-<p>
-También una de las más peligrosas.
-</p>
-
-<p>
-Porque una cosa es que te digan que puedes llegar a ser lo que quieras y otra bastante diferente es que acabes sintiendo que tienes la obligación de conseguirlo.
-</p>
-
-<p>
-Si creces escuchando que puedes llegar a ser cualquier cosa, tarde o temprano puedes empezar a preguntarte por qué todavía no lo has conseguido. Y ahí aparece una de las contradicciones que más me interesan del sueño americano: puede ser una fuente extraordinaria de ambición, pero también puede convertirse en una forma de presión.
-</p>
-
-<p>
-Todos estamos condicionados por la sociedad en la que crecemos. Desde pequeños aprendemos qué aspecto tiene el éxito, aunque nadie se siente delante de nosotros para explicárnoslo. Lo vemos en nuestras familias, en las películas, en los anuncios, en nuestros amigos y en las personas que admiramos.
-</p>
-
-<p>
-Aprendemos que determinadas cosas significan que has triunfado: dinero, una buena profesión, una casa, reconocimiento, poder o simplemente la sensación de que has conseguido algo que los demás consideran importante. También aprendemos qué significa quedarse atrás.
-</p>
-
-<p>
-Esa presión puede producir cosas muy buenas. Puede hacer que una persona estudie más, trabaje más, arriesgue, monte un negocio o se marche a otro lugar para empezar de nuevo. Una de las ideas más atractivas de Estados Unidos es precisamente esa: que tu origen no tiene por qué determinar tu destino.
-</p>
-
-<p>
-Pero la misma idea puede llevarnos por caminos muy diferentes cuando se convierte en una obsesión.
-</p>
-
-<p>
-Existe una diferencia entre querer ganar y sentir que tienes que ganar. Entre querer mejorar tu vida y sentir que, si no lo consigues, has fracasado como persona.
-</p>
-
-<p>
-Quizá por eso la literatura y el cine americanos llevan tanto tiempo hablando del sueño americano y, sobre todo, de lo que ocurre cuando ese sueño empieza a romperse. Si uno mira algunas de las grandes historias que ha producido la cultura americana durante el último siglo, resulta curioso comprobar hasta qué punto muchas de ellas vuelven sobre las mismas preguntas: quién tiene la oportunidad de convertirse en alguien, qué precio está dispuesto a pagar para conseguirlo y qué ocurre con quienes se quedan fuera.
-</p>
-
-<p>
-Una de las primeras que me viene a la cabeza es <em>The Great Gatsby</em>, de F. Scott Fitzgerald. Es una de mis novelas americanas favoritas y, para mí, una de las obras que mejor ha retratado la fascinación por reinventarse.
-</p>
-
-<p>
-Gatsby no quiere solamente dinero. El dinero es el medio para construir una nueva identidad y entrar en un mundo que antes estaba fuera de su alcance. Se ha inventado a sí mismo porque no está dispuesto a aceptar que la persona que fue al principio de su vida tenga que determinar quién será después.
-</p>
-
-<p>
-En el fondo, quiere convertirse en alguien.
-</p>
-
-<p>
-Y quizá esa sea una de las claves del sueño americano. No siempre consiste en hacerse rico. A veces consiste simplemente en escapar de la persona que los demás creen que eres y convertirte en la que tú has decidido ser.
-</p>
-
-<p>
-Pero no todos empiezan desde el mismo lugar.
-</p>
-
-<p>
-Pienso también en <em>In Cold Blood</em>, de Truman Capote, otro de mis libros favoritos y, para mí, una de las obras maestras de la literatura americana.
-</p>
-
-<p>
-La historia es completamente diferente a la de Gatsby. Hay una familia de Kansas que ha conseguido construir una vida estable y dos hombres que llegan hasta allí y terminan asesinándola.
-</p>
-
-<p>
-Sería demasiado sencillo explicar los crímenes de Perry Smith y Richard Hickock como una consecuencia directa de la frustración ante el sueño americano. Sus motivaciones son más complejas. Pero Capote coloca frente a frente dos realidades muy diferentes: una familia que representa cierta idea de estabilidad y prosperidad y dos personas que contemplan ese mundo desde fuera.
-</p>
-
-<p>
-La pregunta que queda en el aire es incómoda: ¿qué ocurre cuando la vida de otra persona se convierte en un recordatorio permanente de la vida que tú no has conseguido tener?
-</p>
-
-<p>
-Puede producir ambición, frustración, resentimiento y, en determinadas circunstancias, algo mucho peor.
-</p>
-
-<p>
-También hay una versión mucho más amable de esta idea en <em>Regreso al futuro</em>. Marty McFly descubre que su propia existencia depende de que sus padres se conozcan y se enamoren, pero también que su padre es un hombre inseguro que nunca ha llegado a convertirse en la persona que podría haber sido.
-</p>
-
-<p>
-Cuando Marty regresa a su época, encuentra una familia diferente: su padre se ha convertido en escritor, su madre parece mucho más feliz y todos tienen una vida mejor.
-</p>
-
-<p>
-Siempre me ha gustado esa idea. El sueño americano no tiene por qué ser solamente dinero o poder. También puede ser la esperanza de que una persona encuentre el valor para cambiar su vida y que ese cambio termine beneficiando a toda una familia.
-</p>
-
-<p>
-La película lleva la idea al terreno de la fantasía, pero el concepto de fondo es bastante real: nuestras vidas no están completamente determinadas por el lugar del que venimos.
-</p>
-
-<p>
-El problema aparece cuando esa posibilidad se convierte en una obligación.
-</p>
-
-<p>
-Y quizá las redes sociales hayan llevado esa presión a un terreno completamente nuevo.
-</p>
-
-<p>
-Durante mucho tiempo, el sueño americano fue una idea asociada a Estados Unidos. Hoy podemos vivir en Madrid, Ciudad de México, Londres o Tokio y pasar buena parte del día viendo las mismas imágenes de éxito: casas espectaculares, coches, viajes, restaurantes, negocios, dinero y personas que parecen haber encontrado la fórmula para convertir su vida en algo extraordinario.
-</p>
-
-<p>
-El sueño americano se ha globalizado.
-</p>
-
-<p>
-Ya no hace falta vivir en Estados Unidos para querer esa vida. Ni siquiera hace falta pensar conscientemente en el sueño americano. Basta con estar conectado.
-</p>
-
-<p>
-Las redes sociales no han inventado la necesidad de reconocimiento, pero han convertido la comparación en algo constante y global. Antes podías imaginar que en algún lugar había personas viviendo la vida que tú querías. Ahora esas personas aparecen todos los días en tu teléfono.
-</p>
-
-<p>
-Y no solo nos enseñan lo que podemos llegar a ser. También nos recuerdan constantemente lo que todavía no somos.
-</p>
-
-<p>
-<em>Scarface</em> lleva esa idea hasta un extremo mucho más oscuro. Tony Montana llega prácticamente sin nada y quiere conseguirlo todo: dinero, poder y respeto. Lo interesante es que cuando alcanza una posición que al principio habría parecido imposible, tampoco resulta suficiente. Necesita más.
-</p>
-
-<p>
-La línea de meta nunca permanece en el mismo sitio.
-</p>
-
-<p>
-Quizá porque, en realidad, lo que busca no es solamente dinero o poder, sino una prueba de que ha dejado atrás el lugar del que venía y de que nadie puede volver a colocarlo allí.
-</p>
-
-<p>
-Pero existe una posibilidad todavía más oscura: ¿qué ocurre cuando alguien deja de creer que el éxito tiene que conseguirse respetando las reglas?
-</p>
-
-<p>
-El sueño americano puede deformarse hasta convertirse en una orden sencilla: ganar. Si el objetivo es suficientemente importante, el camino para llegar hasta él puede empezar a parecer secundario. La ambición puede convertirse en derecho adquirido, y ese derecho en una justificación.
-</p>
-
-<p>
-Ahí es donde el sueño puede tomar el camino del crimen.
-</p>
-
-<p>
-En lugar de estudiar más, construir algo, asumir un riesgo o empezar de nuevo, alguien puede decidir que tiene derecho a quedarse con aquello que cree que merece. El dinero se vuelve más importante que la ley. El poder, más importante que la lealtad. Y las demás personas dejan de ser personas para convertirse en obstáculos.
-</p>
-
-<p>
-Esta es una de las ideas más oscuras que aparecen en muchas historias criminales: no se trata simplemente de que alguien quiera dinero o poder, sino de que ha conseguido convencerse de que tiene derecho a ellos.
-</p>
-
-<p>
-En ese sentido, el camino del crimen no tiene por qué ser exactamente lo contrario del sueño americano. Puede ser una versión deformada del mismo.
-</p>
-
-<p>
-<em>Natural Born Killers</em> lleva esa idea en otra dirección. Mickey y Mallory no son simplemente criminales; se convierten en un fenómeno mediático. El crimen y la fama terminan mezclándose hasta el punto de que la propia imagen pública de los asesinos forma parte de la historia.
-</p>
-
-<p>
-Vista desde hoy, la película resulta especialmente interesante. La necesidad de convertir la vida en espectáculo que Oliver Stone llevaba al extremo en los noventa ya no parece tan lejana. Las redes sociales han convertido la exposición permanente y la necesidad de ser visto en una parte normal de nuestra cultura.
-</p>
-
-<p>
-Y quizá ahí aparece la versión más oscura del sueño americano: cuando el éxito deja de ser algo que quieres y empieza a convertirse en algo que crees que te corresponde.
-</p>
-
-<p>
-El sueño en sí mismo no tiene por qué ser el problema. Lo preocupante es lo que ocurre cuando el éxito se convierte en la única medida que importa, cuando perder resulta insoportable y cuando las personas que se interponen en nuestro camino dejan de ser personas para convertirse en obstáculos.
-</p>
-
-<p>
-Ahí es donde esta idea empieza a interesarme especialmente. El sueño americano nació asociado a Estados Unidos, pero ya no pertenece exclusivamente a Estados Unidos. La cultura global ha hecho que muchas de sus promesas sean reconocibles en cualquier lugar: mejorar nuestra vida, conseguir reconocimiento, escapar de nuestras circunstancias y demostrar que podemos llegar más lejos de lo que otros esperaban.
-</p>
-
-<p>
-Eso puede ser algo maravilloso.
-</p>
-
-<p>
-Pero querer una vida mejor no es lo mismo que necesitar demostrar que tu vida es mejor que la de los demás.
-</p>
-
-<p>
-Esa tensión estaba, de alguna manera, detrás de <em>Do Not Come</em> cuando empecé a escribirla. La novela nació de una pregunta bastante sencilla: ¿qué puede llegar a hacer una persona cuando siente que ya no puede permitirse perder?
-</p>
-
-<p>
-Los personajes no persiguen todos lo mismo, pero comparten algo importante: están atrapados entre lo que quieren conseguir y lo que creen que tienen que conseguir. El dinero, el poder, la información, la lealtad y la supervivencia se mezclan hasta hacer cada vez más difícil distinguir entre una decisión necesaria y una decisión impulsada por la ambición.
-</p>
-
-<p>
-Y ahí es donde la historia empieza a ponerse incómoda. En <em>Do Not Come</em>, nadie puede cambiar su situación sin pagar algún precio. Cada personaje tiene algo que perder y, a medida que aumenta la presión, sus decisiones dejan de ser simplemente buenas o malas. Se convierten en decisiones de supervivencia, de poder, de miedo o de orgullo. Lo que empieza como una necesidad puede terminar convirtiéndose en una obsesión, y una obsesión puede acabar justificando casi cualquier cosa.
-</p>
-
-<p>
-Eso es lo que más me interesaba explorar mientras escribía la novela: no tanto qué haríamos si tuviéramos poder, dinero o información, sino qué estaríamos dispuestos a hacer para conseguirlos cuando sentimos que nuestra vida depende de ello.
-</p>
-
-<p>
-Por eso el sueño americano encaja de una manera tan natural con el mundo de <em>Do Not Come</em>. La novela no habla literalmente del sueño americano, pero sí de una de sus ideas más poderosas: la posibilidad de cambiar de posición, de escapar de las circunstancias que te han tocado y de convertirte en alguien diferente.
-</p>
-
-<p>
-Solo que en un thriller esa promesa tiene consecuencias.
-</p>
-
-<p>
-Cuando la ambición entra en un mundo de secretos, inteligencia, violencia y supervivencia, cada paso hacia delante puede cerrar una puerta detrás de ti. Y llega un momento en el que la pregunta ya no es cuánto estás dispuesto a arriesgar para conseguir lo que quieres, sino qué parte de ti estás dispuesto a perder.
-</p>
-
-<p>
-Eso es lo que me interesa de la ambición como escritor. No hay nada malo, en principio, en querer mejorar tu vida o demostrarte a ti mismo que eres capaz de conseguir algo que parecía difícil. Muchas de las cosas que admiramos en otras personas nacen de esa misma voluntad.
-</p>
-
-<p>
-Y ahí es donde empiezan las historias que me interesan: personas que quieren algo y están dispuestas a hacer cada vez más para conseguirlo, personas que creen que todavía pueden cambiar su destino y personas que necesitan demostrar algo, quizá incluso a sí mismas, sin saber cuándo deberían parar.
-</p>
-
-<p>
-No creo que el sueño americano sea una mentira. De hecho, probablemente su fuerza provenga precisamente de que contiene algo profundamente atractivo: la idea de que no estamos completamente condenados a ser aquello que nos ha tocado al nacer.
-</p>
-
-<p>
-Pero cualquier sueño puede convertirse en una pesadilla cuando conseguirlo deja de ser una posibilidad y empieza a sentirse como una obligación.
-</p>
-
-<p>
-El sueño americano nos dice que podemos convertirnos en alguien.
-</p>
-
-<p>
-La pregunta más oscura es quién acabaremos siendo.
-</p>
-
-<p class="signature">
-— R. B. Claymore
-</p>
-
-</article>
-
-</div>
-
-
-<div class="back-home">
-<a href="index.html">Back to Home</a>
-</div>
-
-</main>
-
-
 <footer>
-© 2026 R. B. Claymore. All rights reserved.
+    © R. B. Claymore. All rights reserved.
 </footer>
 
 
 <script>
-function showLanguage(language, button) {
 
-    var english = document.getElementById("english");
-    var spanish = document.getElementById("spanish");
+function showInterview(language) {
 
-    var englishTitle = document.getElementById("english-title");
-    var spanishTitle = document.getElementById("spanish-title");
+    const englishInterview = document.getElementById("interview-en");
+    const spanishInterview = document.getElementById("interview-es");
+    const buttons = document.querySelectorAll(".language-button");
 
-    var englishSubtitle = document.getElementById("english-subtitle");
-    var spanishSubtitle = document.getElementById("spanish-subtitle");
+    if (language === "en") {
 
-    var buttons = document.querySelectorAll(".language");
+        englishInterview.style.display = "block";
+        spanishInterview.style.display = "none";
 
-    if (language === "english") {
-
-        english.classList.add("active");
-        spanish.classList.remove("active");
-
-        englishTitle.style.display = "inline";
-        spanishTitle.style.display = "none";
-
-        englishSubtitle.style.display = "inline";
-        spanishSubtitle.style.display = "none";
+        buttons[0].classList.add("active");
+        buttons[1].classList.remove("active");
 
         document.documentElement.lang = "en";
 
     } else {
 
-        english.classList.remove("active");
-        spanish.classList.add("active");
+        englishInterview.style.display = "none";
+        spanishInterview.style.display = "block";
 
-        englishTitle.style.display = "none";
-        spanishTitle.style.display = "inline";
-
-        englishSubtitle.style.display = "none";
-        spanishSubtitle.style.display = "inline";
+        buttons[0].classList.remove("active");
+        buttons[1].classList.add("active");
 
         document.documentElement.lang = "es";
     }
-
-    for (var i = 0; i < buttons.length; i++) {
-        buttons[i].classList.remove("active");
-    }
-
-    button.classList.add("active");
 }
+
 </script>
 
 </body>
