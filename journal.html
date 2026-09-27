@@ -6,15 +6,9 @@
 
 <title>Journal | R. B. Claymore</title>
 
-<meta name="description" content="Stories, reflections and essays from R. B. Claymore, author of dark psychological and action thrillers.">
-<meta name="author" content="R. B. Claymore">
-<meta name="robots" content="index, follow">
-
-<link rel="canonical" href="https://www.rbclaymore.com/journal.html">
-<link rel="icon" href="/favicon.png">
+<meta name="description" content="Journal by R. B. Claymore — thoughts on thrillers, crime, ambition, power and the darker side of the American Dream.">
 
 <style>
-
 * {
     box-sizing: border-box;
 }
@@ -33,15 +27,11 @@ body {
 /* HEADER */
 
 header {
-    position: absolute;
-    top: 0;
-    left: 0;
     width: 100%;
     padding: 28px 5%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    z-index: 10;
 }
 
 .logo {
@@ -49,21 +39,21 @@ header {
     text-decoration: none;
     font-size: 18px;
     letter-spacing: 3px;
-    font-weight: 500;
 }
 
 nav {
     display: flex;
     gap: 28px;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 nav a {
-    color: #ddd;
+    color: #ccc;
     text-decoration: none;
     font-size: 13px;
     letter-spacing: 1.5px;
     text-transform: uppercase;
-    transition: color 0.3s ease;
 }
 
 nav a:hover {
@@ -73,27 +63,30 @@ nav a:hover {
 /* HERO */
 
 .hero {
-    min-height: 58vh;
+    min-height: 45vh;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-    padding: 120px 20px 80px;
-
-    background:
-        radial-gradient(circle at center, #202020 0%, #0d0d0d 45%, #080808 75%);
+    padding: 80px 20px;
+    background: radial-gradient(
+        circle at center,
+        #202020 0%,
+        #0d0d0d 50%,
+        #080808 80%
+    );
 }
 
 .hero h1 {
     margin: 0;
-    font-size: clamp(48px, 8vw, 100px);
+    font-size: clamp(48px, 8vw, 96px);
     font-weight: 400;
     letter-spacing: 8px;
 }
 
 .hero p {
     margin-top: 22px;
-    color: #aaa;
+    color: #999;
     font-size: 14px;
     letter-spacing: 3px;
     text-transform: uppercase;
@@ -104,20 +97,20 @@ nav a:hover {
 .content {
     max-width: 900px;
     margin: 0 auto;
-    padding: 100px 30px;
+    padding: 90px 30px;
 }
 
 .article-header {
     text-align: center;
-    margin-bottom: 75px;
+    margin-bottom: 70px;
 }
 
 .label {
-    color: #888;
+    color: #777;
     font-size: 12px;
     letter-spacing: 3px;
     text-transform: uppercase;
-    margin-bottom: 25px;
+    margin-bottom: 22px;
 }
 
 .article-header h2 {
@@ -134,36 +127,41 @@ nav a:hover {
     font-style: italic;
 }
 
-/* LANGUAGES */
+/* LANGUAGE BUTTONS */
 
 .languages {
     display: flex;
     justify-content: center;
-    gap: 14px;
-    margin-top: 35px;
+    gap: 12px;
+    margin-top: 30px;
 }
 
 .language {
-    width: 34px;
-    height: 24px;
-    border: 1px solid #444;
-    background: transparent;
+    width: 42px;
+    height: 28px;
     padding: 0;
+    background: transparent;
+    border: 1px solid #444;
     cursor: pointer;
     opacity: 0.45;
-    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.language:hover,
 .language.active {
     opacity: 1;
     border-color: #aaa;
 }
 
-.language svg {
+.language:hover {
+    opacity: 1;
+}
+
+.flag {
+    width: 28px;
+    height: 19px;
     display: block;
-    width: 100%;
-    height: 100%;
 }
 
 /* ARTICLE */
@@ -173,8 +171,14 @@ nav a:hover {
     margin: 0 auto;
 }
 
+.article h3 {
+    margin: 55px 0 20px;
+    font-size: 22px;
+    font-weight: 500;
+}
+
 .article p {
-    margin: 0 0 27px;
+    margin: 0 0 25px;
     color: #ccc;
     font-size: 16px;
     line-height: 1.9;
@@ -184,21 +188,11 @@ nav a:hover {
     color: #ddd;
 }
 
-.article .closing {
-    margin-top: 55px;
-    color: #aaa;
-    text-align: right;
+.signature {
+    margin-top: 50px !important;
+    color: #eee !important;
     font-style: italic;
 }
-
-.separator {
-    width: 80px;
-    height: 1px;
-    background: #333;
-    margin: 75px auto;
-}
-
-/* LANGUAGE CONTENT */
 
 .language-content {
     display: none;
@@ -212,7 +206,7 @@ nav a:hover {
 
 .back-home {
     text-align: center;
-    margin-top: 100px;
+    margin-top: 90px;
 }
 
 .back-home a {
@@ -224,7 +218,6 @@ nav a:hover {
     font-size: 12px;
     letter-spacing: 2px;
     text-transform: uppercase;
-    transition: all 0.3s ease;
 }
 
 .back-home a:hover {
@@ -255,8 +248,6 @@ footer {
 
     nav {
         gap: 15px;
-        flex-wrap: wrap;
-        justify-content: center;
     }
 
     nav a {
@@ -264,8 +255,7 @@ footer {
     }
 
     .hero {
-        min-height: 50vh;
-        padding-top: 150px;
+        min-height: 40vh;
     }
 
     .hero h1 {
@@ -273,20 +263,14 @@ footer {
     }
 
     .content {
-        padding: 70px 22px;
-    }
-
-    .article-header {
-        margin-bottom: 60px;
+        padding: 65px 22px;
     }
 
     .article p {
         font-size: 15px;
         line-height: 1.85;
     }
-
 }
-
 </style>
 </head>
 
@@ -294,663 +278,669 @@ footer {
 
 <header>
 
-    <a href="index.html" class="logo">R. B. CLAYMORE</a>
+<a href="index.html" class="logo">R. B. CLAYMORE</a>
 
-    <nav>
-        <a href="books.html">Books</a>
-        <a href="about.html">About</a>
-        <a href="journal.html">Journal</a>
-        <a href="interviews.html">Interviews</a>
-        <a href="contact.html">Contact</a>
-    </nav>
+<nav>
+<a href="books.html">Books</a>
+<a href="about.html">About</a>
+<a href="journal.html">Journal</a>
+<a href="interviews.html">Interviews</a>
+<a href="contact.html">Contact</a>
+</nav>
 
 </header>
 
 
 <section class="hero">
 
-    <div>
-        <h1>JOURNAL</h1>
-        <p>Stories, ideas and reflections</p>
-    </div>
+<div>
+<h1>JOURNAL</h1>
+<p>Thoughts, stories and reflections</p>
+</div>
 
 </section>
 
 
 <main class="content">
 
-    <div class="article-header">
+<div class="article-header">
 
-        <div class="label">Essay</div>
+<div class="label">Journal</div>
 
-        <h2>From <em>The Great Gatsby</em> to <em>Do Not Come</em></h2>
+<h2>
+<span id="english-title">From The Great Gatsby to <em>Do Not Come</em></span>
+<span id="spanish-title" style="display:none;">
+Del Gran Gatsby a <em>No Vengáis</em>
+</span>
+</h2>
 
-        <div class="subtitle">
-            The Dark Side of the American Dream
-        </div>
+<div class="subtitle">
 
+<span id="english-subtitle">
+The Dark Side of the American Dream
+</span>
 
-        <div class="languages">
+<span id="spanish-subtitle" style="display:none;">
+El lado oscuro del sueño americano
+</span>
 
-            <!-- USA FLAG -->
+</div>
 
-            <button class="language active"
-                    onclick="showLanguage('en', this)"
-                    aria-label="English">
 
-                <svg viewBox="0 0 60 40"
-                     xmlns="http://www.w3.org/2000/svg">
+<div class="languages">
 
-                    <rect width="60" height="40" fill="#fff"/>
+<button
+class="language active"
+onclick="showLanguage('english', this)"
+aria-label="English">
 
-                    <rect y="0" width="60" height="3.08" fill="#b22234"/>
-                    <rect y="6.15" width="60" height="3.08" fill="#b22234"/>
-                    <rect y="12.3" width="60" height="3.08" fill="#b22234"/>
-                    <rect y="18.45" width="60" height="3.08" fill="#b22234"/>
-                    <rect y="24.6" width="60" height="3.08" fill="#b22234"/>
-                    <rect y="30.75" width="60" height="3.08" fill="#b22234"/>
-                    <rect y="36.9" width="60" height="3.1" fill="#b22234"/>
+<svg class="flag" viewBox="0 0 60 40" xmlns="http://www.w3.org/2000/svg">
 
-                    <rect width="24" height="21.5" fill="#3c3b6e"/>
+<rect width="60" height="40" fill="#b22234"/>
 
-                    <g fill="#fff">
-                        <circle cx="3" cy="3" r="0.9"/>
-                        <circle cx="8" cy="3" r="0.9"/>
-                        <circle cx="13" cy="3" r="0.9"/>
-                        <circle cx="18" cy="3" r="0.9"/>
+<path d="M0 4h60v4H0zm0 8h60v4H0zm0 8h60v4H0zm0 8h60v4H0z"
+fill="#fff"/>
 
-                        <circle cx="5.5" cy="6.5" r="0.9"/>
-                        <circle cx="10.5" cy="6.5" r="0.9"/>
-                        <circle cx="15.5" cy="6.5" r="0.9"/>
-                        <circle cx="20.5" cy="6.5" r="0.9"/>
+<rect width="28" height="22" fill="#3c3b6e"/>
 
-                        <circle cx="3" cy="10" r="0.9"/>
-                        <circle cx="8" cy="10" r="0.9"/>
-                        <circle cx="13" cy="10" r="0.9"/>
-                        <circle cx="18" cy="10" r="0.9"/>
+</svg>
 
-                        <circle cx="5.5" cy="13.5" r="0.9"/>
-                        <circle cx="10.5" cy="13.5" r="0.9"/>
-                        <circle cx="15.5" cy="13.5" r="0.9"/>
-                        <circle cx="20.5" cy="13.5" r="0.9"/>
+</button>
 
-                        <circle cx="3" cy="17" r="0.9"/>
-                        <circle cx="8" cy="17" r="0.9"/>
-                        <circle cx="13" cy="17" r="0.9"/>
-                        <circle cx="18" cy="17" r="0.9"/>
-                    </g>
 
-                </svg>
+<button
+class="language"
+onclick="showLanguage('spanish', this)"
+aria-label="Español">
 
-            </button>
+<svg class="flag" viewBox="0 0 60 40" xmlns="http://www.w3.org/2000/svg">
 
+<rect width="60" height="40" fill="#c60b1e"/>
 
-            <!-- SPAIN FLAG -->
+<rect y="10" width="60" height="20" fill="#ffc400"/>
 
-            <button class="language"
-                    onclick="showLanguage('es', this)"
-                    aria-label="Español">
+</svg>
 
-                <svg viewBox="0 0 60 40"
-                     xmlns="http://www.w3.org/2000/svg">
+</button>
 
-                    <rect width="60" height="40" fill="#aa151b"/>
-                    <rect y="10" width="60" height="20" fill="#f1bf00"/>
+</div>
 
-                </svg>
+</div>
 
-            </button>
 
-        </div>
+<!-- ========================= -->
+<!-- ENGLISH -->
+<!-- ========================= -->
 
-    </div>
+<div id="english" class="language-content active">
 
+<article class="article">
 
-    <!-- ========================= -->
-    <!-- ENGLISH -->
-    <!-- ========================= -->
+<p>
+The American Dream has always made me a little uneasy. Not because I think the idea is a bad one, but almost for the opposite reason. The possibility of changing your life, escaping the circumstances you were born into, and becoming someone different strikes me as one of the most compelling ideas a society can offer.
+</p>
 
-    <div id="en" class="language-content active">
+<p>
+It can also be one of the most dangerous.
+</p>
 
-        <article class="article">
+<p>
+Because there is a big difference between being told that you can become anything you want and eventually feeling that you have to.
+</p>
 
-            <p>
-                The American Dream has always made me a little uneasy. Not because I think the idea is a bad one, but almost for the opposite reason. The possibility of changing your life, escaping the circumstances you were born into, and becoming someone different strikes me as one of the most compelling ideas a society can offer.
-            </p>
+<p>
+If you grow up hearing that you can be anything, sooner or later you may start asking yourself why you haven't made it yet. And that is where one of the contradictions I find most interesting about the American Dream begins: it can be an extraordinary source of ambition, but it can also become a form of pressure.
+</p>
 
-            <p>
-                It can also be one of the most dangerous.
-            </p>
-
-            <p>
-                Because there is a big difference between being told that you can become anything you want and eventually feeling that you have to.
-            </p>
-
-            <p>
-                If you grow up hearing that you can be anything, sooner or later you may start asking yourself why you haven't made it yet. And that is where one of the contradictions I find most interesting about the American Dream begins: it can be an extraordinary source of ambition, but it can also become a form of pressure.
-            </p>
-
-            <p>
-                We are all shaped by the society we grow up in. From an early age, we learn what success is supposed to look like, even though nobody ever sits us down and explains it. We see it in our families, in movies, in advertising, in our friends, and in the people we admire.
-            </p>
-
-            <p>
-                We learn that certain things mean you've made it: money, a good career, a house, recognition, power, or simply the feeling that you've achieved something other people consider important. We also learn what it means to fall behind.
-            </p>
-
-            <p>
-                That pressure can produce very good things. It can make someone study harder, work harder, take risks, start a business, or move somewhere else and begin again. One of the most appealing ideas in America is precisely that your origins don't necessarily have to determine your future.
-            </p>
-
-            <p>
-                But the same idea can take us in very different directions when it becomes an obsession.
-            </p>
-
-            <p>
-                There is a difference between wanting to win and feeling that you have to win. Between wanting to improve your life and feeling that if you don't, you've failed as a person.
-            </p>
-
-            <p>
-                Maybe that's why American literature and cinema have spent so much time exploring the American Dream and, above all, what happens when it begins to fall apart. If you look at some of the great stories American culture has produced over the past century, it's striking how often they return to the same questions: who gets the chance to become somebody, what are they willing to pay to get there, and what happens to those who are left outside?
-            </p>
-
-            <p>
-                One of the first that comes to mind is <em>The Great Gatsby</em>, by F. Scott Fitzgerald. It's one of my favorite American novels and, to me, one of the works that best captures our fascination with reinventing ourselves.
-            </p>
-
-            <p>
-                Gatsby doesn't simply want money. Money is the means by which he builds a new identity and enters a world that was once beyond his reach. He has reinvented himself because he refuses to accept that the person he was at the beginning of his life has to determine who he will become.
-            </p>
-
-            <p>
-                At heart, he wants to become somebody.
-            </p>
-
-            <p>
-                And maybe that's one of the keys to the American Dream. It isn't always about getting rich. Sometimes it's simply about escaping the person other people believe you are and becoming the person you've decided to be.
-            </p>
-
-            <p>
-                But not everyone starts from the same place.
-            </p>
-
-            <p>
-                I also think of <em>In Cold Blood</em>, by Truman Capote, another one of my favorite books and, to me, one of the masterpieces of American literature.
-            </p>
-
-            <p>
-                The story is completely different from Gatsby's. There is a family in Kansas that has managed to build a stable life, and two men who arrive there and eventually murder them.
-            </p>
-
-            <p>
-                It would be far too simple to explain Perry Smith and Richard Hickock's crimes as a direct consequence of frustration with the American Dream. Their motivations are more complicated than that. But Capote places two very different realities side by side: a family representing a certain idea of stability and prosperity, and two people looking at that world from the outside.
-            </p>
-
-            <p>
-                The question that hangs over the story is an uncomfortable one: what happens when someone else's life becomes a permanent reminder of the life you never managed to have?
-            </p>
-
-            <p>
-                It can produce ambition, frustration, resentment—and, under certain circumstances, something much worse.
-            </p>
-
-            <p>
-                There is also a much more hopeful version of this idea in <em>Back to the Future</em>. Marty McFly discovers that his own existence depends on his parents meeting and falling in love, but he also discovers that his father is an insecure man who never became the person he might have been.
-            </p>
-
-            <p>
-                When Marty returns to his own time, he finds a different family: his father has become a writer, his mother seems much happier, and everyone has a better life.
-            </p>
-
-            <p>
-                I've always liked that idea. The American Dream doesn't have to be about money or power. It can also be the hope that someone finds the courage to change their life and that the change ends up benefiting an entire family.
-            </p>
-
-            <p>
-                The movie takes the idea into the realm of fantasy, but the basic concept is very real: our lives aren't completely determined by where we come from.
-            </p>
-
-            <p>
-                The problem begins when that possibility becomes an obligation.
-            </p>
-
-            <p>
-                And perhaps social media has taken that pressure into completely new territory.
-            </p>
-
-            <p>
-                For a long time, the American Dream was an idea associated with the United States. Today, we can live in Madrid, Mexico City, London, or Tokyo and spend much of our day looking at the same images of success: spectacular houses, cars, travel, restaurants, businesses, money, and people who seem to have figured out how to turn their lives into something extraordinary.
-            </p>
-
-            <p>
-                The American Dream has gone global.
-            </p>
-
-            <p>
-                You no longer have to live in the United States to want that life. You don't even have to consciously think about the American Dream. All you have to do is be connected.
-            </p>
-
-            <p>
-                Social media didn't invent our need for recognition, but it has turned comparison into something constant and global. You used to be able to imagine that somewhere out there, people were living the life you wanted. Now those people show up on your phone every day.
-            </p>
-
-            <p>
-                And they don't just show us what we could become. They constantly remind us of what we aren't yet.
-            </p>
-
-            <p>
-                <em>Scarface</em> takes that idea to a much darker extreme. Tony Montana arrives with almost nothing and wants everything: money, power, and respect. What's interesting is that when he reaches a position that would have seemed impossible at the beginning, it still isn't enough. He needs more.
-            </p>
-
-            <p>
-                The finish line never stays in the same place.
-            </p>
-
-            <p>
-                Maybe because, in the end, what he's looking for isn't just money or power, but proof that he has left behind the place he came from and that nobody can ever put him back there.
-            </p>
-
-            <p>
-                But there is an even darker possibility: what happens when someone stops believing that success has to be achieved by playing within the rules?
-            </p>
-
-            <p>
-                The American Dream can be distorted into a simple imperative: win. If the goal is important enough, the path to getting there can begin to seem secondary. Ambition becomes entitlement, and entitlement becomes justification.
-            </p>
-
-            <p>
-                That's where the dream can take the road to crime.
-            </p>
+<p>
+We are all shaped by the society we grow up in. From an early age, we learn what success is supposed to look like, even though nobody ever sits us down and explains it. We see it in our families, in movies, in advertising, in our friends, and in the people we admire.
+</p>
 
-            <p>
-                Instead of studying harder, building something, taking a risk, or starting over, someone may decide they are entitled to take what they believe they deserve. Money becomes more important than the law. Power becomes more important than loyalty. Other people stop being people and become obstacles.
-            </p>
+<p>
+We learn that certain things mean you've made it: money, a good career, a house, recognition, power, or simply the feeling that you've achieved something other people consider important. We also learn what it means to fall behind.
+</p>
 
-            <p>
-                This is one of the darkest ideas in crime stories: it's not simply that someone wants money or power. It's that they've convinced themselves they have a right to them.
-            </p>
+<p>
+That pressure can produce very good things. It can make someone study harder, work harder, take risks, start a business, or move somewhere else and begin again. One of the most appealing ideas in America is precisely that your origins don't necessarily have to determine your future.
+</p>
 
-            <p>
-                In that sense, the criminal path doesn't have to be the exact opposite of the American Dream. It can be a distorted version of it.
-            </p>
+<p>
+But the same idea can take us in very different directions when it becomes an obsession.
+</p>
 
-            <p>
-                <em>Natural Born Killers</em> takes the idea in another direction. Mickey and Mallory aren't simply criminals; they become a media phenomenon. Crime and fame become so intertwined that the killers' public image becomes part of the story itself.
-            </p>
+<p>
+There is a difference between wanting to win and feeling that you have to win. Between wanting to improve your life and feeling that if you don't, you've failed as a person.
+</p>
 
-            <p>
-                Seen from today, the movie is particularly interesting. The need to turn life into spectacle that Oliver Stone pushed to an extreme in the 1990s doesn't seem quite so distant anymore. Social media has made constant exposure and the need to be seen a normal part of our culture.
-            </p>
+<p>
+Maybe that's why American literature and cinema have spent so much time exploring the American Dream and, above all, what happens when it begins to fall apart. If you look at some of the great stories American culture has produced over the past century, it's striking how often they return to the same questions: who gets the chance to become somebody, what are they willing to pay to get there, and what happens to those who are left outside?
+</p>
 
-            <p>
-                And maybe that's the darkest version of the American Dream: when success stops being something you want and becomes something you believe you're entitled to.
-            </p>
+<p>
+One of the first that comes to mind is <em>The Great Gatsby</em>, by F. Scott Fitzgerald. It's one of my favorite American novels and, to me, one of the works that best captures our fascination with reinventing ourselves.
+</p>
 
-            <p>
-                The dream itself doesn't have to be the problem. What matters is what happens when success becomes the only measure that counts, when losing becomes unbearable, and when the people who stand in our way become obstacles rather than people.
-            </p>
+<p>
+Gatsby doesn't simply want money. Money is the means by which he builds a new identity and enters a world that was once beyond his reach. He has reinvented himself because he refuses to accept that the person he was at the beginning of his life has to determine who he will become.
+</p>
 
-            <p>
-                That is where this idea becomes particularly interesting to me. The American Dream may have been born as an idea associated with the United States, but it no longer belongs exclusively to the United States. Global culture has made many of its promises recognizable everywhere: improving our lives, earning recognition, escaping our circumstances, and proving that we can go further than anyone expected.
-            </p>
+<p>
+At heart, he wants to become somebody.
+</p>
 
-            <p>
-                That can be a wonderful thing.
-            </p>
+<p>
+And maybe that's one of the keys to the American Dream. It isn't always about getting rich. Sometimes it's simply about escaping the person other people believe you are and becoming the person you've decided to be.
+</p>
 
-            <p>
-                But wanting a better life is not the same as needing to prove that your life is better than everyone else's.
-            </p>
+<p>
+But not everyone starts from the same place.
+</p>
 
-            <p>
-                That tension was, in some ways, behind <em>Do Not Come</em> when I began writing it. The novel grew out of a simple question: what might a person be willing to do when they feel they can no longer afford to lose?
-            </p>
+<p>
+I also think of <em>In Cold Blood</em>, by Truman Capote, another one of my favorite books and, to me, one of the masterpieces of American literature.
+</p>
 
-            <p>
-                The characters aren't all pursuing the same thing, but they share something important: they are caught between what they want to achieve and what they believe they have to achieve. Money, power, information, loyalty, and survival become tangled together, making it harder and harder to tell the difference between a necessary decision and one driven by ambition.
-            </p>
+<p>
+The story is completely different from Gatsby's. There is a family in Kansas that has managed to build a stable life, and two men who arrive there and eventually murder them.
+</p>
 
-            <p>
-                And that's where the story becomes uncomfortable. In <em>Do Not Come</em>, nobody can change their situation without paying a price. Every character has something to lose, and as the pressure builds, their decisions stop being simply right or wrong. They become decisions about survival, power, fear, or pride. What begins as necessity can turn into obsession, and obsession can eventually justify almost anything.
-            </p>
+<p>
+It would be far too simple to explain Perry Smith and Richard Hickock's crimes as a direct consequence of frustration with the American Dream. Their motivations are more complicated than that. But Capote places two very different realities side by side: a family representing a certain idea of stability and prosperity, and two people looking at that world from the outside.
+</p>
 
-            <p>
-                That's what interested me most while writing the novel: not so much what we would do if we had power, money, or information, but what we might be willing to do to get them when we feel our lives depend on it.
-            </p>
+<p>
+The question that hangs over the story is an uncomfortable one: what happens when someone else's life becomes a permanent reminder of the life you never managed to have?
+</p>
 
-            <p>
-                That's why the American Dream fits so naturally into the world of <em>Do Not Come</em>. The novel isn't literally about the American Dream, but it does explore one of its most powerful ideas: the possibility of changing your position, escaping the circumstances you've been given, and becoming someone different.
-            </p>
+<p>
+It can produce ambition, frustration, resentment—and, under certain circumstances, something much worse.
+</p>
 
-            <p>
-                Only in a thriller, that promise comes with consequences.
-            </p>
+<p>
+There is also a much more hopeful version of this idea in <em>Back to the Future</em>. Marty McFly discovers that his own existence depends on his parents meeting and falling in love, but he also discovers that his father is an insecure man who never became the person he might have been.
+</p>
 
-            <p>
-                When ambition enters a world of secrets, intelligence, violence, and survival, every step forward can close a door behind you. Eventually, the question is no longer how much you're willing to risk to get what you want, but what part of yourself you're willing to lose.
-            </p>
+<p>
+When Marty returns to his own time, he finds a different family: his father has become a writer, his mother seems much happier, and everyone has a better life.
+</p>
 
-            <p>
-                That's what interests me about ambition as a writer. There is nothing inherently wrong with wanting to improve your life or proving to yourself that you can accomplish something that once seemed difficult. Many of the things we admire in other people come from that same drive.
-            </p>
+<p>
+I've always liked that idea. The American Dream doesn't have to be about money or power. It can also be the hope that someone finds the courage to change their life and that the change ends up benefiting an entire family.
+</p>
 
-            <p>
-                And that's where the stories that interest me begin: people who want something and are willing to do more and more to get it, people who believe they can still change their fate, and people who need to prove something, perhaps even to themselves, without knowing when they should stop.
-            </p>
+<p>
+The movie takes the idea into the realm of fantasy, but the basic concept is very real: our lives aren't completely determined by where we come from.
+</p>
 
-            <p>
-                I don't think the American Dream is a lie. In fact, its power probably comes precisely from the fact that it contains something deeply appealing: the idea that we aren't completely condemned to become whatever circumstances we were born into.
-            </p>
+<p>
+The problem begins when that possibility becomes an obligation.
+</p>
 
-            <p>
-                But any dream can become a nightmare when achieving it stops being a possibility and starts feeling like an obligation.
-            </p>
+<p>
+And perhaps social media has taken that pressure into completely new territory.
+</p>
 
-            <p>
-                The American Dream tells us that we can become somebody.
-            </p>
+<p>
+For a long time, the American Dream was an idea associated with the United States. Today, we can live in Madrid, Mexico City, London, or Tokyo and spend much of our day looking at the same images of success: spectacular houses, cars, travel, restaurants, businesses, money, and people who seem to have figured out how to turn their lives into something extraordinary.
+</p>
 
-            <p>
-                The darker question is who we will become.
-            </p>
+<p>
+The American Dream has gone global.
+</p>
 
-            <p class="closing">
-                — R. B. Claymore
-            </p>
+<p>
+You no longer have to live in the United States to want that life. You don't even have to consciously think about the American Dream. All you have to do is be connected.
+</p>
 
-        </article>
+<p>
+Social media didn't invent our need for recognition, but it has turned comparison into something constant and global. You used to be able to imagine that somewhere out there, people were living the life you wanted. Now those people show up on your phone every day.
+</p>
 
-    </div>
+<p>
+And they don't just show us what we could become. They constantly remind us of what we aren't yet.
+</p>
 
+<p>
+<em>Scarface</em> takes that idea to a much darker extreme. Tony Montana arrives with almost nothing and wants everything: money, power, and respect. What's interesting is that when he reaches a position that would have seemed impossible at the beginning, it still isn't enough. He needs more.
+</p>
 
-    <!-- ========================= -->
-    <!-- SPANISH -->
-    <!-- ========================= -->
+<p>
+The finish line never stays in the same place.
+</p>
 
-    <div id="es" class="language-content">
+<p>
+Maybe because, in the end, what he's looking for isn't just money or power, but proof that he has left behind the place he came from and that nobody can ever put him back there.
+</p>
 
-        <article class="article">
+<p>
+But there is an even darker possibility: what happens when someone stops believing that success has to be achieved by playing within the rules?
+</p>
 
-            <p>
-                Siempre me ha producido cierta inquietud el sueño americano. No porque piense que la idea sea mala, sino casi por lo contrario. La posibilidad de cambiar de vida, escapar de las circunstancias en las que has nacido y llegar a convertirte en alguien diferente me parece una de las ideas más atractivas que puede ofrecer una sociedad.
-            </p>
+<p>
+The American Dream can be distorted into a simple imperative: win. If the goal is important enough, the path to getting there can begin to seem secondary. Ambition becomes entitlement, and entitlement becomes justification.
+</p>
 
-            <p>
-                También una de las más peligrosas.
-            </p>
+<p>
+That's where the dream can take the road to crime.
+</p>
 
-            <p>
-                Porque una cosa es que te digan que puedes llegar a ser lo que quieras y otra bastante diferente es que acabes sintiendo que tienes la obligación de conseguirlo.
-            </p>
+<p>
+Instead of studying harder, building something, taking a risk, or starting over, someone may decide they are entitled to take what they believe they deserve. Money becomes more important than the law. Power becomes more important than loyalty. Other people stop being people and become obstacles.
+</p>
 
-            <p>
-                Si creces escuchando que puedes llegar a ser cualquier cosa, tarde o temprano puedes empezar a preguntarte por qué todavía no lo has conseguido. Y ahí aparece una de las contradicciones que más me interesan del sueño americano: puede ser una fuente extraordinaria de ambición, pero también puede convertirse en una forma de presión.
-            </p>
+<p>
+This is one of the darkest ideas in crime stories: it's not simply that someone wants money or power. It's that they've convinced themselves they have a right to them.
+</p>
 
-            <p>
-                Todos estamos condicionados por la sociedad en la que crecemos. Desde pequeños aprendemos qué aspecto tiene el éxito, aunque nadie se siente delante de nosotros para explicárnoslo. Lo vemos en nuestras familias, en las películas, en los anuncios, en nuestros amigos y en las personas que admiramos.
-            </p>
+<p>
+In that sense, the criminal path doesn't have to be the exact opposite of the American Dream. It can be a distorted version of it.
+</p>
 
-            <p>
-                Aprendemos que determinadas cosas significan que has triunfado: dinero, una buena profesión, una casa, reconocimiento, poder o simplemente la sensación de que has conseguido algo que los demás consideran importante. También aprendemos qué significa quedarse atrás.
-            </p>
+<p>
+<em>Natural Born Killers</em> takes the idea in another direction. Mickey and Mallory aren't simply criminals; they become a media phenomenon. Crime and fame become so intertwined that the killers' public image becomes part of the story itself.
+</p>
 
-            <p>
-                Esa presión puede producir cosas muy buenas. Puede hacer que una persona estudie más, trabaje más, arriesgue, monte un negocio o se marche a otro lugar para empezar de nuevo. Una de las ideas más atractivas de Estados Unidos es precisamente esa: que tu origen no tiene por qué determinar tu destino.
-            </p>
+<p>
+Seen from today, the movie is particularly interesting. The need to turn life into spectacle that Oliver Stone pushed to an extreme in the 1990s doesn't seem quite so distant anymore. Social media has made constant exposure and the need to be seen a normal part of our culture.
+</p>
 
-            <p>
-                Pero la misma idea puede llevarnos por caminos muy diferentes cuando se convierte en una obsesión.
-            </p>
+<p>
+And maybe that's the darkest version of the American Dream: when success stops being something you want and becomes something you believe you're entitled to.
+</p>
 
-            <p>
-                Existe una diferencia entre querer ganar y sentir que tienes que ganar. Entre querer mejorar tu vida y sentir que, si no lo consigues, has fracasado como persona.
-            </p>
+<p>
+The dream itself doesn't have to be the problem. What matters is what happens when success becomes the only measure that counts, when losing becomes unbearable, and when the people who stand in our way become obstacles rather than people.
+</p>
 
-            <p>
-                Quizá por eso la literatura y el cine americanos llevan tanto tiempo hablando del sueño americano y, sobre todo, de lo que ocurre cuando ese sueño empieza a romperse. Si uno mira algunas de las grandes historias que ha producido la cultura americana durante el último siglo, resulta curioso comprobar hasta qué punto muchas de ellas vuelven sobre las mismas preguntas: quién tiene la oportunidad de convertirse en alguien, qué precio está dispuesto a pagar para conseguirlo y qué ocurre con quienes se quedan fuera.
-            </p>
+<p>
+That is where this idea becomes particularly interesting to me. The American Dream may have been born as an idea associated with the United States, but it no longer belongs exclusively to the United States. Global culture has made many of its promises recognizable everywhere: improving our lives, earning recognition, escaping our circumstances, and proving that we can go further than anyone expected.
+</p>
 
-            <p>
-                Una de las primeras que me viene a la cabeza es <em>The Great Gatsby</em>, de F. Scott Fitzgerald. Es una de mis novelas americanas favoritas y, para mí, una de las obras que mejor ha retratado la fascinación por reinventarse.
-            </p>
+<p>
+That can be a wonderful thing.
+</p>
 
-            <p>
-                Gatsby no quiere solamente dinero. El dinero es el medio para construir una nueva identidad y entrar en un mundo que antes estaba fuera de su alcance. Se ha inventado a sí mismo porque no está dispuesto a aceptar que la persona que fue al principio de su vida tenga que determinar quién será después.
-            </p>
+<p>
+But wanting a better life is not the same as needing to prove that your life is better than everyone else's.
+</p>
 
-            <p>
-                En el fondo, quiere convertirse en alguien.
-            </p>
+<p>
+That tension was, in some ways, behind <em>Do Not Come</em> when I began writing it. The novel grew out of a simple question: what might a person be willing to do when they feel they can no longer afford to lose?
+</p>
 
-            <p>
-                Y quizá esa sea una de las claves del sueño americano. No siempre consiste en hacerse rico. A veces consiste simplemente en escapar de la persona que los demás creen que eres y convertirte en la que tú has decidido ser.
-            </p>
+<p>
+The characters aren't all pursuing the same thing, but they share something important: they are caught between what they want to achieve and what they believe they have to achieve. Money, power, information, loyalty, and survival become tangled together, making it harder and harder to tell the difference between a necessary decision and one driven by ambition.
+</p>
 
-            <p>
-                Pero no todos empiezan desde el mismo lugar.
-            </p>
+<p>
+And that's where the story becomes uncomfortable. In <em>Do Not Come</em>, nobody can change their situation without paying a price. Every character has something to lose, and as the pressure builds, their decisions stop being simply right or wrong. They become decisions about survival, power, fear, or pride. What begins as necessity can turn into obsession, and obsession can eventually justify almost anything.
+</p>
 
-            <p>
-                Pienso también en <em>In Cold Blood</em>, de Truman Capote, otro de mis libros favoritos y, para mí, una de las obras maestras de la literatura americana.
-            </p>
+<p>
+That's what interested me most while writing the novel: not so much what we would do if we had power, money, or information, but what we might be willing to do to get them when we feel our lives depend on it.
+</p>
 
-            <p>
-                La historia es completamente diferente a la de Gatsby. Hay una familia de Kansas que ha conseguido construir una vida estable y dos hombres que llegan hasta allí y terminan asesinándola.
-            </p>
+<p>
+That's why the American Dream fits so naturally into the world of <em>Do Not Come</em>. The novel isn't literally about the American Dream, but it does explore one of its most powerful ideas: the possibility of changing your position, escaping the circumstances you've been given, and becoming someone different.
+</p>
 
-            <p>
-                Sería demasiado sencillo explicar los crímenes de Perry Smith y Richard Hickock como una consecuencia directa de la frustración ante el sueño americano. Sus motivaciones son más complejas. Pero Capote coloca frente a frente dos realidades muy diferentes: una familia que representa cierta idea de estabilidad y prosperidad y dos personas que contemplan ese mundo desde fuera.
-            </p>
+<p>
+Only in a thriller, that promise comes with consequences.
+</p>
 
-            <p>
-                La pregunta que queda en el aire es incómoda: ¿qué ocurre cuando la vida de otra persona se convierte en un recordatorio permanente de la vida que tú no has conseguido tener?
-            </p>
+<p>
+When ambition enters a world of secrets, intelligence, violence, and survival, every step forward can close a door behind you. Eventually, the question is no longer how much you're willing to risk to get what you want, but what part of yourself you're willing to lose.
+</p>
 
-            <p>
-                Puede producir ambición, frustración, resentimiento y, en determinadas circunstancias, algo mucho peor.
-            </p>
+<p>
+That's what interests me about ambition as a writer. There is nothing inherently wrong with wanting to improve your life or proving to yourself that you can accomplish something that once seemed difficult. Many of the things we admire in other people come from that same drive.
+</p>
 
-            <p>
-                También hay una versión mucho más amable de esta idea en <em>Regreso al futuro</em>. Marty McFly descubre que su propia existencia depende de que sus padres se conozcan y se enamoren, pero también que su padre es un hombre inseguro que nunca ha llegado a convertirse en la persona que podría haber sido.
-            </p>
+<p>
+And that's where the stories that interest me begin: people who want something and are willing to do more and more to get it, people who believe they can still change their fate, and people who need to prove something, perhaps even to themselves, without knowing when they should stop.
+</p>
 
-            <p>
-                Cuando Marty regresa a su época, encuentra una familia diferente: su padre se ha convertido en escritor, su madre parece mucho más feliz y todos tienen una vida mejor.
-            </p>
+<p>
+I don't think the American Dream is a lie. In fact, its power probably comes precisely from the fact that it contains something deeply appealing: the idea that we aren't completely condemned to become whatever circumstances we were born into.
+</p>
 
-            <p>
-                Siempre me ha gustado esa idea. El sueño americano no tiene por qué ser solamente dinero o poder. También puede ser la esperanza de que una persona encuentre el valor para cambiar su vida y que ese cambio termine beneficiando a toda una familia.
-            </p>
+<p>
+But any dream can become a nightmare when achieving it stops being a possibility and starts feeling like an obligation.
+</p>
 
-            <p>
-                La película lleva la idea al terreno de la fantasía, pero el concepto de fondo es bastante real: nuestras vidas no están completamente determinadas por el lugar del que venimos.
-            </p>
+<p>
+The American Dream tells us that we can become somebody.
+</p>
 
-            <p>
-                El problema aparece cuando esa posibilidad se convierte en una obligación.
-            </p>
+<p>
+The darker question is who we will become.
+</p>
 
-            <p>
-                Y quizá las redes sociales hayan llevado esa presión a un terreno completamente nuevo.
-            </p>
+<p class="signature">
+— R. B. Claymore
+</p>
 
-            <p>
-                Durante mucho tiempo, el sueño americano fue una idea asociada a Estados Unidos. Hoy podemos vivir en Madrid, Ciudad de México, Londres o Tokio y pasar buena parte del día viendo las mismas imágenes de éxito: casas espectaculares, coches, viajes, restaurantes, negocios, dinero y personas que parecen haber encontrado la fórmula para convertir su vida en algo extraordinario.
-            </p>
+</article>
 
-            <p>
-                El sueño americano se ha globalizado.
-            </p>
+</div>
 
-            <p>
-                Ya no hace falta vivir en Estados Unidos para querer esa vida. Ni siquiera hace falta pensar conscientemente en el sueño americano. Basta con estar conectado.
-            </p>
 
-            <p>
-                Las redes sociales no han inventado la necesidad de reconocimiento, pero han convertido la comparación en algo constante y global. Antes podías imaginar que en algún lugar había personas viviendo la vida que tú querías. Ahora esas personas aparecen todos los días en tu teléfono.
-            </p>
+<!-- ========================= -->
+<!-- SPANISH -->
+<!-- ========================= -->
 
-            <p>
-                Y no solo nos enseñan lo que podemos llegar a ser. También nos recuerdan constantemente lo que todavía no somos.
-            </p>
+<div id="spanish" class="language-content">
 
-            <p>
-                <em>Scarface</em> lleva esa idea hasta un extremo mucho más oscuro. Tony Montana llega prácticamente sin nada y quiere conseguirlo todo: dinero, poder y respeto. Lo interesante es que cuando alcanza una posición que al principio habría parecido imposible, tampoco resulta suficiente. Necesita más.
-            </p>
+<article class="article">
 
-            <p>
-                La línea de meta nunca permanece en el mismo sitio.
-            </p>
+<p>
+Siempre me ha producido cierta inquietud el sueño americano. No porque piense que la idea sea mala, sino casi por lo contrario. La posibilidad de cambiar de vida, escapar de las circunstancias en las que has nacido y llegar a convertirte en alguien diferente me parece una de las ideas más atractivas que puede ofrecer una sociedad.
+</p>
 
-            <p>
-                Quizá porque, en realidad, lo que busca no es solamente dinero o poder, sino una prueba de que ha dejado atrás el lugar del que venía y de que nadie puede volver a colocarlo allí.
-            </p>
+<p>
+También una de las más peligrosas.
+</p>
 
-            <p>
-                Pero existe una posibilidad todavía más oscura: ¿qué ocurre cuando alguien deja de creer que el éxito tiene que conseguirse respetando las reglas?
-            </p>
+<p>
+Porque una cosa es que te digan que puedes llegar a ser lo que quieras y otra bastante diferente es que acabes sintiendo que tienes la obligación de conseguirlo.
+</p>
 
-            <p>
-                El sueño americano puede deformarse hasta convertirse en una orden sencilla: ganar. Si el objetivo es suficientemente importante, el camino para llegar hasta él puede empezar a parecer secundario. La ambición puede convertirse en derecho adquirido, y ese derecho en una justificación.
-            </p>
+<p>
+Si creces escuchando que puedes llegar a ser cualquier cosa, tarde o temprano puedes empezar a preguntarte por qué todavía no lo has conseguido. Y ahí aparece una de las contradicciones que más me interesan del sueño americano: puede ser una fuente extraordinaria de ambición, pero también puede convertirse en una forma de presión.
+</p>
 
-            <p>
-                Ahí es donde el sueño puede tomar el camino del crimen.
-            </p>
+<p>
+Todos estamos condicionados por la sociedad en la que crecemos. Desde pequeños aprendemos qué aspecto tiene el éxito, aunque nadie se siente delante de nosotros para explicárnoslo. Lo vemos en nuestras familias, en las películas, en los anuncios, en nuestros amigos y en las personas que admiramos.
+</p>
 
-            <p>
-                En lugar de estudiar más, construir algo, asumir un riesgo o empezar de nuevo, alguien puede decidir que tiene derecho a quedarse con aquello que cree que merece. El dinero se vuelve más importante que la ley. El poder, más importante que la lealtad. Y las demás personas dejan de ser personas para convertirse en obstáculos.
-            </p>
+<p>
+Aprendemos que determinadas cosas significan que has triunfado: dinero, una buena profesión, una casa, reconocimiento, poder o simplemente la sensación de que has conseguido algo que los demás consideran importante. También aprendemos qué significa quedarse atrás.
+</p>
 
-            <p>
-                Esta es una de las ideas más oscuras que aparecen en muchas historias criminales: no se trata simplemente de que alguien quiera dinero o poder, sino de que ha conseguido convencerse de que tiene derecho a ellos.
-            </p>
+<p>
+Esa presión puede producir cosas muy buenas. Puede hacer que una persona estudie más, trabaje más, arriesgue, monte un negocio o se marche a otro lugar para empezar de nuevo. Una de las ideas más atractivas de Estados Unidos es precisamente esa: que tu origen no tiene por qué determinar tu destino.
+</p>
 
-            <p>
-                En ese sentido, el camino del crimen no tiene por qué ser exactamente lo contrario del sueño americano. Puede ser una versión deformada del mismo.
-            </p>
+<p>
+Pero la misma idea puede llevarnos por caminos muy diferentes cuando se convierte en una obsesión.
+</p>
 
-            <p>
-                <em>Natural Born Killers</em> lleva esa idea en otra dirección. Mickey y Mallory no son simplemente criminales; se convierten en un fenómeno mediático. El crimen y la fama terminan mezclándose hasta el punto de que la propia imagen pública de los asesinos forma parte de la historia.
-            </p>
+<p>
+Existe una diferencia entre querer ganar y sentir que tienes que ganar. Entre querer mejorar tu vida y sentir que, si no lo consigues, has fracasado como persona.
+</p>
 
-            <p>
-                Vista desde hoy, la película resulta especialmente interesante. La necesidad de convertir la vida en espectáculo que Oliver Stone llevaba al extremo en los noventa ya no parece tan lejana. Las redes sociales han convertido la exposición permanente y la necesidad de ser visto en una parte normal de nuestra cultura.
-            </p>
+<p>
+Quizá por eso la literatura y el cine americanos llevan tanto tiempo hablando del sueño americano y, sobre todo, de lo que ocurre cuando ese sueño empieza a romperse. Si uno mira algunas de las grandes historias que ha producido la cultura americana durante el último siglo, resulta curioso comprobar hasta qué punto muchas de ellas vuelven sobre las mismas preguntas: quién tiene la oportunidad de convertirse en alguien, qué precio está dispuesto a pagar para conseguirlo y qué ocurre con quienes se quedan fuera.
+</p>
 
-            <p>
-                Y quizá ahí aparece la versión más oscura del sueño americano: cuando el éxito deja de ser algo que quieres y empieza a convertirse en algo que crees que te corresponde.
-            </p>
+<p>
+Una de las primeras que me viene a la cabeza es <em>The Great Gatsby</em>, de F. Scott Fitzgerald. Es una de mis novelas americanas favoritas y, para mí, una de las obras que mejor ha retratado la fascinación por reinventarse.
+</p>
 
-            <p>
-                El sueño en sí mismo no tiene por qué ser el problema. Lo preocupante es lo que ocurre cuando el éxito se convierte en la única medida que importa, cuando perder resulta insoportable y cuando las personas que se interponen en nuestro camino dejan de ser personas para convertirse en obstáculos.
-            </p>
+<p>
+Gatsby no quiere solamente dinero. El dinero es el medio para construir una nueva identidad y entrar en un mundo que antes estaba fuera de su alcance. Se ha inventado a sí mismo porque no está dispuesto a aceptar que la persona que fue al principio de su vida tenga que determinar quién será después.
+</p>
 
-            <p>
-                Ahí es donde esta idea empieza a interesarme especialmente. El sueño americano nació asociado a Estados Unidos, pero ya no pertenece exclusivamente a Estados Unidos. La cultura global ha hecho que muchas de sus promesas sean reconocibles en cualquier lugar: mejorar nuestra vida, conseguir reconocimiento, escapar de nuestras circunstancias y demostrar que podemos llegar más lejos de lo que otros esperaban.
-            </p>
+<p>
+En el fondo, quiere convertirse en alguien.
+</p>
 
-            <p>
-                Eso puede ser algo maravilloso.
-            </p>
+<p>
+Y quizá esa sea una de las claves del sueño americano. No siempre consiste en hacerse rico. A veces consiste simplemente en escapar de la persona que los demás creen que eres y convertirte en la que tú has decidido ser.
+</p>
 
-            <p>
-                Pero querer una vida mejor no es lo mismo que necesitar demostrar que tu vida es mejor que la de los demás.
-            </p>
+<p>
+Pero no todos empiezan desde el mismo lugar.
+</p>
 
-            <p>
-                Esa tensión estaba, de alguna manera, detrás de <em>Do Not Come</em> cuando empecé a escribirla. La novela nació de una pregunta bastante sencilla: ¿qué puede llegar a hacer una persona cuando siente que ya no puede permitirse perder?
-            </p>
+<p>
+Pienso también en <em>In Cold Blood</em>, de Truman Capote, otro de mis libros favoritos y, para mí, una de las obras maestras de la literatura americana.
+</p>
 
-            <p>
-                Los personajes no persiguen todos lo mismo, pero comparten algo importante: están atrapados entre lo que quieren conseguir y lo que creen que tienen que conseguir. El dinero, el poder, la información, la lealtad y la supervivencia se mezclan hasta hacer cada vez más difícil distinguir entre una decisión necesaria y una decisión impulsada por la ambición.
-            </p>
+<p>
+La historia es completamente diferente a la de Gatsby. Hay una familia de Kansas que ha conseguido construir una vida estable y dos hombres que llegan hasta allí y terminan asesinándola.
+</p>
 
-            <p>
-                Y ahí es donde la historia empieza a ponerse incómoda. En <em>Do Not Come</em>, nadie puede cambiar su situación sin pagar algún precio. Cada personaje tiene algo que perder y, a medida que aumenta la presión, sus decisiones dejan de ser simplemente buenas o malas. Se convierten en decisiones de supervivencia, de poder, de miedo o de orgullo. Lo que empieza como una necesidad puede terminar convirtiéndose en una obsesión, y una obsesión puede acabar justificando casi cualquier cosa.
-            </p>
+<p>
+Sería demasiado sencillo explicar los crímenes de Perry Smith y Richard Hickock como una consecuencia directa de la frustración ante el sueño americano. Sus motivaciones son más complejas. Pero Capote coloca frente a frente dos realidades muy diferentes: una familia que representa cierta idea de estabilidad y prosperidad y dos personas que contemplan ese mundo desde fuera.
+</p>
 
-            <p>
-                Eso es lo que más me interesaba explorar mientras escribía la novela: no tanto qué haríamos si tuviéramos poder, dinero o información, sino qué estaríamos dispuestos a hacer para conseguirlos cuando sentimos que nuestra vida depende de ello.
-            </p>
+<p>
+La pregunta que queda en el aire es incómoda: ¿qué ocurre cuando la vida de otra persona se convierte en un recordatorio permanente de la vida que tú no has conseguido tener?
+</p>
 
-            <p>
-                Por eso el sueño americano encaja de una manera tan natural con el mundo de <em>Do Not Come</em>. La novela no habla literalmente del sueño americano, pero sí de una de sus ideas más poderosas: la posibilidad de cambiar de posición, de escapar de las circunstancias que te han tocado y de convertirte en alguien diferente.
-            </p>
+<p>
+Puede producir ambición, frustración, resentimiento y, en determinadas circunstancias, algo mucho peor.
+</p>
 
-            <p>
-                Solo que en un thriller esa promesa tiene consecuencias.
-            </p>
+<p>
+También hay una versión mucho más amable de esta idea en <em>Regreso al futuro</em>. Marty McFly descubre que su propia existencia depende de que sus padres se conozcan y se enamoren, pero también que su padre es un hombre inseguro que nunca ha llegado a convertirse en la persona que podría haber sido.
+</p>
 
-            <p>
-                Cuando la ambición entra en un mundo de secretos, inteligencia, violencia y supervivencia, cada paso hacia delante puede cerrar una puerta detrás de ti. Y llega un momento en el que la pregunta ya no es cuánto estás dispuesto a arriesgar para conseguir lo que quieres, sino qué parte de ti estás dispuesto a perder.
-            </p>
+<p>
+Cuando Marty regresa a su época, encuentra una familia diferente: su padre se ha convertido en escritor, su madre parece mucho más feliz y todos tienen una vida mejor.
+</p>
 
-            <p>
-                Eso es lo que me interesa de la ambición como escritor. No hay nada malo, en principio, en querer mejorar tu vida o demostrarte a ti mismo que eres capaz de conseguir algo que parecía difícil. Muchas de las cosas que admiramos en otras personas nacen de esa misma voluntad.
-            </p>
+<p>
+Siempre me ha gustado esa idea. El sueño americano no tiene por qué ser solamente dinero o poder. También puede ser la esperanza de que una persona encuentre el valor para cambiar su vida y que ese cambio termine beneficiando a toda una familia.
+</p>
 
-            <p>
-                Y ahí es donde empiezan las historias que me interesan: personas que quieren algo y están dispuestas a hacer cada vez más para conseguirlo, personas que creen que todavía pueden cambiar su destino y personas que necesitan demostrar algo, quizá incluso a sí mismas, sin saber cuándo deberían parar.
-            </p>
+<p>
+La película lleva la idea al terreno de la fantasía, pero el concepto de fondo es bastante real: nuestras vidas no están completamente determinadas por el lugar del que venimos.
+</p>
 
-            <p>
-                No creo que el sueño americano sea una mentira. De hecho, probablemente su fuerza provenga precisamente de que contiene algo profundamente atractivo: la idea de que no estamos completamente condenados a ser aquello que nos ha tocado al nacer.
-            </p>
+<p>
+El problema aparece cuando esa posibilidad se convierte en una obligación.
+</p>
 
-            <p>
-                Pero cualquier sueño puede convertirse en una pesadilla cuando conseguirlo deja de ser una posibilidad y empieza a sentirse como una obligación.
-            </p>
+<p>
+Y quizá las redes sociales hayan llevado esa presión a un terreno completamente nuevo.
+</p>
 
-            <p>
-                El sueño americano nos dice que podemos convertirnos en alguien.
-            </p>
+<p>
+Durante mucho tiempo, el sueño americano fue una idea asociada a Estados Unidos. Hoy podemos vivir en Madrid, Ciudad de México, Londres o Tokio y pasar buena parte del día viendo las mismas imágenes de éxito: casas espectaculares, coches, viajes, restaurantes, negocios, dinero y personas que parecen haber encontrado la fórmula para convertir su vida en algo extraordinario.
+</p>
 
-            <p>
-                La pregunta más oscura es quién acabaremos siendo.
-            </p>
+<p>
+El sueño americano se ha globalizado.
+</p>
 
-            <p class="closing">
-                — R. B. Claymore
-            </p>
+<p>
+Ya no hace falta vivir en Estados Unidos para querer esa vida. Ni siquiera hace falta pensar conscientemente en el sueño americano. Basta con estar conectado.
+</p>
 
-        </article>
+<p>
+Las redes sociales no han inventado la necesidad de reconocimiento, pero han convertido la comparación en algo constante y global. Antes podías imaginar que en algún lugar había personas viviendo la vida que tú querías. Ahora esas personas aparecen todos los días en tu teléfono.
+</p>
 
-    </div>
+<p>
+Y no solo nos enseñan lo que podemos llegar a ser. También nos recuerdan constantemente lo que todavía no somos.
+</p>
 
+<p>
+<em>Scarface</em> lleva esa idea hasta un extremo mucho más oscuro. Tony Montana llega prácticamente sin nada y quiere conseguirlo todo: dinero, poder y respeto. Lo interesante es que cuando alcanza una posición que al principio habría parecido imposible, tampoco resulta suficiente. Necesita más.
+</p>
 
-    <div class="back-home">
-        <a href="index.html">Back to Home</a>
-    </div>
+<p>
+La línea de meta nunca permanece en el mismo sitio.
+</p>
+
+<p>
+Quizá porque, en realidad, lo que busca no es solamente dinero o poder, sino una prueba de que ha dejado atrás el lugar del que venía y de que nadie puede volver a colocarlo allí.
+</p>
+
+<p>
+Pero existe una posibilidad todavía más oscura: ¿qué ocurre cuando alguien deja de creer que el éxito tiene que conseguirse respetando las reglas?
+</p>
+
+<p>
+El sueño americano puede deformarse hasta convertirse en una orden sencilla: ganar. Si el objetivo es suficientemente importante, el camino para llegar hasta él puede empezar a parecer secundario. La ambición puede convertirse en derecho adquirido, y ese derecho en una justificación.
+</p>
+
+<p>
+Ahí es donde el sueño puede tomar el camino del crimen.
+</p>
+
+<p>
+En lugar de estudiar más, construir algo, asumir un riesgo o empezar de nuevo, alguien puede decidir que tiene derecho a quedarse con aquello que cree que merece. El dinero se vuelve más importante que la ley. El poder, más importante que la lealtad. Y las demás personas dejan de ser personas para convertirse en obstáculos.
+</p>
+
+<p>
+Esta es una de las ideas más oscuras que aparecen en muchas historias criminales: no se trata simplemente de que alguien quiera dinero o poder, sino de que ha conseguido convencerse de que tiene derecho a ellos.
+</p>
+
+<p>
+En ese sentido, el camino del crimen no tiene por qué ser exactamente lo contrario del sueño americano. Puede ser una versión deformada del mismo.
+</p>
+
+<p>
+<em>Natural Born Killers</em> lleva esa idea en otra dirección. Mickey y Mallory no son simplemente criminales; se convierten en un fenómeno mediático. El crimen y la fama terminan mezclándose hasta el punto de que la propia imagen pública de los asesinos forma parte de la historia.
+</p>
+
+<p>
+Vista desde hoy, la película resulta especialmente interesante. La necesidad de convertir la vida en espectáculo que Oliver Stone llevaba al extremo en los noventa ya no parece tan lejana. Las redes sociales han convertido la exposición permanente y la necesidad de ser visto en una parte normal de nuestra cultura.
+</p>
+
+<p>
+Y quizá ahí aparece la versión más oscura del sueño americano: cuando el éxito deja de ser algo que quieres y empieza a convertirse en algo que crees que te corresponde.
+</p>
+
+<p>
+El sueño en sí mismo no tiene por qué ser el problema. Lo preocupante es lo que ocurre cuando el éxito se convierte en la única medida que importa, cuando perder resulta insoportable y cuando las personas que se interponen en nuestro camino dejan de ser personas para convertirse en obstáculos.
+</p>
+
+<p>
+Ahí es donde esta idea empieza a interesarme especialmente. El sueño americano nació asociado a Estados Unidos, pero ya no pertenece exclusivamente a Estados Unidos. La cultura global ha hecho que muchas de sus promesas sean reconocibles en cualquier lugar: mejorar nuestra vida, conseguir reconocimiento, escapar de nuestras circunstancias y demostrar que podemos llegar más lejos de lo que otros esperaban.
+</p>
+
+<p>
+Eso puede ser algo maravilloso.
+</p>
+
+<p>
+Pero querer una vida mejor no es lo mismo que necesitar demostrar que tu vida es mejor que la de los demás.
+</p>
+
+<p>
+Esa tensión estaba, de alguna manera, detrás de <em>Do Not Come</em> cuando empecé a escribirla. La novela nació de una pregunta bastante sencilla: ¿qué puede llegar a hacer una persona cuando siente que ya no puede permitirse perder?
+</p>
+
+<p>
+Los personajes no persiguen todos lo mismo, pero comparten algo importante: están atrapados entre lo que quieren conseguir y lo que creen que tienen que conseguir. El dinero, el poder, la información, la lealtad y la supervivencia se mezclan hasta hacer cada vez más difícil distinguir entre una decisión necesaria y una decisión impulsada por la ambición.
+</p>
+
+<p>
+Y ahí es donde la historia empieza a ponerse incómoda. En <em>Do Not Come</em>, nadie puede cambiar su situación sin pagar algún precio. Cada personaje tiene algo que perder y, a medida que aumenta la presión, sus decisiones dejan de ser simplemente buenas o malas. Se convierten en decisiones de supervivencia, de poder, de miedo o de orgullo. Lo que empieza como una necesidad puede terminar convirtiéndose en una obsesión, y una obsesión puede acabar justificando casi cualquier cosa.
+</p>
+
+<p>
+Eso es lo que más me interesaba explorar mientras escribía la novela: no tanto qué haríamos si tuviéramos poder, dinero o información, sino qué estaríamos dispuestos a hacer para conseguirlos cuando sentimos que nuestra vida depende de ello.
+</p>
+
+<p>
+Por eso el sueño americano encaja de una manera tan natural con el mundo de <em>Do Not Come</em>. La novela no habla literalmente del sueño americano, pero sí de una de sus ideas más poderosas: la posibilidad de cambiar de posición, de escapar de las circunstancias que te han tocado y de convertirte en alguien diferente.
+</p>
+
+<p>
+Solo que en un thriller esa promesa tiene consecuencias.
+</p>
+
+<p>
+Cuando la ambición entra en un mundo de secretos, inteligencia, violencia y supervivencia, cada paso hacia delante puede cerrar una puerta detrás de ti. Y llega un momento en el que la pregunta ya no es cuánto estás dispuesto a arriesgar para conseguir lo que quieres, sino qué parte de ti estás dispuesto a perder.
+</p>
+
+<p>
+Eso es lo que me interesa de la ambición como escritor. No hay nada malo, en principio, en querer mejorar tu vida o demostrarte a ti mismo que eres capaz de conseguir algo que parecía difícil. Muchas de las cosas que admiramos en otras personas nacen de esa misma voluntad.
+</p>
+
+<p>
+Y ahí es donde empiezan las historias que me interesan: personas que quieren algo y están dispuestas a hacer cada vez más para conseguirlo, personas que creen que todavía pueden cambiar su destino y personas que necesitan demostrar algo, quizá incluso a sí mismas, sin saber cuándo deberían parar.
+</p>
+
+<p>
+No creo que el sueño americano sea una mentira. De hecho, probablemente su fuerza provenga precisamente de que contiene algo profundamente atractivo: la idea de que no estamos completamente condenados a ser aquello que nos ha tocado al nacer.
+</p>
+
+<p>
+Pero cualquier sueño puede convertirse en una pesadilla cuando conseguirlo deja de ser una posibilidad y empieza a sentirse como una obligación.
+</p>
+
+<p>
+El sueño americano nos dice que podemos convertirnos en alguien.
+</p>
+
+<p>
+La pregunta más oscura es quién acabaremos siendo.
+</p>
+
+<p class="signature">
+— R. B. Claymore
+</p>
+
+</article>
+
+</div>
+
+
+<div class="back-home">
+<a href="index.html">Back to Home</a>
+</div>
 
 </main>
 
 
 <footer>
-    © 2026 R. B. Claymore. All rights reserved.
+© 2026 R. B. Claymore. All rights reserved.
 </footer>
 
 
 <script>
-
 function showLanguage(language, button) {
 
-    document.querySelectorAll('.language-content').forEach(function(content) {
-        content.classList.remove('active');
-    });
+    var english = document.getElementById("english");
+    var spanish = document.getElementById("spanish");
 
-    document.getElementById(language).classList.add('active');
+    var englishTitle = document.getElementById("english-title");
+    var spanishTitle = document.getElementById("spanish-title");
 
-    document.querySelectorAll('.language').forEach(function(btn) {
-        btn.classList.remove('active');
-    });
+    var englishSubtitle = document.getElementById("english-subtitle");
+    var spanishSubtitle = document.getElementById("spanish-subtitle");
 
-    button.classList.add('active');
+    var buttons = document.querySelectorAll(".language");
 
-    document.documentElement.lang = language;
+    if (language === "english") {
+
+        english.classList.add("active");
+        spanish.classList.remove("active");
+
+        englishTitle.style.display = "inline";
+        spanishTitle.style.display = "none";
+
+        englishSubtitle.style.display = "inline";
+        spanishSubtitle.style.display = "none";
+
+        document.documentElement.lang = "en";
+
+    } else {
+
+        english.classList.remove("active");
+        spanish.classList.add("active");
+
+        englishTitle.style.display = "none";
+        spanishTitle.style.display = "inline";
+
+        englishSubtitle.style.display = "none";
+        spanishSubtitle.style.display = "inline";
+
+        document.documentElement.lang = "es";
+    }
+
+    for (var i = 0; i < buttons.length; i++) {
+        buttons[i].classList.remove("active");
+    }
+
+    button.classList.add("active");
 }
-
 </script>
 
 </body>
