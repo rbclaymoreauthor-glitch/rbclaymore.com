@@ -1,1 +1,893 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<title>Interviews | R. B. Claymore</title>
+
+<meta name="description" content="Interviews with R. B. Claymore, author of dark psychological and action thrillers.">
+<meta name="author" content="R. B. Claymore">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://www.rbclaymore.com/interviews.html">
+<link rel="icon" href="/favicon.png">
+
+<style>
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background: #080808;
+    color: #f2f2f2;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* HEADER */
+
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 28px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10;
+}
+
+.logo {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    letter-spacing: 3px;
+    font-weight: 500;
+}
+
+nav {
+    display: flex;
+    gap: 28px;
+}
+
+nav a {
+    color: #ddd;
+    text-decoration: none;
+    font-size: 13px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #fff;
+}
+
+/* HERO */
+
+.hero {
+    min-height: 58vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 120px 20px 80px;
+    background:
+        radial-gradient(circle at center, #202020 0%, #0d0d0d 45%, #080808 75%);
+}
+
+.hero h1 {
+    margin: 0;
+    font-size: clamp(48px, 8vw, 100px);
+    font-weight: 400;
+    letter-spacing: 8px;
+}
+
+.hero p {
+    margin-top: 22px;
+    color: #aaa;
+    font-size: 14px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+/* CONTENT */
+
+.content {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 100px 30px;
+}
+
+.article-header {
+    text-align: center;
+    margin-bottom: 80px;
+}
+
+.label {
+    color: #888;
+    font-size: 12px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 25px;
+}
+
+.article-header h2 {
+    margin: 0;
+    font-size: clamp(30px, 5vw, 46px);
+    font-weight: 400;
+    line-height: 1.2;
+}
+
+.subtitle {
+    color: #999;
+    font-size: 18px;
+    margin-top: 18px;
+    font-style: italic;
+}
+
+/* LANGUAGE SELECTOR */
+
+.languages {
+    display: flex;
+    justify-content: center;
+    gap: 14px;
+    margin-top: 35px;
+}
+
+.language {
+    width: 34px;
+    height: 24px;
+    border: 1px solid #444;
+    background: transparent;
+    padding: 0;
+    cursor: pointer;
+    opacity: 0.45;
+    transition: all 0.3s ease;
+}
+
+.language:hover,
+.language.active {
+    opacity: 1;
+    border-color: #aaa;
+}
+
+.language svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+/* INTERVIEW */
+
+.interview {
+    max-width: 760px;
+    margin: 0 auto;
+}
+
+.question {
+    margin-bottom: 52px;
+}
+
+.question h3 {
+    margin: 0 0 18px;
+    font-size: 19px;
+    font-weight: 500;
+    line-height: 1.5;
+}
+
+.question p {
+    margin: 0;
+    color: #ccc;
+    font-size: 16px;
+    line-height: 1.9;
+}
+
+.separator {
+    width: 80px;
+    height: 1px;
+    background: #333;
+    margin: 75px auto;
+}
+
+/* BACK */
+
+.back-home {
+    text-align: center;
+    margin-top: 100px;
+}
+
+.back-home a {
+    display: inline-block;
+    border: 1px solid #555;
+    color: #ddd;
+    text-decoration: none;
+    padding: 13px 25px;
+    font-size: 12px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+}
+
+.back-home a:hover {
+    border-color: #fff;
+    color: #fff;
+}
+
+/* FOOTER */
+
+footer {
+    border-top: 1px solid #1d1d1d;
+    padding: 35px 20px;
+    text-align: center;
+    color: #666;
+    font-size: 12px;
+    letter-spacing: 1px;
+}
+
+/* LANGUAGE CONTENT */
+
+.language-content {
+    display: none;
+}
+
+.language-content.active {
+    display: block;
+}
+
+/* MOBILE */
+
+@media (max-width: 768px) {
+
+    header {
+        padding: 22px 20px;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    nav {
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    nav a {
+        font-size: 11px;
+    }
+
+    .hero {
+        min-height: 50vh;
+        padding-top: 150px;
+    }
+
+    .hero h1 {
+        letter-spacing: 5px;
+    }
+
+    .content {
+        padding: 70px 22px;
+    }
+
+    .article-header {
+        margin-bottom: 60px;
+    }
+
+    .question {
+        margin-bottom: 45px;
+    }
+
+    .question h3 {
+        font-size: 18px;
+    }
+
+    .question p {
+        font-size: 15px;
+        line-height: 1.85;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+
+    <a href="index.html" class="logo">R. B. CLAYMORE</a>
+
+    <nav>
+        <a href="books.html">Books</a>
+        <a href="about.html">About</a>
+        <a href="journal.html">Journal</a>
+        <a href="interviews.html">Interviews</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+</header>
+
+
+<section class="hero">
+
+    <div>
+        <h1>INTERVIEWS</h1>
+        <p>Conversations with R. B. Claymore</p>
+    </div>
+
+</section>
+
+
+<main class="content">
+
+    <div class="article-header">
+
+        <div class="label">Interview</div>
+
+        <h2>The Story Behind <em>Do Not Come</em></h2>
+
+        <div class="subtitle">
+            An interview with R. B. Claymore
+        </div>
+
+        <div class="languages">
+
+            <!-- USA FLAG -->
+
+            <button class="language active" onclick="showLanguage('en', this)" aria-label="English">
+
+                <svg viewBox="0 0 60 40" xmlns="http://www.w3.org/2000/svg">
+
+                    <rect width="60" height="40" fill="#fff"/>
+
+                    <rect y="0" width="60" height="3.08" fill="#b22234"/>
+                    <rect y="6.15" width="60" height="3.08" fill="#b22234"/>
+                    <rect y="12.3" width="60" height="3.08" fill="#b22234"/>
+                    <rect y="18.45" width="60" height="3.08" fill="#b22234"/>
+                    <rect y="24.6" width="60" height="3.08" fill="#b22234"/>
+                    <rect y="30.75" width="60" height="3.08" fill="#b22234"/>
+                    <rect y="36.9" width="60" height="3.1" fill="#b22234"/>
+
+                    <rect width="24" height="21.5" fill="#3c3b6e"/>
+
+                    <g fill="#fff">
+                        <circle cx="3" cy="3" r="0.9"/>
+                        <circle cx="8" cy="3" r="0.9"/>
+                        <circle cx="13" cy="3" r="0.9"/>
+                        <circle cx="18" cy="3" r="0.9"/>
+
+                        <circle cx="5.5" cy="6.5" r="0.9"/>
+                        <circle cx="10.5" cy="6.5" r="0.9"/>
+                        <circle cx="15.5" cy="6.5" r="0.9"/>
+                        <circle cx="20.5" cy="6.5" r="0.9"/>
+
+                        <circle cx="3" cy="10" r="0.9"/>
+                        <circle cx="8" cy="10" r="0.9"/>
+                        <circle cx="13" cy="10" r="0.9"/>
+                        <circle cx="18" cy="10" r="0.9"/>
+
+                        <circle cx="5.5" cy="13.5" r="0.9"/>
+                        <circle cx="10.5" cy="13.5" r="0.9"/>
+                        <circle cx="15.5" cy="13.5" r="0.9"/>
+                        <circle cx="20.5" cy="13.5" r="0.9"/>
+
+                        <circle cx="3" cy="17" r="0.9"/>
+                        <circle cx="8" cy="17" r="0.9"/>
+                        <circle cx="13" cy="17" r="0.9"/>
+                        <circle cx="18" cy="17" r="0.9"/>
+                    </g>
+
+                </svg>
+
+            </button>
+
+
+            <!-- SPAIN FLAG -->
+
+            <button class="language" onclick="showLanguage('es', this)" aria-label="Español">
+
+                <svg viewBox="0 0 60 40" xmlns="http://www.w3.org/2000/svg">
+
+                    <rect width="60" height="40" fill="#aa151b"/>
+                    <rect y="10" width="60" height="20" fill="#f1bf00"/>
+
+                </svg>
+
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- ENGLISH -->
+
+    <div id="en" class="language-content active">
+
+        <div class="interview">
+
+            <div class="question">
+                <h3>1. Where did the idea for <em>Do Not Come</em> come from?</h3>
+                <p>
+                    The idea came from a Spring Break trip I took with friends through Mexico in the early 1990s. Some of the events in the novel were inspired by things that happened during that trip.
+                    <br><br>
+                    After staying in a fairly run-down hotel, we ended up at a resort in the middle of nowhere. There was a convention taking place and the resort was almost entirely full of women. We were practically the only foreigners there, and the night became pretty wild.
+                    <br><br>
+                    Because we were isolated and surrounded by Mexican staff who seemed to be watching us with a certain wariness, I had the feeling that the looks we were getting weren't particularly friendly. Maybe it was the tequila.
+                    <br><br>
+                    But I remember thinking: "We're on our own. We'll get out of here because they want us to. But what if they decide they don't?"
+                    <br><br>
+                    That feeling of vulnerability was the real starting point. I began writing the sense of danger almost without stopping. Reality gave me the starting point; fiction took it from there.
+                </p>
+            </div>
+
+
+            <div class="question">
+                <h3>2. Did anything from that trip actually make it into the novel?</h3>
+                <p>
+                    Yes. Some uncomfortable and tense moments did. Fortunately, we all made it home safely.
+                    <br><br>
+                    Over time, memories became mixed with imagination and eventually found their way into the novel. Reality was the starting point, and fiction took it from there.
+                </p>
+            </div>
+
+
+            <div class="question">
+                <h3>3. The novel revolves around three friends. Why three?</h3>
+                <p>
+                    Those three characters grew out of that trip. The people I travelled with were friends and college classmates. A lot of crazy things happened, but we made it back safely.
+                    <br><br>
+                    Years later, I started wondering what might happen if three friends were placed in a much more extreme situation.
+                </p>
+            </div>
+
+
+            <div class="question">
+                <h3>4. You have lived and worked in different parts of the world. How did that influence the novel?</h3>
+                <p>
+                    Mainly through the settings and the way I approached different countries and characters.
+                    <br><br>
+                    Living in different places gives you a firsthand sense of how people think and behave differently. I wanted the settings to feel believable and the characters from different countries to feel authentic.
+                </p>
+            </div>
+
+
+            <div class="question">
+                <h3>5. Why Mexico?</h3>
+                <p>
+                    Mexico is a fascinating country, and its border with the United States made it a natural fit for the story.
+                    <br><br>
+                    It also contained many of the ingredients I needed for the novel. And there was a personal connection: Mexico was tied to the origins of the story itself.
+                </p>
+            </div>
+
+
+            <div class="question">
+                <h3>6. What interests you about intelligence and international operations?</h3>
+                <p>
+                    I'm interested in what goes on between the United States and the rest of the Americas. Some operations work, others don't, and there are often consequences for people who have nothing to do with them.
+                    <br><br>
+                    I'm particularly interested in the less visible side of these operations, and in the consequences and collateral damage that can exist outside the official version of events.
+                </p>
+            </div>
+
+
+            <div class="question">
+                <h3>7. Which writers have influenced you?</h3>
+                <p>
+                    I've been particularly influenced by European writers, especially Pierre Lemaitre and his approach to stories and characters.
+                    <br><br>
+                    I've also read the classic espionage writers. In the end, everything you read becomes part of what you write, whether you realize it or not.
+                </p>
+            </div>
+
+
+            <div class="question">
+                <h3>8. How do you approach plotting?</h3>
+                <p>
+                    I usually start with the main plot roughly mapped out. Then the side stories begin to take on a life of their own. They intersect with the main story and sometimes take the characters in directions I hadn't planned.
+                    <br><br>
+                    I enjoy that part of the process. Readers tend to appreciate unexpected turns, too.
+                </p>
+            </div>
+
+
+            <div class="question">
+                <h3>9. How did you develop the three main characters?</h3>
+                <p>
+                    They are three very different people, but they are close friends.
+                    <br><br>
+                    I started with small personality traits. Those traits gradually grew, and the events of the story helped me discover who the characters really were.
+                </p>
+            </div>
+
+
+            <div class="question">
+                <h3>10. What was the most difficult part of the research?</h3>
+                <p>
+                    The medical material was probably the most difficult. I had to do a lot of research to make it believable.
+                    <br><br>
+                    Technical subjects require actual research. You have to make sure that what you're describing makes sense.
+                </p>
+            </div>
+
+
+            <div class="question">
+                <h3>11. Which part of the novel did you enjoy writing the most?</h3>
+                <p>
+                    Probably the New York section.
+                    <br><br>
+                    Places and scenes have their own atmosphere, and New York was one of those places that was particularly enjoyable to write.
+                </p>
+            </div>
+
+
+            <div class="question">
+                <h3>12. How much research did you do into intelligence and geopolitics?</h3>
+                <p>
+                    I've always been interested in geopolitics and intelligence, so I was already curious about those subjects.
+                    <br><br>
+                    For the book, though, I spent almost a year doing intensive research. I needed to understand certain aspects before I could incorporate them into the story.
+                </p>
+            </div>
+
+
+            <div class="question">
+                <h3>13. The characters are placed under extreme pressure. Why?</h3>
+                <p>
+                    Because pressure outside your comfort zone reveals who you really are.
+                    <br><br>
+                    It reveals your values, your limits and the decisions you're willing to make. I'm interested in what happens when people are forced to confront situations they never imagined themselves facing.
+                </p>
+            </div>
+
+
+            <div class="question">
+                <h3>14. What made you interested in the survival instinct?</h3>
+                <p>
+                    I first became interested in it while watching <em>Black Hawk Down</em>.
+                    <br><br>
+                    There's something powerful about putting people in situations where they have to improvise and act on instinct. Under pressure, you discover who people really are.
+                </p>
+            </div>
+
+
+            <div class="question">
+                <h3>15. What do you hope readers take away from <em>Do Not Come</em>?</h3>
+                <p>
+                    I hope they feel their time was well spent and that they got something from the book.
+                    <br><br>
+                    Obviously, I want them to be entertained, but I'd also like the story to leave them with something to think about. I want it to feel like a journey.
+                    <br><br>
+                    And if they finish it thinking, "Wow," even better.
+                </p>
+            </div>
+
+
+            <div class="question">
+                <h3>16. When did you first start writing?</h3>
+                <p>
+                    I started writing at school.
+                    <br><br>
+                    Sometimes we were punished by being made to write stories about saints. The sooner you finished, the sooner you could go out and play.
+                    <br><br>
+                    Whenever we were allowed to choose the subject, I wrote fiction. I could write a story in five minutes. That's probably where it all started.
+                </p>
+            </div>
+
+
+            <div class="question">
+                <h3>17. Your writing has a cinematic quality. How much does cinema influence you?</h3>
+                <p>
+                    I love movies, but movies are expensive and budgets start making decisions for you.
+                    <br><br>
+                    Writing is probably the closest thing to being God. There's no budget and no limit. You can create a character, take them anywhere and make almost anything happen.
+                </p>
+            </div>
+
+
+            <div class="question">
+                <h3>18. What have you learned about the writing process?</h3>
+                <p>
+                    Not many rules, really.
+                    <br><br>
+                    You can build characters and situations without necessarily following the usual rules of a genre, and the story can still work.
+                    <br><br>
+                    The important thing is that the characters feel alive and have personalities. Once that happens, they sometimes do things that surprise even me.
+                </p>
+            </div>
+
+
+            <div class="question">
+                <h3>19. What has been the most rewarding part of writing the novel?</h3>
+                <p>
+                    Characters can stay with someone for a while, and sometimes for the rest of their life.
+                    <br><br>
+                    With <em>Do Not Come</em>, Fred generates the most debate. Readers want to talk about him. That's a good sign. It means the character has made it off the page and into the reader's mind.
+                </p>
+            </div>
+
+
+            <div class="question">
+                <h3>20. Is <em>Do Not Come</em> simply a thriller, or is there something more underneath?</h3>
+                <p>
+                    It's always more than that.
+                    <br><br>
+                    There's social criticism, black humor, and characters who aren't necessarily what they seem.
+                    <br><br>
+                    The thriller is the vehicle, but underneath it is a look at people, their ambitions, their decisions and the consequences of those decisions.
+                    <br><br>
+                    I'm interested in characters under pressure and in what happens when they are forced to confront things they never thought they were capable of.
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- SPANISH -->
+
+    <div id="es" class="language-content">
+
+        <div class="interview">
+
+            <div class="question">
+                <h3>1. ¿De dónde surgió la idea de <em>No Vengáis</em>?</h3>
+                <p>
+                    La idea surgió de un viaje que hice con unos amigos durante las vacaciones de Spring Break por México a principios de los años noventa. Algunos acontecimientos de la novela están inspirados en cosas que ocurrieron durante aquel viaje.
+                    <br><br>
+                    Después de alojarnos en un hotel bastante ruinoso, terminamos en un resort en medio de la nada. Había un congreso y el resort estaba prácticamente lleno de chicas. Nosotros éramos casi los únicos extranjeros y la noche acabó siendo bastante loca.
+                    <br><br>
+                    Como estábamos aislados y rodeados de empleados mexicanos que parecían observarnos con cierta desconfianza, tuve la sensación de que las miradas que recibíamos no eran especialmente amistosas. Puede que fuera el tequila.
+                    <br><br>
+                    Pero recuerdo haber pensado: «Estamos solos. Saldremos vivos de aquí porque ellos quieren. Pero ¿qué ocurriría si dejaran de quererlo?».
+                    <br><br>
+                    Esa sensación de vulnerabilidad fue el verdadero punto de partida. Empecé a escribir aquella sensación de peligro casi sin parar. La realidad proporcionó el punto de partida; la ficción construyó todo lo demás.
+                </p>
+            </div>
+
+
+            <div class="question">
+                <h3>2. ¿Algo de aquel viaje llegó realmente a la novela?</h3>
+                <p>
+                    Sí. Algunos momentos incómodos y tensos llegaron a ella. Por suerte, todos volvimos a casa sanos y salvos.
+                    <br><br>
+                    Con el tiempo, los recuerdos se mezclaron con la imaginación y terminaron encontrando su camino hasta la novela. La realidad fue el punto de partida y después llegó la ficción.
+                </p>
+            </div>
+
+
+            <div class="question">
+                <h3>3. La novela gira alrededor de tres amigos. ¿Por qué tres?</h3>
+                <p>
+                    Esos tres personajes nacieron de aquel viaje. Las personas con las que viajé eran amigos y compañeros de universidad. Pasaron muchas cosas disparatadas, pero todos volvimos a casa.
+                    <br><br>
+                    Años después empecé a preguntarme qué ocurriría si tres amigos fueran colocados en una situación mucho más extrema.
+                </p>
+            </div>
+
+
+            <div class="question">
+                <h3>4. Has vivido y trabajado en diferentes partes del mundo. ¿Cómo influyó eso en la novela?</h3>
+                <p>
+                    Principalmente en los escenarios y en la manera de abordar los diferentes países y personajes.
+                    <br><br>
+                    Vivir en distintos lugares te permite conocer de primera mano diferentes formas de pensar y de comportarse. Quería que los escenarios resultaran creíbles y que los personajes de diferentes países fueran auténticos.
+                </p>
+            </div>
+
+
+            <div class="question">
+                <h3>5. ¿Por qué México?</h3>
+                <p>
+                    México es un país fascinante y su frontera con Estados Unidos lo convertía en un escenario natural para la historia.
+                    <br><br>
+                    Además, reunía muchos de los ingredientes que necesitaba para la novela. Y existía una conexión personal: México estaba relacionado con el origen de la propia historia.
+                </p>
+            </div>
+
+
+            <div class="question">
+                <h3>6. ¿Qué te interesa de la inteligencia y las operaciones internacionales?</h3>
+                <p>
+                    Me interesa lo que ocurre entre Estados Unidos y el resto de América. Algunas operaciones salen bien, otras no, y a menudo existen consecuencias para personas que no tienen nada que ver con ellas.
+                    <br><br>
+                    Me interesa especialmente esa parte menos visible de las operaciones y las consecuencias y daños colaterales que pueden existir al margen de la versión oficial de los acontecimientos.
+                </p>
+            </div>
+
+
+            <div class="question">
+                <h3>7. ¿Qué escritores te han influido?</h3>
+                <p>
+                    Me han influido especialmente escritores europeos, sobre todo Pierre Lemaitre y su manera de abordar las historias y los personajes.
+                    <br><br>
+                    También he leído a los clásicos de la novela de espionaje. Al final, todo lo que lees termina formando parte de lo que escribes, lo quieras o no.
+                </p>
+            </div>
+
+
+            <div class="question">
+                <h3>8. ¿Cómo construyes la trama?</h3>
+                <p>
+                    Normalmente empiezo con la trama principal más o menos definida. Después las historias secundarias empiezan a cobrar vida propia. Se cruzan con la historia principal y, en ocasiones, llevan a los personajes por caminos que no había previsto.
+                    <br><br>
+                    Esa parte del proceso me gusta. A los lectores también suelen gustarles los giros inesperados.
+                </p>
+            </div>
+
+
+            <div class="question">
+                <h3>9. ¿Cómo desarrollaste a los tres personajes principales?</h3>
+                <p>
+                    Son tres personas muy diferentes, pero son amigos íntimos.
+                    <br><br>
+                    Empecé con pequeños rasgos de personalidad. Esos rasgos fueron creciendo y los acontecimientos de la historia me ayudaron a descubrir quiénes eran realmente los personajes.
+                </p>
+            </div>
+
+
+            <div class="question">
+                <h3>10. ¿Cuál fue la parte más difícil de la investigación?</h3>
+                <p>
+                    Probablemente el material médico. Tuve que hacer mucha investigación para conseguir que resultara creíble.
+                    <br><br>
+                    Los temas técnicos requieren investigar de verdad. Hay que asegurarse de que aquello que describes tenga sentido.
+                </p>
+            </div>
+
+
+            <div class="question">
+                <h3>11. ¿Qué parte disfrutaste más escribiendo?</h3>
+                <p>
+                    Probablemente la parte de Nueva York.
+                    <br><br>
+                    Los lugares y las escenas tienen su propia atmósfera, y Nueva York fue uno de esos lugares que resultó especialmente divertido de escribir.
+                </p>
+            </div>
+
+
+            <div class="question">
+                <h3>12. ¿Cuánta investigación hiciste sobre inteligencia y geopolítica?</h3>
+                <p>
+                    Siempre me han interesado la geopolítica y la inteligencia, así que ya tenía curiosidad por esos temas.
+                    <br><br>
+                    Para el libro, sin embargo, pasé casi un año haciendo una investigación intensiva. Necesitaba comprender determinados aspectos antes de poder incorporarlos a la historia.
+                </p>
+            </div>
+
+
+            <div class="question">
+                <h3>13. Los personajes están sometidos a una presión extrema. ¿Por qué?</h3>
+                <p>
+                    Porque la presión fuera de nuestra zona de confort revela quiénes somos realmente.
+                    <br><br>
+                    Revela nuestros valores, nuestros límites y las decisiones que estamos dispuestos a tomar. Me interesa lo que ocurre cuando las personas se ven obligadas a enfrentarse a situaciones que nunca imaginaron que tendrían que afrontar.
+                </p>
+            </div>
+
+
+            <div class="question">
+                <h3>14. ¿Qué hizo que te interesara el instinto de supervivencia?</h3>
+                <p>
+                    Me interesó por primera vez viendo <em>Black Hawk Down</em>.
+                    <br><br>
+                    Hay algo muy poderoso en colocar a las personas en situaciones en las que tienen que improvisar y actuar por instinto. Bajo presión descubres quiénes son realmente.
+                </p>
+            </div>
+
+
+            <div class="question">
+                <h3>15. ¿Qué esperas que se lleven los lectores de <em>No Vengáis</em>?</h3>
+                <p>
+                    Espero que sientan que su tiempo ha estado bien invertido y que han obtenido algo del libro.
+                    <br><br>
+                    Evidentemente, quiero que se entretengan, pero también me gustaría que la historia les dejara algo en lo que pensar. Quiero que se sienta como un viaje.
+                    <br><br>
+                    Y si terminan pensando «Wow», todavía mejor.
+                </p>
+            </div>
+
+
+            <div class="question">
+                <h3>16. ¿Cuándo empezaste a escribir?</h3>
+                <p>
+                    Empecé a escribir en el colegio.
+                    <br><br>
+                    A veces nos castigaban obligándonos a escribir historias sobre santos. Cuanto antes terminabas, antes podías salir a jugar.
+                    <br><br>
+                    Cuando nos dejaban elegir el tema, yo escribía ficción. Podía escribir una historia en cinco minutos. Probablemente todo empezó ahí.
+                </p>
+            </div>
+
+
+            <div class="question">
+                <h3>17. Tu escritura tiene un carácter muy cinematográfico. ¿Cuánto influye el cine en ti?</h3>
+                <p>
+                    Me encantan las películas, pero hacer cine es caro y el presupuesto empieza a tomar decisiones por ti.
+                    <br><br>
+                    Escribir es probablemente lo más parecido a ser Dios. No hay presupuesto ni límites. Puedes crear un personaje, llevarlo a cualquier lugar y hacer que ocurra prácticamente cualquier cosa.
+                </p>
+            </div>
+
+
+            <div class="question">
+                <h3>18. ¿Qué has aprendido sobre el proceso de escritura?</h3>
+                <p>
+                    En realidad, no demasiadas reglas.
+                    <br><br>
+                    Puedes construir personajes y situaciones sin seguir necesariamente las reglas habituales de un género y la historia puede seguir funcionando.
+                    <br><br>
+                    Lo importante es que los personajes parezcan vivos y tengan personalidad. Cuando eso ocurre, a veces hacen cosas que incluso a mí me sorprenden.
+                </p>
+            </div>
+
+
+            <div class="question">
+                <h3>19. ¿Qué ha sido lo más gratificante de escribir la novela?</h3>
+                <p>
+                    Los personajes pueden acompañar a alguien durante un tiempo y, en ocasiones, durante el resto de su vida.
+                    <br><br>
+                    En <em>No Vengáis</em>, Fred es el personaje que más debate genera. Los lectores quieren hablar de él. Es una buena señal. Significa que el personaje ha salido de las páginas y ha entrado en la mente del lector.
+                </p>
+            </div>
+
+
+            <div class="question">
+                <h3>20. ¿Es <em>No Vengáis</em> simplemente un thriller o hay algo más debajo?</h3>
+                <p>
+                    Siempre hay algo más.
+                    <br><br>
+                    Hay crítica social, humor negro y personajes que no son necesariamente lo que parecen.
+                    <br><br>
+                    El thriller es el vehículo, pero debajo hay una mirada sobre las personas, sus ambiciones, sus decisiones y las consecuencias de esas decisiones.
+                    <br><br>
+                    Me interesan los personajes sometidos a presión y lo que ocurre cuando se ven obligados a enfrentarse a cosas que nunca pensaron que serían capaces de hacer.
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="back-home">
+        <a href="index.html">Back to Home</a>
+    </div>
+
+</main>
+
+
+<footer>
+    © 2026 R. B. Claymore. All rights reserved.
+</footer>
+
+
+<script>
+
+function showLanguage(language, button) {
+
+    document.querySelectorAll('.language-content').forEach(function(content) {
+        content.classList.remove('active');
+    });
+
+    document.getElementById(language).classList.add('active');
+
+    document.querySelectorAll('.language').forEach(function(btn) {
+        btn.classList.remove('active');
+    });
+
+    button.classList.add('active');
+
+    document.documentElement.lang = language;
+}
+
+</script>
+
+</body>
+</html>
