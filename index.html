@@ -22,576 +22,17 @@
 
 <!-- AUTHOR SCHEMA -->
 
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Person",
-  "name": "R. B. Claymore",
-  "url": "https://www.rbclaymore.com/",
-  "sameAs": [
-    "https://www.instagram.com/r.b.claymore/"
-  ],
-  "jobTitle": "Author"
-}
-</script>
+<script type="application/ld+json"> { "@context": "https://schema.org", "@type": "Person", "name": "R. B. Claymore", "url": "https://www.rbclaymore.com/", "sameAs": [ "https://www.instagram.com/r.b.claymore/" ], "jobTitle": "Author" } </script>
 
 <!-- BOOK SCHEMA -->
 
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Book",
-  "name": "No Vengáis",
-  "author": {
-    "@type": "Person",
-    "name": "R. B. Claymore",
-    "url": "https://www.rbclaymore.com/"
-  },
-  "genre": "Psychological Thriller",
-  "inLanguage": "es",
-  "workExample": [
-    {
-      "@type": "Book",
-      "name": "No Vengáis",
-      "author": {
-        "@type": "Person",
-        "name": "R. B. Claymore"
-      },
-      "inLanguage": "es",
-      "url": "https://www.amazon.es/No-Veng%C3%A1is-R-B-Claymore/dp/B0H5FFTNTJ"
-    },
-    {
-      "@type": "Book",
-      "name": "Do Not Come",
-      "author": {
-        "@type": "Person",
-        "name": "R. B. Claymore"
-      },
-      "inLanguage": "en",
-      "url": "https://www.amazon.es/Do-Not-Come-Psychological-Thriller-ebook/dp/B0GXGDCYWV"
-    }
-  ]
-}
-</script>
+<script type="application/ld+json"> { "@context": "https://schema.org", "@type": "Book", "name": "No Vengáis", "author": { "@type": "Person", "name": "R. B. Claymore", "url": "https://www.rbclaymore.com/" }, "genre": "Psychological Thriller", "inLanguage": "es", "workExample": [ { "@type": "Book", "name": "No Vengáis", "author": { "@type": "Person", "name": "R. B. Claymore" }, "inLanguage": "es", "url": "https://www.amazon.es/No-Veng%C3%A1is-R-B-Claymore/dp/B0H5FFTNTJ" }, { "@type": "Book", "name": "Do Not Come", "author": { "@type": "Person", "name": "R. B. Claymore" }, "inLanguage": "en", "url": "https://www.amazon.es/Do-Not-Come-Psychological-Thriller-ebook/dp/B0GXGDCYWV" } ] } </script>
 
-<style>
-
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
-html {
-    scroll-behavior: smooth;
-}
-
-body {
-    background: #080808;
-    color: #f2f2f2;
-    font-family: Arial, Helvetica, sans-serif;
-    line-height: 1.6;
-}
-
-a {
-    color: inherit;
-    text-decoration: none;
-}
-
-/* =========================
-   HEADER
-========================= */
-
-header {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 10;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 28px 6%;
-}
-
-.logo {
-    font-size: 18px;
-    letter-spacing: 3px;
-    font-weight: 600;
-}
-
-nav {
-    display: flex;
-    gap: 30px;
-    font-size: 13px;
-    letter-spacing: 1.5px;
-    text-transform: uppercase;
-}
-
-nav a {
-    opacity: 0.75;
-    transition: opacity 0.3s ease;
-}
-
-nav a:hover {
-    opacity: 1;
-}
-
-/* =========================
-   HERO
-========================= */
-
-.hero {
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding: 120px 20px;
-    background:
-        radial-gradient(
-            circle at center,
-            #202020 0%,
-            #0d0d0d 45%,
-            #050505 100%
-        );
-}
-
-.hero-content {
-    max-width: 900px;
-}
-
-.hero h1 {
-    font-size: clamp(48px, 8vw, 96px);
-    letter-spacing: 8px;
-    font-weight: 500;
-    margin-bottom: 25px;
-}
-
-.hero p {
-    font-size: 15px;
-    letter-spacing: 4px;
-    text-transform: uppercase;
-    color: #bdbdbd;
-}
-
-/* =========================
-   GENERAL
-========================= */
-
-.section-inner {
-    max-width: 1150px;
-    margin: 0 auto;
-    padding: 120px 30px;
-}
-
-.section-label {
-    text-align: center;
-    font-size: 13px;
-    letter-spacing: 5px;
-    text-transform: uppercase;
-    color: #777;
-    margin-bottom: 22px;
-}
-
-/* =========================
-   BOOKS
-========================= */
-
-.books {
-    background: #0a0a0a;
-    border-top: 1px solid #1c1c1c;
-    border-bottom: 1px solid #1c1c1c;
-}
-
-.books-heading {
-    text-align: center;
-    margin-bottom: 70px;
-}
-
-.books-heading h2 {
-    font-size: clamp(28px, 5vw, 46px);
-    font-weight: 400;
-    letter-spacing: 3px;
-    margin-bottom: 15px;
-}
-
-.books-heading p {
-    color: #888;
-    font-size: 14px;
-    letter-spacing: 2px;
-}
-
-.editions {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 35px;
-}
-
-.edition-card {
-    background: #101010;
-    border: 1px solid #242424;
-    padding: 42px 38px 45px;
-    text-align: center;
-    transition:
-        transform 0.3s ease,
-        border-color 0.3s ease;
-}
-
-.edition-card:hover {
-    transform: translateY(-5px);
-    border-color: #444;
-}
-
-.language {
-    font-size: 13px;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    color: #aaa;
-    margin-bottom: 10px;
-}
-
-.flag {
-    font-size: 25px;
-    margin-right: 7px;
-    vertical-align: -2px;
-}
-
-.edition-card h3 {
-    font-size: 29px;
-    font-weight: 400;
-    letter-spacing: 2px;
-    margin-bottom: 5px;
-}
-
-.edition-name {
-    font-size: 12px;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    color: #777;
-    margin-bottom: 32px;
-}
-
-.book-cover {
-    width: 100%;
-    max-width: 290px;
-    display: block;
-    margin: 0 auto 35px;
-    box-shadow:
-        0 25px 60px rgba(0,0,0,0.55);
-}
-
-.genre {
-    font-size: 12px;
-    letter-spacing: 1.5px;
-    text-transform: uppercase;
-    color: #888;
-    margin-bottom: 18px;
-}
-
-.synopsis {
-    color: #bdbdbd;
-    font-size: 15px;
-    line-height: 1.8;
-    max-width: 480px;
-    margin: 0 auto 30px;
-}
-
-.amazon-button {
-    display: inline-block;
-    padding: 12px 28px;
-    border: 1px solid #555;
-    font-size: 11px;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    transition:
-        background 0.3s ease,
-        color 0.3s ease;
-}
-
-.amazon-button:hover {
-    background: #f2f2f2;
-    color: #080808;
-}
-
-/* =========================
-   ABOUT
-========================= */
-
-.about {
-    background:
-        linear-gradient(
-            to bottom,
-            #080808 0%,
-            #0d0d0d 50%,
-            #080808 100%
-        );
-}
-
-.bio-language {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 14px;
-    margin-bottom: 45px;
-}
-
-.bio-lang {
-    background: none;
-    border: none;
-    padding: 4px;
-    font-size: 25px;
-    cursor: pointer;
-    opacity: 0.4;
-    transition:
-        opacity 0.3s ease,
-        transform 0.3s ease;
-}
-
-.bio-lang:hover {
-    opacity: 0.8;
-    transform: translateY(-2px);
-}
-
-.bio-lang.active {
-    opacity: 1;
-}
-
-.about-content {
-    display: grid;
-    grid-template-columns: 280px 1fr;
-    gap: 80px;
-    align-items: center;
-    max-width: 1000px;
-    margin: 0 auto;
-}
-
-.author-photo {
-    width: 190px;
-    height: 190px;
-    object-fit: cover;
-    display: block;
-    margin: 0 auto;
-}
-
-.about-text p {
-    color: #bdbdbd;
-    font-size: 17px;
-    line-height: 1.9;
-    margin-bottom: 25px;
-}
-
-.signature {
-    margin-top: 35px;
-    color: #f2f2f2 !important;
-    font-size: 15px !important;
-}
-
-/* =========================
-   CONTACT
-========================= */
-
-.contact {
-    background: #0a0a0a;
-    border-top: 1px solid #1c1c1c;
-}
-
-.contact-content {
-    text-align: center;
-    max-width: 700px;
-    margin: 0 auto;
-}
-
-.contact-content h2 {
-    font-size: clamp(30px, 5vw, 48px);
-    font-weight: 400;
-    letter-spacing: 3px;
-    margin-bottom: 18px;
-}
-
-.contact-content p {
-    color: #888;
-    margin-bottom: 25px;
-}
-
-.email {
-    display: inline-block;
-    font-size: 16px;
-    letter-spacing: 1px;
-    margin-bottom: 42px;
-}
-
-.socials {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 27px;
-}
-
-.social-icon {
-    width: 30px;
-    height: 30px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #888;
-    transition:
-        color 0.3s ease,
-        transform 0.3s ease;
-}
-
-.social-icon:hover {
-    color: #fff;
-    transform: translateY(-3px);
-}
-
-.social-icon svg {
-    width: 23px;
-    height: 23px;
-    fill: currentColor;
-}
-
-/* =========================
-   NEWSLETTER
-========================= */
-
-.newsletter {
-    background: #080808;
-    border-top: 1px solid #1c1c1c;
-    border-bottom: 1px solid #1c1c1c;
-}
-
-.newsletter-content {
-    text-align: center;
-    max-width: 650px;
-    margin: 0 auto;
-}
-
-.newsletter-content h2 {
-    font-size: clamp(28px, 5vw, 44px);
-    font-weight: 400;
-    letter-spacing: 3px;
-    margin-bottom: 15px;
-}
-
-.newsletter-content p {
-    color: #888;
-    font-size: 15px;
-    margin-bottom: 35px;
-}
-
-/* =========================
-   FOOTER
-========================= */
-
-footer {
-    border-top: 1px solid #1c1c1c;
-    text-align: center;
-    padding: 30px 20px;
-    color: #666;
-    font-size: 11px;
-    letter-spacing: 1px;
-}
-
-/* =========================
-   MOBILE
-========================= */
-
-@media (max-width: 768px) {
-
-    header {
-        padding: 22px 20px;
-    }
-
-    nav {
-        gap: 15px;
-        font-size: 10px;
-    }
-
-    .hero {
-        min-height: 90vh;
-    }
-
-    .hero h1 {
-        letter-spacing: 5px;
-    }
-
-    .hero p {
-        font-size: 11px;
-        letter-spacing: 2.5px;
-    }
-
-    .section-inner {
-        padding: 90px 20px;
-    }
-
-    .books-heading {
-        margin-bottom: 50px;
-    }
-
-    .books-heading h2 {
-        font-size: 27px;
-        line-height: 1.4;
-    }
-
-    .editions {
-        grid-template-columns: 1fr;
-        gap: 25px;
-    }
-
-    .edition-card {
-        padding: 35px 25px 40px;
-    }
-
-    .edition-card h3 {
-        font-size: 26px;
-    }
-
-    .book-cover {
-        max-width: 250px;
-    }
-
-    .about-content {
-        grid-template-columns: 1fr;
-        gap: 45px;
-        text-align: center;
-    }
-
-    .author-photo {
-        width: 155px;
-        height: 155px;
-    }
-
-    .about-text {
-        text-align: left;
-    }
-
-    .about-text p {
-        font-size: 16px;
-        line-height: 1.8;
-    }
-
-    .signature {
-        text-align: center;
-    }
-
-    .socials {
-        gap: 20px;
-    }
-
-}
-
-</style>
+<style> * { box-sizing: border-box; margin: 0; padding: 0; } html { scroll-behavior: smooth; } body { background: #080808; color: #f2f2f2; font-family: Arial, Helvetica, sans-serif; line-height: 1.6; } a { color: inherit; text-decoration: none; } /* ========================= HEADER ========================= */ header { position: absolute; top: 0; left: 0; width: 100%; z-index: 10; display: flex; justify-content: space-between; align-items: center; padding: 28px 6%; } .logo { font-size: 18px; letter-spacing: 3px; font-weight: 600; } nav { display: flex; gap: 30px; font-size: 13px; letter-spacing: 1.5px; text-transform: uppercase; } nav a { opacity: 0.75; transition: opacity 0.3s ease; } nav a:hover { opacity: 1; } /* ========================= HERO ========================= */ .hero { min-height: 100vh; display: flex; align-items: center; justify-content: center; text-align: center; padding: 120px 20px; background: radial-gradient( circle at center, #202020 0%, #0d0d0d 45%, #050505 100% ); } .hero-content { max-width: 900px; } .hero h1 { font-size: clamp(48px, 8vw, 96px); letter-spacing: 8px; font-weight: 500; margin-bottom: 25px; } .hero p { font-size: 15px; letter-spacing: 4px; text-transform: uppercase; color: #bdbdbd; } /* ========================= GENERAL ========================= */ .section-inner { max-width: 1150px; margin: 0 auto; padding: 120px 30px; } .section-label { text-align: center; font-size: 13px; letter-spacing: 5px; text-transform: uppercase; color: #777; margin-bottom: 22px; } /* ========================= BOOKS ========================= */ .books { background: #0a0a0a; border-top: 1px solid #1c1c1c; border-bottom: 1px solid #1c1c1c; } .books-heading { text-align: center; margin-bottom: 70px; } .books-heading h2 { font-size: clamp(28px, 5vw, 46px); font-weight: 400; letter-spacing: 3px; margin-bottom: 15px; } .books-heading p { color: #888; font-size: 14px; letter-spacing: 2px; } .editions { display: grid; grid-template-columns: 1fr 1fr; gap: 35px; } .edition-card { background: #101010; border: 1px solid #242424; padding: 42px 38px 45px; text-align: center; transition: transform 0.3s ease, border-color 0.3s ease; } .edition-card:hover { transform: translateY(-5px); border-color: #444; } .language { font-size: 13px; letter-spacing: 2px; text-transform: uppercase; color: #aaa; margin-bottom: 10px; } .flag { font-size: 25px; margin-right: 7px; vertical-align: -2px; } .edition-card h3 { font-size: 29px; font-weight: 400; letter-spacing: 2px; margin-bottom: 5px; } .edition-name { font-size: 12px; letter-spacing: 2px; text-transform: uppercase; color: #777; margin-bottom: 32px; } .book-cover { width: 100%; max-width: 290px; display: block; margin: 0 auto 35px; box-shadow: 0 25px 60px rgba(0,0,0,0.55); } .genre { font-size: 12px; letter-spacing: 1.5px; text-transform: uppercase; color: #888; margin-bottom: 18px; } .synopsis { color: #bdbdbd; font-size: 15px; line-height: 1.8; max-width: 480px; margin: 0 auto 30px; } .amazon-button { display: inline-block; padding: 12px 28px; border: 1px solid #555; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; transition: background 0.3s ease, color 0.3s ease; } .amazon-button:hover { background: #f2f2f2; color: #080808; } /* ========================= ABOUT ========================= */ .about { background: linear-gradient( to bottom, #080808 0%, #0d0d0d 50%, #080808 100% ); } .bio-language { display: flex; justify-content: center; align-items: center; gap: 14px; margin-bottom: 45px; } .bio-lang { background: none; border: none; padding: 4px; font-size: 25px; cursor: pointer; opacity: 0.4; transition: opacity 0.3s ease, transform 0.3s ease; } .bio-lang:hover { opacity: 0.8; transform: translateY(-2px); } .bio-lang.active { opacity: 1; } .about-content { display: grid; grid-template-columns: 280px 1fr; gap: 80px; align-items: center; max-width: 1000px; margin: 0 auto; } .author-photo { width: 190px; height: 190px; object-fit: cover; display: block; margin: 0 auto; } .about-text p { color: #bdbdbd; font-size: 17px; line-height: 1.9; margin-bottom: 25px; } .signature { margin-top: 35px; color: #f2f2f2 !important; font-size: 15px !important; } /* ========================= CONTACT ========================= */ .contact { background: #0a0a0a; border-top: 1px solid #1c1c1c; } .contact-content { text-align: center; max-width: 700px; margin: 0 auto; } .contact-content h2 { font-size: clamp(30px, 5vw, 48px); font-weight: 400; letter-spacing: 3px; margin-bottom: 18px; } .contact-content p { color: #888; margin-bottom: 25px; } .email { display: inline-block; font-size: 16px; letter-spacing: 1px; margin-bottom: 42px; } .socials { display: flex; justify-content: center; align-items: center; gap: 27px; } .social-icon { width: 30px; height: 30px; display: flex; align-items: center; justify-content: center; color: #888; transition: color 0.3s ease, transform 0.3s ease; } .social-icon:hover { color: #fff; transform: translateY(-3px); } .social-icon svg { width: 23px; height: 23px; fill: currentColor; } /* ========================= NEWSLETTER ========================= */ .newsletter { background: #080808; border-top: 1px solid #1c1c1c; border-bottom: 1px solid #1c1c1c; } .newsletter-content { text-align: center; max-width: 650px; margin: 0 auto; } .newsletter-content h2 { font-size: clamp(28px, 5vw, 44px); font-weight: 400; letter-spacing: 3px; margin-bottom: 15px; } .newsletter-content p { color: #888; font-size: 15px; margin-bottom: 35px; } /* ========================= FOOTER ========================= */ footer { border-top: 1px solid #1c1c1c; text-align: center; padding: 30px 20px; color: #666; font-size: 11px; letter-spacing: 1px; } /* ========================= MOBILE ========================= */ @media (max-width: 768px) { header { padding: 22px 20px; } nav { gap: 15px; font-size: 10px; } .hero { min-height: 90vh; } .hero h1 { letter-spacing: 5px; } .hero p { font-size: 11px; letter-spacing: 2.5px; } .section-inner { padding: 90px 20px; } .books-heading { margin-bottom: 50px; } .books-heading h2 { font-size: 27px; line-height: 1.4; } .editions { grid-template-columns: 1fr; gap: 25px; } .edition-card { padding: 35px 25px 40px; } .edition-card h3 { font-size: 26px; } .book-cover { max-width: 250px; } .about-content { grid-template-columns: 1fr; gap: 45px; text-align: center; } .author-photo { width: 155px; height: 155px; } .about-text { text-align: left; } .about-text p { font-size: 16px; line-height: 1.8; } .signature { text-align: center; } .socials { gap: 20px; } } </style>
 
 <!-- MailerLite Universal -->
 
-<script>
-    (function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[])
-    .push(arguments);},l=d.createElement(e),l.async=1,l.src=u,
-    n=d.getElementsByTagName(e)[0],n.parentNode.insertBefore(l,n);})
-    (window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
-    ml('account', '2666737');
-</script>
+<script> (function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[]) .push(arguments);},l=d.createElement(e),l.async=1,l.src=u, n=d.getElementsByTagName(e)[0],n.parentNode.insertBefore(l,n);}) (window,document,'script','https://assets.mailerlite.com/js/universal.js','ml'); ml('account', '2666737'); </script>
 
 <!-- End MailerLite Universal -->
 
@@ -599,13 +40,10 @@ footer {
 
 <body>
 
-<!-- =========================
-     HEADER
-========================= -->
+<!-- ========================= HEADER ========================= -->
 
 <header>
 
-```
 <div class="logo">
     R. B. CLAYMORE
 </div>
@@ -616,17 +54,13 @@ footer {
     <a href="journal.html">Journal</a>
     <a href="#contact">Contact</a>
 </nav>
-```
 
 </header>
 
-<!-- =========================
-     HERO
-========================= -->
+<!-- ========================= HERO ========================= -->
 
 <section class="hero">
 
-```
 <div class="hero-content">
 
     <h1>R. B. CLAYMORE</h1>
@@ -636,17 +70,13 @@ footer {
     </p>
 
 </div>
-```
 
 </section>
 
-<!-- =========================
-     BOOKS
-========================= -->
+<!-- ========================= BOOKS ========================= -->
 
 <section class="books" id="books">
 
-```
 <div class="section-inner">
 
     <div class="books-heading">
@@ -754,17 +184,13 @@ footer {
     </div>
 
 </div>
-```
 
 </section>
 
-<!-- =========================
-     ABOUT
-========================= -->
+<!-- ========================= ABOUT ========================= -->
 
 <section class="about" id="about">
 
-```
 <div class="section-inner">
 
     <div class="section-label">
@@ -852,47 +278,15 @@ footer {
     </div>
 
 </div>
-```
 
 </section>
 
-<script>
+<script> function showBio(language) { const englishBio = document.getElementById("bio-en"); const spanishBio = document.getElementById("bio-es"); const buttons = document.querySelectorAll(".bio-lang"); if (language === "en") { englishBio.style.display = "block"; spanishBio.style.display = "none"; buttons[0].classList.add("active"); buttons[1].classList.remove("active"); } else { englishBio.style.display = "none"; spanishBio.style.display = "block"; buttons[0].classList.remove("active"); buttons[1].classList.add("active"); } } </script>
 
-function showBio(language) {
-
-    const englishBio = document.getElementById("bio-en");
-    const spanishBio = document.getElementById("bio-es");
-    const buttons = document.querySelectorAll(".bio-lang");
-
-    if (language === "en") {
-
-        englishBio.style.display = "block";
-        spanishBio.style.display = "none";
-
-        buttons[0].classList.add("active");
-        buttons[1].classList.remove("active");
-
-    } else {
-
-        englishBio.style.display = "none";
-        spanishBio.style.display = "block";
-
-        buttons[0].classList.remove("active");
-        buttons[1].classList.add("active");
-
-    }
-
-}
-
-</script>
-
-<!-- =========================
-     CONTACT
-========================= -->
+<!-- ========================= CONTACT ========================= -->
 
 <section class="contact" id="contact">
 
-```
 <div class="section-inner">
 
     <div class="contact-content">
@@ -983,17 +377,13 @@ function showBio(language) {
     </div>
 
 </div>
-```
 
 </section>
 
-<!-- =========================
-     NEWSLETTER
-========================= -->
+<!-- ========================= NEWSLETTER ========================= -->
 
 <section class="newsletter">
 
-```
 <div class="section-inner">
 
     <div class="section-label">
@@ -1015,13 +405,9 @@ function showBio(language) {
     </div>
 
 </div>
-```
 
 </section>
 
-<footer>
-    © R. B. Claymore. All rights reserved.
-</footer>
+<footer> © R. B. Claymore. All rights reserved. </footer>
 
-</body>
-</html>
+</body> </html>
