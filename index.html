@@ -352,11 +352,58 @@ nav a:hover {
     border-color: #444;
 }
 
-.video-card iframe {
+.video-thumbnail {
+    position: relative;
+    display: block;
     width: 100%;
     aspect-ratio: 16 / 9;
+    overflow: hidden;
+    background: #000;
+}
+
+.video-thumbnail img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
     display: block;
-    border: none;
+    transition: transform 0.4s ease, opacity 0.4s ease;
+}
+
+.video-thumbnail:hover img {
+    transform: scale(1.04);
+    opacity: 0.75;
+}
+
+.play-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 68px;
+    height: 68px;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.78);
+    border: 1px solid rgba(255, 255, 255, 0.75);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.video-thumbnail:hover .play-button {
+    transform: translate(-50%, -50%) scale(1.08);
+    background: rgba(0, 0, 0, 0.9);
+}
+
+.play-button::after {
+    content: "";
+    display: block;
+    margin-left: 5px;
+    width: 0;
+    height: 0;
+    border-top: 11px solid transparent;
+    border-bottom: 11px solid transparent;
+    border-left: 17px solid #ffffff;
 }
 
 .video-card h3 {
@@ -865,13 +912,22 @@ ml('account', '2666737');
 
         <div class="video-card">
 
-            <iframe
-                src="https://www.youtube.com/embed/ohc84lHANio"
-                title="Do Not Come — The Last Day They Enjoyed Being Free"
-                loading="lazy"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowfullscreen>
-            </iframe>
+            <a
+                href="https://www.youtube.com/watch?v=ohc84lHANio"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="video-thumbnail"
+                aria-label="Watch Do Not Come on YouTube"
+            >
+
+                <img
+                    src="https://img.youtube.com/vi/ohc84lHANio/maxresdefault.jpg"
+                    alt="Do Not Come — R. B. Claymore"
+                >
+
+                <span class="play-button"></span>
+
+            </a>
 
             <h3>
                 DO NOT COME
@@ -887,13 +943,22 @@ ml('account', '2666737');
 
         <div class="video-card">
 
-            <iframe
-                src="https://www.youtube.com/embed/7ZqEFY6W-cI"
-                title="No Vengáis — Trailer"
-                loading="lazy"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowfullscreen>
-            </iframe>
+            <a
+                href="https://www.youtube.com/watch?v=7ZqEFY6W-cI"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="video-thumbnail"
+                aria-label="Watch No Vengáis trailer on YouTube"
+            >
+
+                <img
+                    src="https://img.youtube.com/vi/7ZqEFY6W-cI/maxresdefault.jpg"
+                    alt="No Vengáis — Trailer"
+                >
+
+                <span class="play-button"></span>
+
+            </a>
 
             <h3>
                 NO VENGÁIS
@@ -909,13 +974,22 @@ ml('account', '2666737');
 
         <div class="video-card">
 
-            <iframe
-                src="https://www.youtube.com/embed/bnzmQW1v_uM"
-                title="Do Not Come — A Dark Psychological Thriller"
-                loading="lazy"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowfullscreen>
-            </iframe>
+            <a
+                href="https://www.youtube.com/watch?v=bnzmQW1v_uM"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="video-thumbnail"
+                aria-label="Watch Do Not Come on YouTube"
+            >
+
+                <img
+                    src="https://img.youtube.com/vi/bnzmQW1v_uM/maxresdefault.jpg"
+                    alt="Do Not Come — R. B. Claymore"
+                >
+
+                <span class="play-button"></span>
+
+            </a>
 
             <h3>
                 DO NOT COME
